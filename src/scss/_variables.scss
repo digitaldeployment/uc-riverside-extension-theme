@@ -1,0 +1,147 @@
+// =============================================================================
+// Theme Variables
+// =============================================================================
+
+// Header Heights
+// -----------------------------------------------------------------------------
+
+$header-height: (
+  'xs': 156px,
+  'sm': 156px,
+  'md': 104px,
+  'lg': 114px,
+  'xl': 114px, 
+);
+
+// Toolbar - Header(logo + menu btn) & Flyout(cart btn + close btn)
+// -----------------------------------------------------------------------------
+
+$header-toolbar-height: (
+  'xs': 86px,
+  'sm': 86px,
+  'md': 104px,
+  'lg': 114px,
+  'xl': 114px, 
+);
+
+// =============================================================================
+// Bootstrp Theme Variables
+// =============================================================================
+
+// Branding Colors
+// -----------------------------------------------------------------------------
+
+$blue:    #003da5;
+$blue-lt: #0f74cb;
+$gold:    #ffb81c;
+$light:   #eaeaea;
+$dark:    #2b2b2b;
+
+$colors: (
+  "blue-lt": $blue-lt,
+  "gold": $gold,
+);
+
+// Theme Colors
+// -----------------------------------------------------------------------------
+
+$primary:   $blue;
+$secondary: $blue-lt;
+$tertiary:  $gold;
+
+$theme-colors: (
+  "tertiary": $tertiary,
+);
+
+// Links
+// -----------------------------------------------------------------------------
+
+$link-color:       $primary;
+$link-hover-color: $secondary;
+
+// Grid breakpoints
+// -----------------------------------------------------------------------------
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1440px,
+);
+
+// Grid containers
+// -----------------------------------------------------------------------------
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px,
+);
+
+// Grid columns
+// -----------------------------------------------------------------------------
+
+// $grid-columns:      12;
+// $grid-gutter-width: 30px;
+// $grid-row-columns:  6;
+
+// Typography
+// -----------------------------------------------------------------------------
+
+$font-family-base: 'Fira Sans', sans-serif;
+$font-family-heading: 'Oswald', sans-serif;
+
+$font-size-base: 1rem;
+
+$h1-font-size: $font-size-base * (50/$font-size-base);
+$h2-font-size: $font-size-base * (36/$font-size-base);
+$h3-font-size: $font-size-base * (24/$font-size-base);
+$h4-font-size: $font-size-base * (21/$font-size-base);
+$h5-font-size: $font-size-base * (18/$font-size-base);
+$h6-font-size: $font-size-base;
+
+// Sizing with .h-* and .w-* classes.
+// -----------------------------------------------------------------------------
+
+$sizes: (
+  20: 20%,
+);
+
+// Border Radius
+// -----------------------------------------------------------------------------
+
+$border-radius:               0.5rem;
+$border-radius-lg:            0.5rem;
+$border-radius-sm:            0.5rem;
+
+// Responsive Font Sizing
+// -----------------------------------------------------------------------------
+
+// $enable-responsive-font-sizes: true;
+
+// Cards
+// -----------------------------------------------------------------------------
+
+// $card-spacer-y:                     0.75rem;
+// $card-spacer-x:                     1.25rem;
+$card-border-width:                 0;
+$card-border-radius:                0;
+$card-border-color:                 rgba(black, .125);
+// $card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
+// $card-cap-bg:                       rgba(black, .03);
+// $card-cap-color:                    null;
+// $card-height:                       null;
+$card-color:                        $dark;
+$card-bg:                           white;
+
+// $card-img-overlay-padding:          1.25rem;
+
+// $card-group-margin:                 $grid-gutter-width / 2;
+// $card-deck-margin:                  $card-group-margin;
+
+// $card-columns-count:                3;
+// $card-columns-gap:                  1.25rem;
+// $card-columns-margin:               $card-spacer-y;
+

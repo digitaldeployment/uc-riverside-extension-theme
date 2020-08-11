@@ -1,0 +1,133 @@
+// =============================================================================
+// Home :: Hero
+// =============================================================================
+
+.hero {
+  position: relative;
+  height: 40vw; // 1920/768 = 40% ratio based on image size
+  min-height: 450px;
+  max-height: 768px;
+
+  // Shaded Image
+  // ---------------------------------------------------------------------------
+
+  .image {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    background-color: #2c2c2c;
+
+    img {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: 100%;
+      opacity: 0.44;
+      max-width: none;
+      transform: translate(-50%, -50%);
+  
+      @media (min-width: 1125px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  // Container of Content
+  // ---------------------------------------------------------------------------
+
+  .container-max {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+
+  // Heading
+  // ---------------------------------------------------------------------------
+
+  .heading {
+    text-shadow: 0 3px 6px rgba(black, 0.35);
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-weight: 300;
+    color: white;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 64px;
+    }
+
+    .word {
+      display: inline-block;
+      min-width: 3em;
+      min-height: 1em;
+      color: $tertiary;
+    }
+  }
+  
+  // Subheading
+  // ---------------------------------------------------------------------------
+  
+  .subheading {
+    text-shadow: 0 3px 6px rgba(black, 0.35);
+    letter-spacing: 0.02em;
+    font-size: 18px;
+    color: white;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 20px;
+    }
+  }
+
+  // Get Started Here Selection
+  // ---------------------------------------------------------------------------
+
+  form.get-started-here {
+    position: relative;
+    margin-top: 1.5rem;
+    border-radius: $border-radius;
+    background-color: white;
+    transition: 0.5s ease-out;
+    opacity: 0;
+
+    button {
+      position: absolute;
+      z-index: 2;
+      right: 4px;
+      bottom: 4px;
+      width: 60px;
+      height: 60px;
+      line-height: 1;
+
+      svg {
+        margin-top: -3px;
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        svg {
+          transform: scale(1.25);
+        }
+      }
+    }
+  }
+
+  // Ready state
+
+  &.ready {
+    form.get-started-here {
+      opacity: 1;
+    }
+  }
+}

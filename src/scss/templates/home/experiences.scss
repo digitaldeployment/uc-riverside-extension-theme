@@ -1,0 +1,148 @@
+// =============================================================================
+// Home :: Experiences
+// =============================================================================
+
+section.experiences {
+  padding: 4rem 0;
+  text-align: center;
+  background-size: cover;
+  background-position: 85% 50%;
+  background-color: $tertiary;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md) {
+    padding: 6.25rem 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 7.5rem 0;
+  }
+
+  // Section Heading
+  // ---------------------------------------------------------------------------
+
+  .section-heading {
+    max-width: 6em;
+    margin: 0 auto 3rem;
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-weight: 300;
+    color: white;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 6rem;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 2rem auto;
+      width: 120px;
+      height: 5px;
+      background-color: white;
+    }
+  }
+
+  // Slider
+  // ---------------------------------------------------------------------------
+
+  .slider {
+    margin-bottom: 8rem;
+  }  
+
+  // Slide
+  // ---------------------------------------------------------------------------
+  
+  .slide {
+    width: 75vw;
+    margin: 0 rem-calc(12);
+
+    @include media-breakpoint-up(md) {
+      width: 45vw;
+      margin: 0 rem-calc(16);
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 25vw;
+      margin: 0 rem-calc(64);
+    }
+
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  // Flickity
+  // ---------------------------------------------------------------------------
+
+  .flickity-viewport {
+    width: 100%;
+  }
+
+  // Flickity prev/next buttons
+  // ---------------------------------------------------------------------------
+
+  .flickity-prev-next-button {
+    font-size: rem-calc(48);
+    color: white;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    &.previous {
+      left: calc(50vw - (12.5vw + #{rem-calc(64)}));
+      margin-left: -0.5em;
+    }
+
+    &.next {
+      right: calc(50vw - (12.5vw + #{rem-calc(64)}));
+      margin-right: -0.5em;
+    }
+  }
+
+  // Flickity page dots
+  // ---------------------------------------------------------------------------
+
+  .flickity-page-dots {
+    bottom: -4.5rem;
+  }
+
+  .dot {
+    background-color: white;
+    opacity: 1;
+
+    &:not(.is-active):hover {
+      opacity: 0.75;
+    }
+  }
+
+  // More button wrapper
+  // ---------------------------------------------------------------------------
+
+  .container-max {
+    position: relative;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      text-align: right;
+    }
+  }
+
+  // Learn more
+  // ---------------------------------------------------------------------------
+
+  .btn-more {
+    font-size: rem-calc(25);
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    svg {
+      fill: white;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+// =============================================================================
+// Icons
+// =============================================================================
+
+.icon {
+  display: inline-block;
+  fill: currentColor;
+
+  &.icon-24 {
+    width: rem-calc(24);
+    height: rem-calc(24);
+  }
+
+  &.icon-32 {
+    width: rem-calc(32);
+    height: rem-calc(32);
+  }
+
+  &.icon-36 {
+    width: rem-calc(36);
+    height: rem-calc(36);
+  }
+
+  &.icon-44 {
+    width: rem-calc(44);
+    height: rem-calc(44);
+  }
+
+  &.icon-86 {
+    width: rem-calc(86);
+    height: rem-calc(86);
+  }
+}

@@ -1,0 +1,32 @@
+// =============================================================================
+// Buttons
+// =============================================================================
+
+// Solid button rest / Outline on hover
+// Borrows a lot from the 'button-varient' bootstrap mixin
+// -----------------------------------------------------------------------------
+
+@mixin button-solid-then-outline-on-hover($background: $primary, $border: $primary, $hover-border: $primary, $hover-background: transparent) {
+  border-color: $border;
+  background-color: $background;
+  color: color-yiq($background);
+
+  @include hover() {
+    border-color: $hover-border;
+    background-color: $hover-background;
+    color: $background;
+  }
+
+  &:focus,
+  &.focus {
+    border-color: $hover-border;
+    background-color: $hover-background;
+    color: $background;
+
+    @if $enable-shadows {
+      @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
+    } @else {
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+    }
+  }
+}

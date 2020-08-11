@@ -1,0 +1,55 @@
+// =============================================================================
+// Bootstrap :: Custom Buttons
+// =============================================================================
+
+.btn-more {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: $font-family-heading;
+  letter-spacing: 0.025em;
+  border-radius: 0;
+  line-height: 1.5;
+
+  svg {
+    display: inline-block;
+    margin-top: -0.2em;
+    margin-left: 0.8em;
+    transition: transform 0.15s ease-out;
+    fill: $tertiary;
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    svg {
+      transform: translateX(0.2em);
+    }
+  }
+
+  &.btn-primary {
+    @include hover() {
+      background-color: transparent;
+      color: $primary;
+    }
+
+    &.focus,
+    &:focus {
+      background-color: transparent;
+      color: $primary;
+    }
+  }
+
+  &.btn-secondary {
+    @include hover() {
+      background-color: transparent;
+      color: $secondary;
+    }
+
+    &.focus,
+    &:focus {
+      background-color: transparent;
+      color: $secondary;
+    }
+  }
+}

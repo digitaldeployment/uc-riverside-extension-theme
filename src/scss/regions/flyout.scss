@@ -1,0 +1,205 @@
+// =============================================================================
+// Flyout
+// =============================================================================
+
+.flyout {
+  color: white;
+
+  .container-flyout {
+    height: 100vh;
+    padding: rem-calc(0 36 100);
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+
+    @include media-breakpoint-up(sm) {
+      padding: rem-calc(0 80 100);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: rem-calc(0 60 120 120);
+    }
+  }
+
+  // Toolbar
+  // ---------------------------------------------------------------------------
+
+  .toolbar {
+    display: flex;
+    margin-bottom: 0.8rem;
+  }
+
+  // Toolbar buttons
+  // ---------------------------------------------------------------------------
+
+  .button__cart,
+  .button__close {
+    height: map-get($header-toolbar-height , 'xs');
+    color: white;
+
+    @include media-breakpoint-up(md) {
+      height: map-get($header-toolbar-height , 'md');
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: map-get($header-toolbar-height , 'lg');
+    }
+
+    &:hover,
+    &:focus {
+      color: $tertiary;
+    }
+  }
+
+  // Cart Button
+  // ---------------------------------------------------------------------------
+
+  .button__cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -1.2rem;
+  }
+
+  // Close Button
+  // ---------------------------------------------------------------------------
+
+  .button__close {
+    margin-left: auto;
+    margin-right: -1.2rem;
+  }
+}
+
+// Login options
+// -----------------------------------------------------------------------------
+
+.login-options.dropdown {
+  margin-bottom: 1rem;
+
+  .dropdown-toggle {
+    display: flex;
+    width: 100%;
+    height: rem-calc(52);
+    align-items: center;
+    border-width: 2px;
+    justify-content: space-between;
+    text-align: left;
+    color: white;
+
+    &:after {
+      display: none;
+    }
+
+    &:hover,
+    &[aria-expanded="true"] {
+      color: $dark;
+    }
+  }
+
+  .dropdown-menu {
+    right: 0;
+
+    &.show {
+      top: 100% !important;
+      transform: none !important;
+    }
+  }
+
+  .dropdown-item {
+    padding: 0.75rem 1rem;
+  }
+}
+
+// Flyout Expanded/Collapsed States
+// -----------------------------------------------------------------------------
+
+form.site-search {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  input {
+    border: none;
+    height: rem-calc(52);
+    font-style: italic;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+
+  button {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    height: rem-calc(48);
+    transition: 0.1s ease-out;
+    color: $primary;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+  }
+}
+
+// Flyout Quicklinks
+// -----------------------------------------------------------------------------
+
+.flyout-quicklinks {
+  flex-direction: column;
+  margin-left: -1rem;
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-size: rem-calc(18);
+    letter-spacing: 0.025em;
+    color: white;
+
+    svg {
+      margin-right: 0.5em;
+      transition: 0.1s ease-out;
+      fill: $tertiary;
+    }
+  
+    &:hover,
+    &:focus {
+      svg {
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+
+// Flyout Expanded/Collapsed States
+// -----------------------------------------------------------------------------
+
+.flyout-collapse {
+  position: fixed;
+  z-index: $zindex-fixed;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  width: 100%;
+  max-width: 768px;
+  visibility: hidden;
+  background-color: $primary;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  body.flyout--expanded & {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  body.flyout--expanded {
+    #root > div > *:not(.flyout) {
+      transition: opacity 0.3s ease-in-out, filter 0s 0.3s;
+      overflow: hidden;
+      opacity: 0.1;
+      filter: blur(6px);
+    }
+  }
+}

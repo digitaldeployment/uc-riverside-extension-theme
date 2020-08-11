@@ -1,0 +1,93 @@
+// =============================================================================
+// Rem-calc function and mixins
+// @credit https://codepen.io/ryan_labar/pen/GWPzrP
+// =============================================================================
+
+$rem-base: 16px !default;
+
+// list-separator polyfill by Hugo Giraudel (https://sass-compatibility.github.io/#list_separator_function)
+@function rem-separator($list) {
+  @if function-exists("list-separator")==true {
+    @return list-separator($list);
+  }
+  $test-list: ();
+  @each $item in $list {
+    $test-list: append($test-list, $item, space);
+  }
+  @return if($test-list==$list, space, comma);
+}
+
+@mixin rem-base($zoom: 100%) {
+  font-size: $zoom / 16px * $rem-base;
+}
+
+@function rem-convert($to, $values...) {
+  $result: ();
+  $separator: rem-separator($values);
+  @each $value in $values {
+    @if type-of($value)=="number" and unit($value)=="rem" and $to=="px" {
+      $result: append($result, $value / 1rem * $rem-base, $separator);
+    }
+    @else if type-of($value)=="number" and unit($value)=="px" and $to=="rem" {
+      $result: append($result, $value / ($rem-base / 1rem), $separator);
+    }
+    @else if type-of($value)=="list" {
+      $result: append($result, rem-convert($to, $value...), $separator);
+    }
+    @else {
+      $result: append($result, $value, $separator);
+    }
+  }
+  @return if(length($result)==1, nth($result, 1), $result);
+}
+
+@function rem($values...) {
+  @return rem-convert(rem, $values...);
+}
+
+@mixin rem($properties, $values...) {
+  @if type-of($properties)=="map" {
+    @each $property in map-keys($properties) {
+      @include rem($property, map-get($properties, $property));
+    }
+  }
+  @else {
+    @each $property in $properties {
+      #{$property}: rem-convert(rem, $values...);
+    }
+  }
+}
+
+// It strips the unit of measure and returns it
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// New Syntax, allows to optionally calculate on a different base value to counter compounding effect of em\'s.
+// Call with 1, 2, 3 or 4 parameters, \'px\' is not required but supported
+// rem-calc(10 20 30px 40);
+// Space delimited, if you want to delimit using comma\'s, wrap it in another pair of brackets
+// rem-calc((10, 20, 30, 40px));
+// Optionally call with a different base (eg: 8px) to calculate em.
+// rem-calc(16px 32px 48px, 8px);
+// If you require to comma separate your list
+// rem-calc((16px, 32px, 48), 8px);
+@function convert-to-rem($value, $base-value: $rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value==0rem) {
+    $value: 0;
+  } // Turn 0em into 0
+  @return $value;
+}
+
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+  @if $max==1 {
+    @return convert-to-rem(nth($values, 1), $base-value);
+  }
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}

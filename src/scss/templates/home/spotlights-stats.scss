@@ -1,0 +1,166 @@
+// =============================================================================
+// Home :: Spotlights & Stats sections
+// =============================================================================
+
+.spotlights-stats {
+  position: relative;
+  padding: 4rem 0;
+  background: 50% 50%/cover no-repeat $dark;
+
+  @include media-breakpoint-up(md) {
+    padding: 6.25rem 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 7.5rem 0;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 35%;
+      opacity: 0.72;
+      background-image: linear-gradient(to bottom, $dark, rgba($dark, 0.52) 85%, rgba($dark, 0));
+    }
+  }
+
+  // Container
+  // ---------------------------------------------------------------------------
+
+  .container-max {
+    position: relative;
+    z-index: 2;
+  }
+
+  // Section heading
+  // ---------------------------------------------------------------------------
+
+  .section-heading {
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-size: rem-calc(20);
+    font-weight: 300;
+    color: white;
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(30);
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 5px;
+      margin: 1.2rem 0 2rem;
+      background-color: $tertiary;
+
+      @include media-breakpoint-up(lg) {
+        margin: rem-calc(30 0 64);
+      }
+    }
+  }
+
+  // Spotlights
+  // ---------------------------------------------------------------------------
+
+  .spotlights {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .spotlight {
+    margin-bottom: rem-calc(70);
+    color: $tertiary;
+
+    @include media-breakpoint-down(md) {
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 44%;
+      flex-shrink: 0;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .heading {
+      margin: 1em 0;
+      font-size: rem-calc(30);
+      color: inherit;
+    }
+
+    .subheading {
+      line-height: (30/18);
+      letter-spacing: 0.02em;
+      font-size: rem-calc(18);
+      font-weight: 300;
+      color: white;
+    }
+  }
+
+  // Stats
+  // ---------------------------------------------------------------------------
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid white;
+    padding-top: rem-calc(40);
+  }
+
+  .stat {
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(md) {
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 44%;
+      flex-shrink: 0;
+    }
+
+    .value {
+      margin-right: 0.6em;
+      line-height: 1.5;
+      font-size: rem-calc(80);
+      font-weight: 300;
+      color: $tertiary;
+
+      @include media-breakpoint-up(xl) {
+        font-size: rem-calc(90);
+      }
+    }
+
+    .description {
+      max-width: 275px;
+      margin-bottom: 0;
+      letter-spacing: 0.025em;
+      font-size: rem-calc(18);
+      color: white;
+
+      @include media-breakpoint-up(lg) {
+        max-width: none;
+      }
+
+      @include media-breakpoint-up(xl) {
+        font-size: rem-calc(21);
+      }
+    }
+  }
+}

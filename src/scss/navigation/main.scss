@@ -1,0 +1,88 @@
+// =============================================================================
+// Main Navigation
+// =============================================================================
+
+.main-navigation {
+  margin-bottom: 2rem;
+
+  .nav-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .nav-link {
+    padding: 0.75rem 0;
+    max-width: calc(100% - #{rem-calc(24)});
+    letter-spacing: 0.025em;
+    background-color: $primary;
+    color: white;
+
+    &.l1 {
+      position: relative;
+      z-index: 2;
+      padding: 1rem 0;
+      text-transform: uppercase;
+      font-family: $font-family-heading;
+      font-size: rem-calc(18);
+    }
+
+    &:hover,
+    &:focus {
+      color: $tertiary;
+    }
+  }
+
+  button {
+    padding: rem-calc(12);
+    margin-left: auto;
+    flex-shrink: 0;
+    color: $primary;
+    
+    svg {
+      border-radius: 100%;
+      transition: 0.1s ease-out;
+      background-color: white;
+    }
+
+    &[aria-expanded="true"] svg {
+      transform: rotate(-45deg);
+    }
+
+    &:hover,
+    &:focus {
+      svg {
+        background-color: $tertiary;
+      }
+    }
+  }
+
+  ul {
+    width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .subnav-menu {
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.1s, visibility 0.3s, padding 0.3s ease-out;
+  }
+
+  [aria-expanded=true] + .subnav-menu {
+    height: auto;
+    padding: 1rem 0 2rem;
+    visibility: inherit;
+    opacity: 1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 5px;
+    margin: 2rem 0;
+    background-color: $tertiary;
+  }
+}

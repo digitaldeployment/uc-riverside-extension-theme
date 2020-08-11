@@ -1,0 +1,21 @@
+{
+  "name": "@digitaldeployment/uc-riverside-extention-theme",
+  "author": "Digital Deployment",
+  "version": "1.0.0",
+  "private": false,
+  "dependencies": {
+    "@ttskch/select2-bootstrap4-theme": "^1.4.0",
+    "accessible-menu": "^2.1.0",
+    "array-shuffle": "^1.0.1",
+    "bootstrap": "^4.5.0",
+    "flickity": "^2.2.1",
+    "flickity-fade": "^1.0.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "select2": "^4.0.13",
+    "typewriter-effect": "^2.13.1"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

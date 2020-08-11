@@ -1,0 +1,132 @@
+// =============================================================================
+// Header Region
+// =============================================================================
+
+.page__header {
+  height: 156px;
+  padding: 0;
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  @include media-breakpoint-up(md) {
+    height: 104px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 114px;
+  }
+}
+
+// Branding Logo
+// -----------------------------------------------------------------------------
+
+.branding__logo {
+  display: flex;
+  align-items: center;
+  min-height: 86px;
+
+  img {
+    width: auto;
+    height: 60px;
+    max-width: none;
+
+    @include media-breakpoint-up(md) {
+      height: 70px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 90px;
+    }
+  }
+}
+
+// Secondary Navigation
+// -----------------------------------------------------------------------------
+
+.navigation__secondary {
+  .nav-link {
+    font-family: $font-family-heading;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: white;
+
+    svg {
+      margin-right: 0.3em;
+      transition: 0.1s ease-out;
+      fill: $tertiary;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba(white, 0.85);
+
+      svg {
+        transform: scale(1.25) translateX(-0.1em);
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+    order: 99;
+    width: 100%;
+    height: 70px;
+    background-color: #0d4ab4;
+
+    .nav-link {
+      justify-content: center;
+      width: 50%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    border-right: 1px solid rgba(white, 0.3);
+  }
+}
+
+// Menu button (hamburger menu)
+// -----------------------------------------------------------------------------
+
+.button__menu {
+  width: map-get($header-toolbar-height, 'xs');
+  height: map-get($header-toolbar-height, 'xs');
+  fill: $dark;
+
+  @include media-breakpoint-up(md) {
+    height: 100%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 140px;
+  }
+}
+
+// Cart Button
+// -----------------------------------------------------------------------------
+
+.button__cart {
+  line-height: 1;
+}
+
+.page__header {
+  .button__cart {
+    color: $tertiary;
+  
+    svg {
+      transition: 0.1s ease-out;
+    }
+  
+    &:hover,
+    &:focus {
+      color: $tertiary;
+
+      svg {
+        transform: scale(1.25);
+      }
+    }
+  }
+}

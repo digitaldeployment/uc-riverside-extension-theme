@@ -1,0 +1,131 @@
+// =============================================================================
+// Home :: Programs
+// =============================================================================
+
+section.programs {
+  margin: 4rem 0;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    margin: 6.25rem 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin: 7.5rem 0;
+  }
+
+  // Section Heading
+  // ---------------------------------------------------------------------------
+
+  .section-heading {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-weight: 300;
+    color: $primary;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 6rem;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      margin: 2rem auto;
+      width: 120px;
+      height: 5px;
+      background-color: $tertiary;
+    }
+  }
+
+  // Dropdown (mobile/tablet only)
+  // ---------------------------------------------------------------------------
+
+  .programs-dropdown {
+    .dropdown-toggle {
+      display: flex;
+      width: 100%;
+      padding: 1.2rem 2rem;
+      align-items: center;
+      justify-content: space-between;
+      font-style: italic;
+      text-align: left;
+
+      &:after {
+        display: none;
+      }
+
+      svg {
+        fill: currentColor;
+      }
+    }
+
+    .dropdown-menu {
+      right: 0;
+    }
+
+    .dropdown-item {
+      display: flex;
+      padding: 0.75rem 1rem;
+      align-items: center;
+    }
+
+    img {
+      width: auto;
+      height: 24px;
+      margin-right: 1rem;
+    }
+
+    .heading {
+      letter-spacing: 0.025em;
+      color: $dark;
+    }
+  }
+
+  // Grid (desktop+ only)
+  // ---------------------------------------------------------------------------
+
+  .programs-grid {
+    margin-bottom: 3rem;
+
+    .nav-link {
+      width: percentage(1/5);
+      margin-bottom: 3rem;
+    }
+
+    img {
+      width: auto;
+      height: 100px;
+      margin-bottom: 2rem;
+      transition: transform 0.1s ease-out;
+    }
+
+    .heading {
+      line-height: 1.4;
+      letter-spacing: 0.025em;
+      text-transform: uppercase;
+      font-family: $font-family-heading;
+      font-weight: normal;
+      font-size: 18px;
+      color: $dark;
+    }
+
+    .nav-link {
+      &:hover,
+      &:focus {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  // More Button
+  // ---------------------------------------------------------------------------
+
+  .btn-more {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}

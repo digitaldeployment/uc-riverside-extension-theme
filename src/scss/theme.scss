@@ -1,0 +1,48 @@
+// =============================================================================
+// Welcome to the UC Riverside Extension theme
+// =============================================================================
+
+// Variables
+@import 'variables';
+
+// Bootstrap Framework
+@import '~bootstrap/scss/bootstrap';
+
+// Functions
+@import 'functions/rem-calc';
+
+// Easing
+@import 'third-party/eezee';
+
+// Mixins
+@import 'mixins/buttons';
+
+// Flickity
+@import 'third-party/flickity';
+
+// Select2 Theme
+@import 'third-party/select2';
+
+// Globals
+@import 'global/typography';
+@import 'global/elements';
+@import 'global/container';
+
+// Components
+@import 'components/container';
+@import 'components/button';
+@import 'components/icons';
+@import 'components/card';
+
+// Regions
+@import 'regions/page';
+@import 'regions/header';
+@import 'regions/flyout';
+@import 'regions/main';
+@import 'regions/footer';
+
+// Navigation
+@import 'navigation/main';
+
+// Templates
+@import 'templates/home';

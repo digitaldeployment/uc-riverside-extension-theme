@@ -1,0 +1,80 @@
+// =============================================================================
+// Select2 Custom Theme based on Bootstrap 4 Theme
+// =============================================================================
+
+// Select2 source (core.scss)
+// -----------------------------------------------------------------------------
+
+.select2-container {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+
+  @import '~select2/src/scss/single';
+  @import '~select2/src/scss/multiple';
+}
+
+@import '~select2/src/scss/dropdown';
+
+.select2-close-mask {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  z-index: 99;
+}
+
+.select2-hidden-accessible {
+  @include sr-only();
+}
+
+// Select2 Theme :: Bootstrap4 source (layout.scss)
+// -----------------------------------------------------------------------------
+
+@import '~@ttskch/select2-bootstrap4-theme/src/layout';
+// @import '~@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4';
+
+// Customized for this theme specifically
+// -----------------------------------------------------------------------------
+
+.select2-container {
+  .select2-selection {
+    padding: 1rem;
+  }
+
+  .select2-search--inline .select2-search__field {
+    letter-spacing: 0.02em;
+    font-style: italic;
+    color: $dark;
+
+    &::placeholder {
+      font-style: inherit;
+      color: inherit;
+    }
+  }
+
+  .select2-dropdown {
+    &.select2-dropdown--below {
+      border-top: 5px solid $tertiary;
+    }
+
+    .select2-results__group {
+      font-family: $font-family-heading;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      font-size: 18px;
+      padding: 1rem;
+      color: $dark;
+    }
+  }
+}

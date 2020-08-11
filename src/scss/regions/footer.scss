@@ -1,0 +1,317 @@
+// =============================================================================
+// Footer Region
+// =============================================================================
+
+.page__footer {
+  @include media-breakpoint-up(lg) {
+    background-image: linear-gradient(to right, $primary 50%, white 50%);
+  }
+
+  // Container
+  // ---------------------------------------------------------------------------
+
+  .container-max {
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+  }
+
+  // Sections
+  // ---------------------------------------------------------------------------
+
+  .primary-section,
+  .secondary-section {
+    padding: rem-calc(48) 10vw;
+
+    @include media-breakpoint-up(md) {
+      padding-top: rem-calc(70);
+      padding-bottom: rem-calc(70);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  // Primary section
+  // ---------------------------------------------------------------------------
+
+  .primary-section {
+    background-color: $primary;
+    color: white;
+
+    @include media-breakpoint-up(lg) {
+      width: 56%;
+      flex-shrink: 0;
+      padding-right: rem-calc(70);
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  // Address
+  // ---------------------------------------------------------------------------
+
+  .footer-address {
+    margin-bottom: 3rem;
+    letter-spacing: 0.02em;
+    font-size: rem-calc(20);
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: 3rem;
+      border-bottom: 2px solid white;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 45%;
+      flex-shrink: 0;
+    }
+
+    // Logo
+    // -------------------------------------------------------------------------
+    
+    .logo {
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
+    .department {
+      margin: 2rem 0;
+    }
+
+    // Schedule an Appointment button
+    // -------------------------------------------------------------------------
+
+    .btn-link {
+      display: flex;
+      align-items: center;
+      margin-left: -1rem;
+      line-height: 1;
+      font-size: rem-calc(18);
+      text-transform: uppercase;
+      font-family: $font-family-heading;
+      letter-spacing: 0.02em;
+      color: white;
+
+      svg {
+        display: block;
+        margin-right: 0.75rem;
+        transition: 0.1s ease-out;
+        fill: $tertiary;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: rgba(white, 0.85);
+  
+        svg {
+          transform: scale(1.25) translateX(-0.1em);
+        }
+      }
+    }
+  }
+
+  // Quicklinks navigation
+  // ---------------------------------------------------------------------------
+
+  .footer-quicklinks {
+    margin-left: -1rem;
+    margin-bottom: 4rem;
+    font-size: rem-calc(23);
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    letter-spacing: 0.025em;
+
+    @include media-breakpoint-up(xl) {
+      width: 45%;
+      flex-shrink: 0;
+    }
+
+    .nav-link {
+      color: white;
+  
+      &:hover,
+      &:focus {
+        color: $tertiary;
+      }
+    }
+  }
+
+  // Navigation divider
+  // ---------------------------------------------------------------------------
+
+  .nav-divider {
+    width: 100px;
+    height: 5px;
+    margin: 2rem 1rem;
+    background-color: $tertiary;
+  }
+
+  // Links navigation
+  // ---------------------------------------------------------------------------
+
+  .footer-links {
+    @include media-breakpoint-up(xl) {
+      width: 100%;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      margin: 0 0 1rem;
+      padding: 0 1rem 0 0;
+      color: white;
+
+      &:not(.disabled) {
+        padding-left: 1rem;
+        border-left: 1px solid white;
+      }
+
+      &:last-child {
+        width: 100%;
+        margin-top: 2rem;
+      }
+
+      svg {
+        padding-right: 0.3em;
+        fill: $tertiary;
+      }
+
+      &:hover,
+      &:focus {
+        color: $tertiary;
+      }
+    }
+  }
+
+  // Secondary section
+  // ---------------------------------------------------------------------------
+
+  .secondary-section {
+    background-color: white;
+    color: $dark;
+
+    @include media-breakpoint-up(lg) {
+      flex-shrink: 0;
+      width: 44%;
+      padding-left: rem-calc(70);
+    }
+
+    // Section heading
+    // -------------------------------------------------------------------------
+
+    .section-heading {
+      font-size: rem-calc(20);
+      text-transform: uppercase;
+      font-family: $font-family-heading;
+      letter-spacing: 0.025em;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 5px;
+        margin: 2rem 0;
+        background-color: $tertiary;
+      }
+    }
+
+    .section-subheading {
+      margin-bottom: 2rem;
+      font-size: rem-calc(18);
+      font-weight: 300;
+
+      @include media-breakpoint-down(md) {
+        max-width: 300px;
+      }
+    }
+  }
+
+  // Footer signup form
+  // ---------------------------------------------------------------------------
+
+  .signup-form {
+    margin-bottom: 3rem;
+
+    @include media-breakpoint-down(md) {
+      max-width: 300px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+    }
+
+    .btn,
+    .form-control {
+      height: rem-calc(64);
+      padding: rem-calc(6 20);
+      font-size: rem-calc(18);
+      border-radius: 0;
+    }
+
+    .form-group {
+      flex-grow: 1;
+    }
+
+    .form-control {
+      border: none;
+      font-weight: 300;
+      background-color: #eaeaea;
+    }
+
+    .btn {
+      text-transform: uppercase;
+      font-family: $font-family-heading;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+
+      @include media-breakpoint-up(xl) {
+        width: 140px;
+      }
+    }
+  }
+
+  // Social links
+  // ---------------------------------------------------------------------------
+
+  .footer-social-links {
+    flex-wrap: nowrap;
+    
+    @include media-breakpoint-down(lg) {
+      justify-content: space-between;
+      max-width: 300px;
+    }
+
+    .nav-link {
+      padding: 0;
+      transition: all 0.2s ease-out;
+      color: $dark;
+
+      @include media-breakpoint-up(xl) {
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+
+    svg {
+      fill: currentColor;
+    }
+  }
+}

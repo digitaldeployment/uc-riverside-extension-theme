@@ -1,0 +1,65 @@
+// =============================================================================
+// Flickity - Custom styles
+// =============================================================================
+
+@import '~flickity/css/flickity';
+
+// Buttons
+// -----------------------------------------------------------------------------
+
+.flickity-button:focus {
+  box-shadow: 0 0 0 5px $primary;
+}
+
+// Prev/Next Buttons
+// -----------------------------------------------------------------------------
+
+.flickity-prev-next-button {
+  width: 1em;
+  height: 1em;
+  font-size: rem-calc(44);
+  transition: all 0.2s ease-out;
+  background-color: transparent;
+  color: $dark;
+
+  // Icon
+  // ---------------------------------------------------------------------------
+
+  .flickity-button-icon {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: rgba($dark, 0.25);
+  }
+
+  &:active {
+    &.previous {
+      transform: translate(-0.2em, -50%);
+    }
+
+    &.next {
+      transform: translate(0.2em, -50%);
+    }
+  }
+}
+
+// Page Dots
+// -----------------------------------------------------------------------------
+
+.flickity-page-dots {
+  .dot {
+    width: 1rem;
+    height: 1rem;
+    margin: rem-calc(0 6);
+
+    &.is-selected {
+      background-color: $primary;
+    }
+  }
+}
