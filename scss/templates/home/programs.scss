@@ -3,15 +3,16 @@
 // =============================================================================
 
 section.programs {
-  margin: 4rem 0;
+  padding: 4rem 0;
   text-align: center;
+  background: no-repeat right top white;
 
   @include media-breakpoint-up(md) {
-    margin: 6.25rem 0;
+    padding: 6.25rem 0;
   }
 
   @include media-breakpoint-up(lg) {
-    margin: 7.5rem 0;
+    padding: 7.5rem 0;
   }
 
   // Section Heading
