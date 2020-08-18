@@ -121,11 +121,11 @@ section.choices {
     position: relative;
 
     &:nth-child(odd) .nav-link:after {
-      background-image: linear-gradient(to bottom, $blue 25%, rgba($blue, 0));
+      background-image: linear-gradient(to bottom, $blue-lt 25%, rgba($blue-lt, 0));
     }
 
     &:nth-child(even) .nav-link:after {
-      background-image: linear-gradient(to bottom, $blue-lt 25%, rgba($blue-lt, 0));
+      background-image: linear-gradient(to bottom, $blue 25%, rgba($blue, 0));
     }
 
     @include media-breakpoint-up(lg) {
