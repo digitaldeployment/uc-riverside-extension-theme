@@ -95,6 +95,7 @@
   form.get-started-here {
     position: relative;
     margin-top: 1.5rem;
+    max-width: rem-calc(525);
     border-radius: $border-radius;
     background-color: white;
     transition: 0.5s ease-out;
