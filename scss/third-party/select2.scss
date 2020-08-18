@@ -64,17 +64,24 @@
   }
 
   .select2-dropdown {
+    color: $primary;
+
     &.select2-dropdown--below {
       border-top: 5px solid $tertiary;
     }
 
     .select2-results__group {
       font-family: $font-family-heading;
+      font-weight: normal;
       text-transform: uppercase;
       letter-spacing: 0.025em;
       font-size: 18px;
       padding: 1rem;
       color: $dark;
+    }
+
+    .select2-results__options {
+      margin-bottom: 0.5rem;
     }
   }
 }
