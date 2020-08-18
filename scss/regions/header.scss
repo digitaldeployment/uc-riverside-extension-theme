@@ -27,6 +27,13 @@
   display: flex;
   align-items: center;
   min-height: 86px;
+  padding: 0;
+  margin-left: 10vw;
+  margin-right: auto;
+
+  @include media-breakpoint-up(lg) {
+    margin-left: 12.5vw;
+  }
 
   img {
     width: auto;
