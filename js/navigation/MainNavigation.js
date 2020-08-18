@@ -1,4 +1,4 @@
-import AccessibleMenu from '../custom_node_modules/accessible-menu';
+import AccessibleMenu from '@digitaldeployment/accessible-menu';
 
 const defaults = {
   menuElement: null,
