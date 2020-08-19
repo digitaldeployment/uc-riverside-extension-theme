@@ -5,17 +5,22 @@
 section.experiences {
   padding: 4rem 0 rem-calc(45);
   text-align: center;
-  background-size: cover;
-  background-position: 85% 50%;
-  background-color: $tertiary;
+  background-color: #e3af03; // bottom-most yellow color of the background image
+  background-repeat: no-repeat;
+  background-position: 85% 0;
+  background-size: 165%;
   overflow: hidden;
 
   @include media-breakpoint-up(md) {
     padding: 6.25rem 0 rem-calc(78);
+    background-position: 100% 0;
+    background-size: 140%;
   }
 
   @include media-breakpoint-up(lg) {
     padding: 7.5rem 0 rem-calc(80);
+    background-position: 85% 50%;
+    background-size: cover;
   }
 
   // Section Heading
@@ -29,11 +34,8 @@ section.experiences {
     font-weight: 300;
     color: white;
 
-    @include media-breakpoint-up(md) {
-      max-width: none;
-    }
-
     @include media-breakpoint-up(lg) {
+      max-width: none;
       margin-bottom: rem-calc(96);
     }
 
