@@ -55,7 +55,7 @@
     @include media-breakpoint-up(xl) {
       display: flex;
       flex-wrap: wrap;
-      width: 62.5%;
+      width: 60%;
       justify-content: space-between;
     }
   }
@@ -211,8 +211,12 @@
 
     @include media-breakpoint-up(lg) {
       flex-shrink: 0;
-      width: 44%;
+      width: 50%;
       padding-left: rem-calc(70);
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 40%;
     }
 
     // Section heading
