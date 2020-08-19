@@ -29,6 +29,10 @@ section.experiences {
     font-weight: 300;
     color: white;
 
+    @include media-breakpoint-up(md) {
+      max-width: none;
+    }
+
     @include media-breakpoint-up(lg) {
       margin-bottom: 6rem;
     }
