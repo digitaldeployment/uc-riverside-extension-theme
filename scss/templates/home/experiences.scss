@@ -59,6 +59,7 @@ section.experiences {
   
   .slide {
     width: 75vw;
+    min-height: 100%;
     margin: 0 rem-calc(12);
 
     @include media-breakpoint-up(md) {
