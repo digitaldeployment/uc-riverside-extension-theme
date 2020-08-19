@@ -122,6 +122,12 @@
     }
   }
 
+  // Fix phone numbers being transitioned to a link on iOS devices.
+
+  span[itemprop=telephone] {
+    color: white;
+  }
+
   // Quicklinks navigation
   // ---------------------------------------------------------------------------
 
