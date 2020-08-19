@@ -99,6 +99,25 @@
       }
     }
 
+    .image {
+      position: relative;
+
+      // Creates a cropped image style which matches the aspect ratio of the
+      // comp for larger displays.
+      @include media-breakpoint-up(lg) {
+        padding-top: percentage(366/694);
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          left: 50%;
+          bottom: 0;
+          width: 100%;
+          transform: translate(-50%, 0);
+        }
+      }  
+    }
+
     .heading {
       margin: 1em 0;
       font-size: rem-calc(30);
