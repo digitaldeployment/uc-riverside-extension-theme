@@ -47,7 +47,7 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      width: 56%;
+      width: 50%;
       flex-shrink: 0;
       padding-right: rem-calc(70);
     }
@@ -55,6 +55,7 @@
     @include media-breakpoint-up(xl) {
       display: flex;
       flex-wrap: wrap;
+      width: 62.5%;
       justify-content: space-between;
     }
   }
