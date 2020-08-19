@@ -15,7 +15,7 @@ section.experiences {
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 7.5rem 0;
+    padding: 7.5rem 0 5rem;
   }
 
   // Section Heading
@@ -51,7 +51,7 @@ section.experiences {
   // ---------------------------------------------------------------------------
 
   .slider {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
   }  
 
   // Slide
