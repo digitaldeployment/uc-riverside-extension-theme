@@ -198,7 +198,7 @@ form.site-search {
     #root > div > *:not(.flyout) {
       transition: opacity 0.3s ease-in-out, filter 0s 0.3s;
       overflow: hidden;
-      opacity: 0.1;
+      opacity: 0.2;
       filter: blur(6px);
     }
   }
