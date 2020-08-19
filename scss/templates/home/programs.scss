@@ -72,14 +72,16 @@ section.programs {
     }
 
     img {
-      width: auto;
-      height: 24px;
+      flex-shrink: 0;
+      width: 28px;
       margin-right: 1rem;
+      background-color: white;
+      box-shadow: 0 0 0 5px white;
+      border-radius: 2px;
     }
 
     .heading {
       letter-spacing: 0.025em;
-      color: $dark;
     }
   }
 
