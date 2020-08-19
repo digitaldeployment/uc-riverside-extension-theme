@@ -5,11 +5,17 @@
 .main-navigation {
   margin-bottom: 2rem;
 
+  // Navigation list item
+  // ---------------------------------------------------------------------------
+
   .nav-item {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
   }
+
+  // Navigation Link
+  // ---------------------------------------------------------------------------
 
   .nav-link {
     padding: 0.75rem 0;
@@ -17,6 +23,9 @@
     letter-spacing: 0.025em;
     background-color: $primary;
     color: white;
+
+    // Primary navigation link
+    // -------------------------------------------------------------------------
 
     &.l1 {
       position: relative;
@@ -33,49 +42,100 @@
     }
   }
 
+  // Navigation Dropdown Menu Toggle button
+  // ---------------------------------------------------------------------------
+
   button {
     padding: rem-calc(12);
     margin-left: auto;
     flex-shrink: 0;
-    color: $primary;
     
     svg {
+      border: 1px solid white;
       border-radius: 100%;
       transition: 0.1s ease-out;
-      background-color: white;
+      fill: white;
     }
-
+    
     &[aria-expanded="true"] svg {
       transform: rotate(-45deg);
+    }
+    
+    &:hover,
+    &:focus {
+      svg {
+        border-color: $tertiary;
+        fill: $tertiary;
+      }
+    }
+  }
+  
+  // Primary level differs from the rest
+  // ---------------------------------------------------------------------------
+
+  .nav-link.l1 + button {
+    svg {
+      background-color: white;
+      fill: $primary;
     }
 
     &:hover,
     &:focus {
       svg {
         background-color: $tertiary;
+        fill: $primary;
       }
     }
   }
+
+  // Navigation List
+  // ---------------------------------------------------------------------------
 
   ul {
     width: 100%;
     flex-wrap: nowrap;
     flex-direction: column;
+
+    ul ul {
+      position: relative;
+      padding-left: 1rem;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        bottom: 2rem;
+        border-left: 3px solid $tertiary;
+      }
+    }
   }
+
+  // Dropdown Menu
+  // ---------------------------------------------------------------------------
 
   .subnav-menu {
     height: 0;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.1s, visibility 0.3s, padding 0.3s ease-out;
+    margin-top: -1rem;
+    transition: opacity 0.1s, visibility 0.3s, padding 0.3s ease-out, margin 0.3s ease-out;
   }
+
+  // Navigation Dropdown Menu :: Expanded State
+  // ---------------------------------------------------------------------------
 
   [aria-expanded=true] + .subnav-menu {
     height: auto;
-    padding: 1rem 0 2rem;
+    margin-top: 0;
+    padding-bottom: 1rem;
     visibility: inherit;
     opacity: 1;
   }
+
+  // Orange Horizontal line which separates the main nav from supplemental links
+  // which proceed it
+  // ---------------------------------------------------------------------------
 
   &:after {
     content: '';
