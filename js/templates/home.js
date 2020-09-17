@@ -1,5 +1,6 @@
+import 'flickity-fade'
+import $ from 'jquery'
 import Flickity from 'flickity'
-import 'flickity-fade';
 import Hero from '../components/Hero'
 
 export default () => {
@@ -26,6 +27,41 @@ export default () => {
     }
   });
 
+  // Home Videos Modal
+  // ---------------------------------------------------------------------------
+
+  const videoModal = document.querySelector('#modal-video');
+
+  if (videoModal) {
+    // Video Modal show handler
+    $(videoModal).on('show.bs.modal', () => {
+      const iframeSrc = videoModal.getAttribute('data-iframe-src');
+      const iframeTitle = videoModal.getAttribute('aria-label');
+
+      if (iframeSrc && iframeTitle) {
+        // Creates an iframe which houses the embed video player.
+        const iframe = document.createElement('iframe');
+        iframe.src = iframeSrc;
+        iframe.title = iframeTitle;
+        iframe.className = 'embed-responsive-item';
+        iframe.setAttribute('allowfullscreen', '');
+
+        // If embed container is found, add our video player iframe.
+        const embedContainer = videoModal.querySelector('.embed-responsive');
+        if (embedContainer) {
+          embedContainer.appendChild(iframe);
+        }
+      }
+    });
+
+    // Video Modal hide handler.
+    $(videoModal).on('hide.bs.modal', () => {
+      document.querySelectorAll('iframe').forEach((iframe) => {
+        iframe.remove();
+      });
+    });
+  }
+
   // Home Videos
   // ---------------------------------------------------------------------------
 
@@ -42,35 +78,20 @@ export default () => {
       // -----------------------------------------------------------------------
 
       element.Slider.cells.forEach(cell => {
-        const video = cell.element.querySelector('video');
         const button = cell.element.querySelector('.button__play');
-        if (button && video) {
-          button.addEventListener('click', event => {
-            event.stopPropagation();
+        const videoURL = button.getAttribute('data-video-url');
+        const videoTitle = button.getAttribute('data-video-title');
 
-            if (video && video.paused) {
-              cell.element.classList.add('playing');
-              video.setAttribute('controls', true);
-              video.play();
-            }
+        if (button && videoModal && videoURL && videoTitle) {
+          // Add a click handler for the play button which overlays each
+          // video background image and title.
+          button.addEventListener('click', () => {
+            // Update modal data attributes relavent to the new video.
+            videoModal.setAttribute('data-iframe-src', videoURL);
+            videoModal.setAttribute('aria-label', videoTitle);
           });
         }
       })
-
-      // Flickity on 'change' event
-      // -----------------------------------------------------------------------
-
-      element.Slider.on('change', () => {
-        element.Slider.cells.forEach(cell => {
-          const video = cell.element.querySelector('video');
-
-          if (video && !video.paused) {
-            cell.element.classList.remove('playing');
-            video.removeAttribute('controls');
-            video.pause();
-          }
-        });
-      });
     }
   });
 }

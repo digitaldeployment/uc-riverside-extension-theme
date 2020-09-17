@@ -1,0 +1,19 @@
+// =============================================================================
+// Modal
+// =============================================================================
+
+.modal {
+  .button__close {
+    position: fixed;
+    z-index: 10;
+    top: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    color: white;
+  
+    &:hover,
+    &:focus {
+      background-color: rgba(white, 0.3);
+    }
+  }
+}
