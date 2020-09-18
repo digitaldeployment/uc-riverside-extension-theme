@@ -42,7 +42,6 @@
 // -----------------------------------------------------------------------------
 
 @import '~@ttskch/select2-bootstrap4-theme/src/layout';
-// @import '~@ttskch/select2-bootstrap4-theme/dist/select2-bootstrap4';
 
 // Customized for this theme specifically
 // -----------------------------------------------------------------------------
@@ -50,6 +49,12 @@
 .select2-container {
   .select2-selection {
     padding: 1rem;
+  }
+
+  &.select2-container--focus.select2-container--open {
+    .select2-selection {
+      border-bottom: 1px solid transparent;
+    }
   }
 
   .select2-search--inline .select2-search__field {
