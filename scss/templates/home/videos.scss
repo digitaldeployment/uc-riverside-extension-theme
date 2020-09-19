@@ -33,7 +33,12 @@ section.videos {
   
   .slide {
     position: relative;
+    z-index: 1;
     width: 100%;
+
+    &.is-selected {
+      z-index: 2;
+    }
 
     &:before {
       content: '';
@@ -180,6 +185,7 @@ section.videos {
     }
 
     .group {
+      z-index: 1;
       top: 0;
       bottom: 0;
       display: flex;
@@ -188,6 +194,10 @@ section.videos {
       width: 100%;
       text-align: center;
       transition: opacity 0.25s, visibility 0.5s;
+
+      &.is-selected {
+        z-index: 2;
+      }
 
       &:not(.is-selected) {
         visibility: hidden;
