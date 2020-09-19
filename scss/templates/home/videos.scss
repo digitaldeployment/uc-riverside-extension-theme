@@ -36,6 +36,10 @@ section.videos {
     z-index: 1;
     width: 100%;
 
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 105%;
+    }
+
     &.is-selected {
       z-index: 2;
     }
@@ -108,6 +112,14 @@ section.videos {
     img {
       width: 100%;
       max-width: none;
+
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 195%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     .heading {
