@@ -18,6 +18,10 @@
     @include media-breakpoint-up(lg) {
       padding: rem-calc(0 60 120 120);
     }
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 4.25rem;
+    }
   }
 
   // Toolbar
@@ -42,6 +46,10 @@
 
     @include media-breakpoint-up(lg) {
       height: map-get($header-toolbar-height , 'lg');
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 8.125rem;
     }
 
     &:hover,
