@@ -7,7 +7,9 @@ section.choices {
   z-index: 3;
 
   .nav {
-    @include media-breakpoint-down(md) {
+    margin-top: -4vw;
+
+    @include media-breakpoint-up(md) {
       margin-top: -2vw;
     }
 
@@ -55,8 +57,12 @@ section.choices {
       bottom: -1px;
       opacity: 0.85;
       transition: opacity 0.3s ease-out;
-      transform: skewY(-2deg);
-      
+      transform: skewY(-5deg);
+
+      @include media-breakpoint-up(md) {
+        transform: skewY(-2deg);
+      }
+
       @include media-breakpoint-up(lg) {
         transform: none;
       }
@@ -103,9 +109,13 @@ section.choices {
     left: 0;
     right: 0;
     bottom: 0;
-    transform: skewY(-2deg);
+    transform: skewY(-5deg);
     background-position: 50% 50%;
     background-size: cover;
+
+    @include media-breakpoint-up(md) {
+      transform: skewY(-2deg);
+    }
 
     @include media-breakpoint-up(lg) {
       left: -2.5vw;
