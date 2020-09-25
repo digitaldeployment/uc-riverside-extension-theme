@@ -78,6 +78,11 @@ section.experiences {
     }
 
     @include media-breakpoint-up(lg) {
+      width: calc(35vw - 8rem);
+      margin: 0 4rem;
+    }
+
+    @include media-breakpoint-up(xl) {
       width: calc(35vw - 8.8rem);
       margin: 0 4.4rem;
     }
@@ -99,11 +104,15 @@ section.experiences {
   // ---------------------------------------------------------------------------
 
   .flickity-prev-next-button {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: white;
 
     @include media-breakpoint-down(md) {
       display: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+      font-size: 3.5rem;
     }
 
     &.previous {
