@@ -58,6 +58,7 @@
   }
 
   .select2-search--inline .select2-search__field {
+    margin-top: rem-calc(5);
     letter-spacing: 0.02em;
     font-style: italic;
     color: $dark;
@@ -72,7 +73,7 @@
     color: $primary;
 
     &.select2-dropdown--below {
-      border-top: 5px solid $tertiary;
+      border-top: rem-calc(5) solid $tertiary;
     }
 
     .select2-results__group {
@@ -80,7 +81,7 @@
       font-weight: normal;
       text-transform: uppercase;
       letter-spacing: 0.025em;
-      font-size: 18px;
+      font-size: rem-calc(18);
       padding: 1rem;
       color: $dark;
     }

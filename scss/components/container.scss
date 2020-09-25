@@ -2,13 +2,9 @@
 // Bootstrap :: Custom Container Options
 // =============================================================================
 
-$container-max: 1920px !default;
-
 // Allows the container to maintain gutters while maximizing the width of the
 // container.
 .container-max {
-  box-sizing: content-box;
-  max-width: $container-max;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10vw; // 10% of the screen width eg. 37.5px@375px 

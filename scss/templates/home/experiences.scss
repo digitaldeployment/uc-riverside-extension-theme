@@ -18,8 +18,7 @@ section.experiences {
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 7.5rem 0 rem-calc(80);
-    background-position: 85% 50%;
+    background-position: 85% 65%;
     background-size: cover;
   }
 
@@ -36,14 +35,15 @@ section.experiences {
 
     @include media-breakpoint-up(lg) {
       max-width: none;
-      margin-bottom: rem-calc(96);
+      margin-bottom: 4.5rem;
+      font-size: rem-calc(69);
     }
 
     &:after {
       content: '';
       display: block;
-      margin: 2rem auto;
-      width: 120px;
+      margin: 1rem auto;
+      width: rem-calc(92);
       height: 5px;
       background-color: white;
     }
@@ -78,8 +78,8 @@ section.experiences {
     }
 
     @include media-breakpoint-up(lg) {
-      width: 25vw;
-      margin: 0 rem-calc(64);
+      width: calc(35vw - 8.8rem);
+      margin: 0 4.4rem;
     }
 
     img {
@@ -99,7 +99,7 @@ section.experiences {
   // ---------------------------------------------------------------------------
 
   .flickity-prev-next-button {
-    font-size: rem-calc(48);
+    font-size: 3.5rem;
     color: white;
 
     @include media-breakpoint-down(md) {
@@ -107,12 +107,12 @@ section.experiences {
     }
 
     &.previous {
-      left: calc(50vw - (12.5vw + #{rem-calc(64)}));
+      left: calc(50vw - 17.5vw);
       margin-left: -0.5em;
     }
 
     &.next {
-      right: calc(50vw - (12.5vw + #{rem-calc(64)}));
+      right: calc(50vw - 17.5vw);
       margin-right: -0.5em;
     }
   }
@@ -158,7 +158,7 @@ section.experiences {
   // ---------------------------------------------------------------------------
 
   .btn-more {
-    font-size: rem-calc(25);
+    font-size: rem-calc(19);
 
     @include media-breakpoint-up(lg) {
       padding-left: 0;

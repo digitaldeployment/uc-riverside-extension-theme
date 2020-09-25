@@ -15,6 +15,16 @@ section.programs {
     padding: 7.5rem 0;
   }
 
+  // Container max
+  // ---------------------------------------------------------------------------
+
+  .container-max {
+    @include media-breakpoint-up(lg) {
+      padding-left: 9.635vw;
+      padding-right: 9.635vw;
+    }
+  }
+
   // Section Heading
   // ---------------------------------------------------------------------------
 
@@ -26,14 +36,15 @@ section.programs {
     color: $primary;
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 6rem;
+      margin-bottom: 3.5rem;
+      font-size: rem-calc(69);
     }
 
     &:after {
       content: '';
       display: block;
       margin: 2rem auto;
-      width: 120px;
+      width: rem-calc(92);
       height: 5px;
       background-color: $tertiary;
     }
@@ -94,23 +105,26 @@ section.programs {
 
     .nav-link {
       width: percentage(1/5);
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
     }
 
     img {
-      width: auto;
-      height: 100px;
-      margin-bottom: 2rem;
+      width: 130px;
+      height: auto;
+      margin-bottom: 14px;
       transition: transform 0.1s ease-out;
     }
 
     .heading {
+      max-width: 200px;
+      margin-left: auto;
+      margin-right: auto;
       line-height: 1.4;
       letter-spacing: 0.025em;
       text-transform: uppercase;
       font-family: $font-family-heading;
       font-weight: normal;
-      font-size: 18px;
+      font-size: 21px;
       color: $dark;
     }
 

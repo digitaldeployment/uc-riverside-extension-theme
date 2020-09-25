@@ -68,7 +68,7 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      font-size: 64px;
+      font-size: rem-calc(64);
     }
 
     .word {
@@ -89,7 +89,7 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      font-size: 20px;
+      font-size: rem-calc(20);
     }
   }
 
@@ -108,14 +108,14 @@
     button {
       position: absolute;
       z-index: 2;
-      right: 4px;
-      bottom: 4px;
-      width: 60px;
-      height: 60px;
+      right: rem-calc(4);
+      bottom: rem-calc(4);
+      width: rem-calc(60);
+      height: rem-calc(60);
       line-height: 1;
 
       svg {
-        margin-top: -3px;
+        margin-top: rem-calc(-3);
         transition: transform 0.2s ease-in-out;
       }
 

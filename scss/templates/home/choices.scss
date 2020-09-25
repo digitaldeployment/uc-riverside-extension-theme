@@ -78,14 +78,14 @@ section.choices {
     top: 0;
     left: 0;
     right: 0;
-    padding: 60px 36px;
+    padding: rem-calc(60 36);
     letter-spacing: 0.02em;
     font-weight: 500;
-    font-size: 28px;
+    font-size: rem-calc(28);
     color: white;
 
     @include media-breakpoint-up(lg) {
-      padding: 60px;
+      padding: rem-calc(60);
       transform: skewX(7deg);
     }
 
@@ -93,7 +93,7 @@ section.choices {
       content: '';
       display: block;
       margin-top: 0.65em;
-      width: 70px;
+      width: rem-calc(70);
       height: 5px;
       transition: width 0.3s $easeOutBack;
       background: $tertiary;
@@ -161,7 +161,7 @@ section.choices {
       }
 
       .heading:after {
-        width: 105px;
+        width: rem-calc(105);
       }
     }
   }

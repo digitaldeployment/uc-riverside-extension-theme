@@ -33,6 +33,11 @@
   .container-max {
     position: relative;
     z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 7.5vw;
+      padding-right: 7.5vw;
+    }
   }
 
   // Section heading
@@ -46,13 +51,13 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      font-size: rem-calc(30);
+      font-size: rem-calc(24);
     }
 
     &:after {
       content: '';
       display: block;
-      width: 100px;
+      width: rem-calc(76);
       height: 5px;
       margin: 1.2rem 0 2rem;
       background-color: $tertiary;
@@ -120,14 +125,20 @@
 
     .heading {
       margin: 1em 0;
-      font-size: rem-calc(30);
+      font-weight: normal;
+      font-size: 30px;
       color: inherit;
+
+      @include media-breakpoint-up(lg) {
+        margin: 0.35em 0;
+        font-size: rem-calc(42);
+      }
     }
 
     .subheading {
-      line-height: (30/18);
+      line-height: 1.45;
       letter-spacing: 0.02em;
-      font-size: rem-calc(18);
+      font-size: rem-calc(19);
       font-weight: 300;
       color: white;
     }
@@ -171,7 +182,8 @@
       color: $tertiary;
 
       @include media-breakpoint-up(xl) {
-        font-size: rem-calc(90);
+        margin-right: 0.35em;
+        font-size: 5rem;
       }
     }
 
@@ -187,7 +199,7 @@
       }
 
       @include media-breakpoint-up(xl) {
-        font-size: rem-calc(21);
+        font-size: rem-calc(23);
       }
     }
   }
