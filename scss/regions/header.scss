@@ -18,6 +18,10 @@
   @include media-breakpoint-up(lg) {
     height: 114px;
   }
+
+  @include media-breakpoint-up(xl) {
+    height: 8.125rem;
+  }
 }
 
 // Branding Logo
@@ -32,7 +36,7 @@
   margin-right: auto;
 
   @include media-breakpoint-up(lg) {
-    margin-left: 12.5vw;
+    margin-left: 7.5vw;
   }
 
   img {
@@ -46,6 +50,10 @@
 
     @include media-breakpoint-up(lg) {
       height: 90px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      height: 6rem;
     }
   }
 }
@@ -109,6 +117,10 @@
 
   @include media-breakpoint-up(lg) {
     width: 140px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    width: 9.65rem;
   }
 }
 
