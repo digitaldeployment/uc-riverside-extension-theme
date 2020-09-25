@@ -10,6 +10,11 @@
 
   .container-max {
     max-width: none;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 7.5vw;
+      padding-right: 7.5vw;
+    }
   }
 
   // Shaded Image
@@ -61,6 +66,7 @@
   // ---------------------------------------------------------------------------
 
   .heading {
+    margin-bottom: 1.3rem;
     text-shadow: 0 3px 6px rgba(black, 0.35);
     text-transform: uppercase;
     font-family: $font-family-heading;
@@ -68,7 +74,7 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      font-size: rem-calc(64);
+      font-size: rem-calc(69);
     }
 
     .word {
@@ -89,7 +95,7 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      font-size: rem-calc(20);
+      font-size: rem-calc(19);
     }
   }
 
@@ -99,11 +105,15 @@
   form.get-started-here {
     position: relative;
     margin-top: 1.5rem;
-    max-width: rem-calc(525);
+    max-width: 34.5rem;
     border-radius: $border-radius;
     background-color: white;
     transition: 0.5s ease-out;
     opacity: 0;
+
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 2.4rem;
+    }
 
     button {
       position: absolute;
