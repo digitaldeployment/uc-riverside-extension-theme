@@ -2,6 +2,18 @@
 // Global Elements
 // =============================================================================
 
+html {
+  font-size: 16px;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 1.11111vw;
+  }
+
+  @include media-breakpoint-up(max) {
+    font-size: 21px;
+  }
+}
+
 body {
   overflow-x: hidden;
 }
