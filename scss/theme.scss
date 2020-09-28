@@ -18,16 +18,19 @@
 @import 'mixins/buttons';
 @import 'mixins/layout';
 
+// Globals
+@import 'global/typography';
+@import 'global/elements';
+@import 'global/container';
+
 // Flickity
 @import 'third-party/flickity';
 
 // Select2 Theme
 @import 'third-party/select2';
 
-// Globals
-@import 'global/typography';
-@import 'global/elements';
-@import 'global/container';
+// Collapsible
+@import '~fg-collapsible/src/collapsible.css';
 
 // Components
 @import 'components/container';

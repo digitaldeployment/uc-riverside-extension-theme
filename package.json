@@ -17,6 +17,7 @@
     "@ttskch/select2-bootstrap4-theme": "^1.4.0",
     "array-shuffle": "^1.0.1",
     "bootstrap": "^4.5.0",
+    "fg-collapsible": "^0.14.0",
     "flickity": "^2.2.1",
     "flickity-fade": "^1.0.0",
     "jquery": "^3.5.1",

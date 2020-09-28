@@ -2,6 +2,9 @@ import 'jquery'
 import 'select2'
 import 'popper.js'
 import 'bootstrap'
+import 'fg-collapsible/src/collapsible'
+import 'fg-collapsible/src/collapsible.set'
+import 'fg-collapsible/src/collapsible.tab'
 import Flyout from '../components/Flyout'
 import MainNavigation from '../navigation/MainNavigation'
 
@@ -17,4 +20,12 @@ export default () => {
       menuElement: element,
     });
   });
+
+  // Collapsible powered accordions
+  // ---------------------------------------------------------------------------
+  $('.accordions .collapsible').collapsible();
+
+  // Collapsible powered tabs
+  // ---------------------------------------------------------------------------
+  $('.tabs .collapsible').collapsible();
 }
