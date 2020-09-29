@@ -94,14 +94,20 @@ $container-max-widths: (
 $font-family-base: 'Fira Sans', sans-serif;
 $font-family-heading: 'Oswald', sans-serif;
 
-$font-size-base: 1rem;
+$font-size-base:              1rem;
+$line-height-base:            1.67;
 
-$h1-font-size: $font-size-base * (50/$font-size-base);
-$h2-font-size: $font-size-base * (36/$font-size-base);
-$h3-font-size: $font-size-base * (24/$font-size-base);
-$h4-font-size: $font-size-base * (21/$font-size-base);
-$h5-font-size: $font-size-base * (18/$font-size-base);
+$h1-font-size: $font-size-base * (68/$font-size-base);
+$h2-font-size: $font-size-base * (40/$font-size-base);
+$h3-font-size: $font-size-base * (30/$font-size-base);
+$h4-font-size: $font-size-base * (22/$font-size-base);
+$h5-font-size: $font-size-base * (20/$font-size-base);
 $h6-font-size: $font-size-base;
+
+$headings-margin-bottom:      0.75rem;
+$headings-font-weight:        normal;
+$headings-line-height:        1.5;
+
 
 // Sizing with .h-* and .w-* classes.
 // -----------------------------------------------------------------------------
