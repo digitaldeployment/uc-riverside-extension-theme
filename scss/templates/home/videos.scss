@@ -128,7 +128,7 @@ section.videos {
         top: 50%;
         left: 50%;
         width: 195%;
-        transform: translate3D(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
       }
     }
 
@@ -252,13 +252,13 @@ section.videos {
         width: 185%;
         max-width: none;
         transition: 0.25s ease-in;
-        transform: translate3D(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
       }
 
       &:hover {
         img {
           filter: brightness(120%);
-          transform: translate3D(-50%, -50%, 0) scale(1.05);
+          transform: translate3d(-50%, -50%, 0) scale(1.05);
         }
       }
 
