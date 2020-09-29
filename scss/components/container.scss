@@ -1,17 +1,25 @@
 // =============================================================================
-// Bootstrap :: Custom Container Options
+// Containers
 // =============================================================================
 
-// Allows the container to maintain gutters while maximizing the width of the
-// container.
-.container-max {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10vw; // 10% of the screen width eg. 37.5px@375px 
-  padding-right: 10vw; // 10% of the screen width eg. 76.8px@768px
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @include media-breakpoint-up(sm) {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
 
   @include media-breakpoint-up(lg) {
-    padding-left: 12.5vw; // 12.5% of the screen width eg. 180px@1440px
-    padding-right: 12.5vw; // 12.5% of the screen width eg. 240px@1920px
+    padding-left: 7.5vw;
+    padding-right: 7.5vw;
+  }
+
+  @include media-breakpoint-up(max) {
+    padding-left: 144px;
+    padding-right: 144px;
   }
 }
