@@ -7,7 +7,7 @@ section.choices {
   z-index: 3;
 
   .nav {
-    margin-top: -4vw;
+    margin-top: -5vw;
 
     @include media-breakpoint-up(md) {
       margin-top: -2vw;
@@ -38,11 +38,11 @@ section.choices {
     padding: 0;
     min-height: 265px;
     max-height: 750px;
-    background-color: #bfbfbf;
-
+    
     @include media-breakpoint-up(lg) {
       overflow: hidden;
       height: 40vw;
+      background-color: #bfbfbf;
     }
 
     // Color overlay
