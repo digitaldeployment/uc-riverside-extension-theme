@@ -10,7 +10,7 @@
   // Container
   // ---------------------------------------------------------------------------
 
-  .container {
+  .container-max {
     @include media-breakpoint-down(md) {
       padding-left: 0;
       padding-right: 0;
