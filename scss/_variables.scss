@@ -158,3 +158,17 @@ $modal-sm:                          map-get($container-max-widths, 'sm');
 $modal-md:                          map-get($container-max-widths, 'md');
 $modal-lg:                          map-get($container-max-widths, 'lg');
 $modal-xl:                          map-get($container-max-widths, 'xl');
+
+// Breadcrumbs
+// -----------------------------------------------------------------------------
+
+$breadcrumb-font-size:              14px;
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           0.5rem;
+$breadcrumb-margin-bottom:          4.375rem;
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider-color:          inherit;
+$breadcrumb-active-color:           $primary;
+$breadcrumb-divider:                quote("/");
+$breadcrumb-border-radius:          none;
