@@ -38,6 +38,7 @@
 
     &:hover,
     &:focus {
+      text-decoration: underline;
       color: $tertiary;
     }
   }
