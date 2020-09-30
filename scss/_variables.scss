@@ -88,6 +88,16 @@ $container-max-widths: (
 // $grid-gutter-width: 30px;
 // $grid-row-columns:  6;
 
+// Custom Max Container offsets
+// -----------------------------------------------------------------------------
+
+$container-max-offsets: (
+  xs: 2rem,
+  sm: 10vw,
+  lg: 7.5vw,
+  xl: 144px,
+);
+
 // Typography
 // -----------------------------------------------------------------------------
 
