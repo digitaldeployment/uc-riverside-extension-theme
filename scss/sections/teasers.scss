@@ -1,0 +1,45 @@
+// =============================================================================
+// General Teasers
+// =============================================================================
+
+.section__teasers {
+  .teaser {
+    overflow: hidden;
+    padding-top: rem-calc(32);
+    border-top: 1px solid #b5b5b5;
+    margin-bottom: rem-calc(45);
+
+    // Teaer image
+    // -------------------------------------------------------------------------
+
+    .teaser-image {
+      @include media-breakpoint-up(lg) {
+        float: left;
+        max-width: 35%;
+        margin-top: rem-calc(10);
+        margin-right: rem-calc(24);
+        margin-bottom: rem-calc(16);
+      }
+    }
+
+    // Teaer heading / subheading
+    // -------------------------------------------------------------------------
+
+    .heading {
+      color: inherit;
+
+      a {
+        color: inherit;
+      }
+
+      a:hover,
+      a:focus {
+        color: $secondary;
+      }
+    }
+
+    // Teaer heading / subheading
+    // -------------------------------------------------------------------------
+
+  }
+}

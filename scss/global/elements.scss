@@ -31,6 +31,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
+  margin-bottom: 1rem;
   line-height: 1.3;
   letter-spacing: 0.025em;
   font-family: $font-family-heading;
@@ -58,4 +59,9 @@ h6, .h6 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.readmore {
+  letter-spacing: 0.02em;
+  font-weight: 500;
 }
