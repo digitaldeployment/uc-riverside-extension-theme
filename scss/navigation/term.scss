@@ -4,17 +4,16 @@
 
 .term-navigation {
   @include media-breakpoint-down(sm) {
-    margin: 0 -#{map-get($container-max-offsets, 'xs')} 2rem;
+    margin: 0 -#{map-get($container-max-offsets, 'xs')};
   }
   
   @include media-breakpoint-down(md) {
-    margin: 0 -#{map-get($container-max-offsets, 'sm')} 2rem;
+    margin: 0 -#{map-get($container-max-offsets, 'sm')};
     background-color: $primary;
   }
 
   @include media-breakpoint-up(lg) {
-    margin-left: 0;
-    margin-right: 0;
+    margin: rem-calc(0 0 45);
   }
 
   // Toggle Button/Link

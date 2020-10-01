@@ -1,0 +1,70 @@
+// =============================================================================
+// Page
+// =============================================================================
+
+.page-main {
+  & > .container-max {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+}
+
+.page-center,
+.page-sidebar {
+  margin-bottom: rem-calc(48);
+
+  @include media-breakpoint-up(lg) {
+    margin-top: rem-calc(150);
+  }
+}
+
+.page-center {
+  flex-grow: 1;
+
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+}
+
+.page-sidebar {
+  @include media-breakpoint-up(lg) {
+    width: 25%;
+  }
+}
+
+.page-sidebar-inner {
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: rem-calc(map-get($header-height, 'lg') + 45);
+  }
+
+  @include media-breakpoint-up(xl) {
+    top: rem-calc(map-get($header-height, 'xl') + 45);
+  }
+}
+
+.page-sidebar--left {
+  @include media-breakpoint-down(md) {
+    margin-bottom: 2rem;
+    order: -1;
+  }
+
+  .page-sidebar-inner {
+    @include media-breakpoint-up(lg) {
+      margin-right: rem-calc(45);
+    }
+  }
+}
+
+.page-sidebar--right {
+  .page-sidebar-inner {
+    @include media-breakpoint-up(lg) {
+      margin-left: rem-calc(45);
+    }
+  }
+}
