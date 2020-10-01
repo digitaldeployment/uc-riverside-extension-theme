@@ -3,5 +3,13 @@
 // =============================================================================
 
 .section__overview {
-  margin-bottom: rem-calc(45);
+  margin-bottom: rem-calc(30);
+
+  .overview-heading {
+    margin-bottom: rem-calc(20);
+  }
+  
+  .heading {
+    margin-top: -0.15em;
+  }
 }
