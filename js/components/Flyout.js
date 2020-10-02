@@ -1,3 +1,5 @@
+import Keyboard from 'keyboard-key'
+
 export default class Flyout {
   constructor() {
     this.listen();
@@ -13,8 +15,9 @@ export default class Flyout {
     });
   }
 
-  keydownHandler({ key }) {
-    if (key === 'Escape' && this.isExpanded) {
+  keydownHandler(event) {
+    const keyCode = Keyboard.getCode(event);
+    if (keyCode === Keyboard.Escape && this.isExpanded) {
       this.toggleClickHandler();
     }
   }
