@@ -4,7 +4,12 @@
 
 section.choices {
   position: relative;
+  margin-bottom: -2rem;
   z-index: 3;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
 
   .nav {
     margin-top: -5vw;
@@ -82,7 +87,7 @@ section.choices {
     padding: rem-calc(60 36);
     letter-spacing: 0.02em;
     font-family: $font-family-base;
-    font-weight: 500;
+    font-weight: normal;
     font-size: rem-calc(28);
     color: white;
 
