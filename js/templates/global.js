@@ -5,6 +5,7 @@ import 'bootstrap'
 import 'fg-collapsible/src/collapsible'
 import 'fg-collapsible/src/collapsible.set'
 import 'fg-collapsible/src/collapsible.tab'
+import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
@@ -37,4 +38,12 @@ export default () => {
   // Collapsible powered tabs
   // ---------------------------------------------------------------------------
   $('.tabs .collapsible').collapsible();
+  
+  // Sticky sidebars
+  // ---------------------------------------------------------------------------
+  document.querySelectorAll('.page-sidebar-inner').forEach((element) => {
+    if (!element.Sticky) {
+      element.Sticky = new Sticky(element);
+    }
+  });
 }

@@ -38,7 +38,7 @@
   }
 }
 
-.page-sidebar-inner {
+.page-sidebar-inner.sticky {
   @include media-breakpoint-up(lg) {
     position: sticky;
     top: rem-calc(map-get($header-height, 'lg') + 45);
