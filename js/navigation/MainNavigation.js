@@ -1,4 +1,12 @@
-import Navigation from './Navigation';
+import Navigation from '../components/Navigation';
+
+const settings = {
+  menuBlock: 'main-navigation',
+  expandActiveMenus: true,
+  closeUnnestedMenus: false,
+  focusout: false,
+  hover: false,
+};
 
 export default class MainNavigation {
   constructor(element) {
@@ -10,9 +18,7 @@ export default class MainNavigation {
   }
 
   addNavigationLogic() {
-    return new Navigation({
-      menuElement: this.menu,
-    });
+    return new Navigation(this.menu, settings);
   }
   
   get menu() {

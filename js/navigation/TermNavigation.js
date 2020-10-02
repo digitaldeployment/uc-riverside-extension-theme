@@ -1,9 +1,18 @@
-import Navigation from './Navigation';
+import Navigation from '../components/Navigation';
+import Keyboard from 'keyboard-key'
 
 const components = {
   menu: '#term-navigation-menu',
   button: '.term-navigation-toggle__button',
   buttonLink: '.term-navigation-toggle__link',
+};
+
+const settings = {
+  menuBlock: 'term-navigation',
+  expandActiveMenus: true,
+  closeUnnestedMenus: false,
+  focusout: false,
+  hover: false,
 };
 
 export default class TermNavigation {
@@ -12,7 +21,7 @@ export default class TermNavigation {
     this.open = false;
 
     if (this.menu) {
-      this.addLogic();
+      this.Navigation = this.addLogic();
       this.listen();
     }
 
@@ -21,27 +30,36 @@ export default class TermNavigation {
 
   // Enhance the term navigation with the standardized, accessible, menu.
   addLogic() {
-    return new Navigation({ menuElement: this.menu });
+    return new Navigation(this.menu, settings);
   }
 
   // We want to control the mobile dropdown but let the desktop link go thru.
   clickHandler() {
-    if (this.open) {
-      this.open = false;
-      this.button.setAttribute('aria-expanded', false);
-      this.element.classList.remove('term-navigation-menu--expanded');
-      this.menu.setAttribute('aria-hidden', true);
-    } else {
-      this.open = true;
-      this.button.setAttribute('aria-expanded', true);
-      this.element.classList.add('term-navigation-menu--expanded');
-      this.menu.setAttribute('aria-hidden', false);
-      this.buttonLink.focus();
+    if (this.Navigation.mobileState) {
+      if (this.open) {
+        this.open = false;
+        this.button.setAttribute('aria-expanded', false);
+        this.element.classList.remove('term-navigation-menu--expanded');
+        this.menu.setAttribute('aria-hidden', true);
+      } else {
+        this.open = true;
+        this.button.setAttribute('aria-expanded', true);
+        this.element.classList.add('term-navigation-menu--expanded');
+        this.menu.setAttribute('aria-hidden', false);
+        this.buttonLink.focus();
+      }
     }
   }
 
-  keydownHandler({ key }) {
-    if (key === 'Escape' && this.open) {
+  // keydownHandler({ key }) {
+  //   if (key === 'Escape' && this.open) {
+  //     this.clickHandler();
+  //   }
+  // }
+
+  keydownHandler(event) {
+    const keyCode = Keyboard.getCode(event);
+    if (keyCode === Keyboard.Escape && this.open) {
       this.clickHandler();
     }
   }
@@ -49,7 +67,7 @@ export default class TermNavigation {
   listen() {
     // Add a click handler to control the mobile dropdown menu
     this.button.addEventListener('click', this.clickHandler.bind(this));
-    this.element.addEventListener('keydown', this.keydownHandler.bind(this));
+    window.addEventListener('keydown', this.keydownHandler.bind(this));
   }
 
   ready() {
