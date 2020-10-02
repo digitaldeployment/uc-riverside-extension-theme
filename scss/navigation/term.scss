@@ -210,8 +210,10 @@
     }
 
     svg {
+      display: block;
       border: 1px solid white;
       border-radius: 100%;
+      line-height: 1;
       fill: white;
 
       @include media-breakpoint-down(md) {
@@ -223,10 +225,12 @@
       }
 
       @include media-breakpoint-up(lg) {
-        width: 1em;
-        height: 1em;
-        border: none;
+        width: rem-calc(12);
+        height: rem-calc(12);
+        font-size: rem-calc(12);
         fill: currentColor;
+        line-height: 1;
+        border: none;
 
         &.icon-plus {
           display: none;
