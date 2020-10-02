@@ -61,13 +61,14 @@ export default class Navigation {
 
       // Link
       const link = element.firstElementChild;
-      link.setAttribute('aria-label', `${link.innerText}, tab to the next button to expand the submenu`);
+      link.setAttribute('aria-label', `${link.textContent}, tab to the next button to expand the submenu`);
       link.setAttribute('aria-haspopup', true);
       link.setAttribute('aria-controls', id);
 
       // Toggle button
       const button = link.nextSibling;
       button.classList.add(this.components.button);
+      button.setAttribute('aria-label', `Toggle the submenu`);
       button.setAttribute('aria-haspopup', true);
       button.setAttribute('aria-controls', id);
 
@@ -103,9 +104,14 @@ export default class Navigation {
   // Update submenu display based on user interaction.
 
   userInteractionHandler(event) {
+    // Grab closest list item to the target.
     const parentNode = event.target.closest('li');
-    if (!parentNode) return;
 
+    // Cancel if a parentNode list item isn't found or
+    // if the target was a hyperlink tag.
+    if (!parentNode || event.target.tagName === 'A') return;
+
+    // Grab reference to the assigned button and submenu of this list item.
     const { button, submenu } = parentNode;
 
     // If there isn't a submenu and button, quit.
