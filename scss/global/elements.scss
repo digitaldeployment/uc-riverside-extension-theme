@@ -61,7 +61,27 @@ img {
   height: auto;
 }
 
+// Readmore
+// -----------------------------------------------------------------------------
+
 .readmore {
+  position: relative;
+  text-decoration: underline;
   letter-spacing: 0.02em;
   font-weight: 500;
+
+  &:after {
+    content: '\2192';
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+    opacity: 0;
+  }
+
+  &:focus,
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: translateX(0.3em);
+    }
+  }
 }
