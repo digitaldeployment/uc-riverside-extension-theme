@@ -4,7 +4,7 @@
 
 .page__footer {
   @include media-breakpoint-up(lg) {
-    background-image: linear-gradient(to right, $primary 50%, white 50%);
+    background-image: linear-gradient(to right, $primary 50%, #eaeaea 50%);
   }
 
   // Container
@@ -206,7 +206,7 @@
   // ---------------------------------------------------------------------------
 
   .secondary-section {
-    background-color: white;
+    background-color: #eaeaea;
     color: $dark;
 
     @include media-breakpoint-up(lg) {
@@ -278,7 +278,7 @@
     .form-control {
       border: none;
       font-weight: 300;
-      background-color: #eaeaea;
+      background-color: white;
     }
 
     .btn {
@@ -323,6 +323,23 @@
 
     svg {
       fill: currentColor;
+    }
+  }
+
+  // Light Mode
+  // ---------------------------------------------------------------------------
+
+  .footer--light & {
+    @include media-breakpoint-up(lg) {
+      background-image: linear-gradient(to right, $primary 50%, white 50%);
+    }
+  
+    .secondary-section {
+      background-color: white;
+    }
+  
+    .signup-form .form-control {
+      background-color: #eaeaea;
     }
   }
 }
