@@ -1,0 +1,40 @@
+// =============================================================================
+// Teaser
+// =============================================================================
+
+.teaser {
+  overflow: hidden;
+  padding-top: rem-calc(25);
+  border-top: 1px solid #b5b5b5;
+  margin-bottom: rem-calc(25);
+
+  // Teaer image
+  // -------------------------------------------------------------------------
+
+  .teaser-image {
+    margin-bottom: rem-calc(16);
+
+    @include media-breakpoint-up(lg) {
+      float: left;
+      max-width: 35%;
+      margin-top: rem-calc(8);
+      margin-right: rem-calc(24);
+    }
+  }
+
+  // Teaer heading / subheading
+  // -------------------------------------------------------------------------
+
+  .heading {
+    color: inherit;
+
+    a {
+      color: inherit;
+    }
+
+    a:hover,
+    a:focus {
+      color: $secondary;
+    }
+  }
+}
