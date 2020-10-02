@@ -2,104 +2,44 @@
 // Pods Section
 // =============================================================================
 
-.pod {
-  display: block;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: rem-calc(20);
-  transition: 0.2s ease-out;
-  color: white;
-
-  &:hover,
-  &:focus {
-    outline: 5px solid $tertiary;
-    text-decoration: none;
-    color: white;
+@mixin pod-columns($columns: 2, $gap: 10) {
+  .pods {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 rem-calc(-$gap);
   }
 
-  // Heading
+  .pod {
+    width: calc(#{percentage(1/$columns)} - #{rem-calc($gap * 2)});
+    margin-left: rem-calc($gap);
+    margin-right: rem-calc($gap);
+  }
+}
+
+.section__pods {
+  // Pods appearing within the right sidebar on larger displays.
   // ---------------------------------------------------------------------------
 
-  .pod-heading {
-    position: relative;
-    z-index: 2;
-    padding: rem-calc(20 20 24);
-    transition: 0.2s ease-out;
-    background-color: $primary;
-  }
-
-  &:hover,
-  &:focus {
-    .pod-heading {
-      transform: translate3d(0, -1em, 0);
+  &.pods-right {
+    @include media-breakpoint-between(sm, md) {
+      @include pod-columns(2, 10);
     }
-  }
-  
-  .heading {
-    padding-top: rem-calc(40);
-    font-family: $font-family-base;
-    letter-spacing: 0.02em;
-    line-height: 1.2;
-  }
 
-  // Offset heading
-  // -------------------------------------------------------------------------
-
-  .pod-image + .pod-heading .heading {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 100%;
-    margin-bottom: 0;
-    padding-left: rem-calc(20);
-    padding-right: rem-calc(20);
-  }
-
-  .subheading {
-    position: relative;
-    margin-bottom: 0;
-    padding-top: rem-calc(8);
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    font-size: rem-calc(14);
-
-    // Orange Separator
-    // -------------------------------------------------------------------------
-
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      top: rem-calc(-8);
-      left: 0;
-      height: 5px;
-      width: rem-calc(45);
-      background: $tertiary;
+    @include media-breakpoint-only(md) {
+      @include pod-columns(3, 10);
     }
   }
 
-  // Odd/Even color scheme
-  // -------------------------------------------------------------------------
+  // Pods appearing below the main/center content on larger displays.
+  // ---------------------------------------------------------------------------
 
-  &:nth-child(odd) {
-    &,
-    .pod-heading {
-      background-color: $primary;
+  &.pods-below {
+    @include media-breakpoint-up(sm) {
+      @include pod-columns(3, 10);
     }
 
-    .pod-image + .pod-heading .heading {
-      background-image: linear-gradient(to top, $primary, rgba($primary, 0));
-    }
-  }
-
-  &:nth-child(even) {
-    &,
-    .pod-heading {
-      background-color: $secondary;
-    }
-
-    .pod-image + .pod-heading .heading {
-      background-image: linear-gradient(to top, $secondary, rgba($secondary, 0));
+    @include media-breakpoint-up(lg) {
+      @include pod-columns(3, 21);
     }
   }
 }

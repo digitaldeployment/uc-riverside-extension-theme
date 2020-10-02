@@ -1,0 +1,115 @@
+// =============================================================================
+// Pod
+// =============================================================================
+
+.pod {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: rem-calc(20);
+  transition: 0.2s ease-out;
+  color: white;
+  
+  &.no-image {
+    background: url('https://images.prismic.io/ucriverside/a95706a3-ee7d-4516-b185-bd1c84d23a70_pod-bg.png?auto=compress,format') repeat-y center 20px transparent;
+  }
+
+  &:hover,
+  &:focus {
+    outline-offset: 0;
+    outline: 5px solid $tertiary;
+    text-decoration: none;
+    color: white;
+  }
+
+  // Heading
+  // ---------------------------------------------------------------------------
+
+  .pod-heading {
+    position: relative;
+    z-index: 2;
+    padding: rem-calc(20 20 24);
+    transition: 0.2s ease-out;
+  }
+
+  &:hover,
+  &:focus {
+    .pod-heading {
+      transform: translate3d(0, -1rem, 0);
+    }
+  }
+  
+  .heading {
+    padding-top: rem-calc(40);
+    font-family: $font-family-base;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  // Offset heading
+  // -------------------------------------------------------------------------
+
+  .pod-image + .pod-heading .heading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 0;
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(20);
+  }
+
+  .subheading {
+    position: relative;
+    margin-bottom: 0;
+    padding-top: rem-calc(8);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    font-size: rem-calc(14);
+
+    // Orange Separator
+    // -------------------------------------------------------------------------
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: rem-calc(-8);
+      left: 0;
+      height: 5px;
+      width: rem-calc(45);
+      background: $tertiary;
+    }
+  }
+
+  // Odd/Even color scheme
+  // -------------------------------------------------------------------------
+
+  &:nth-child(odd) {
+    background-color: $primary;
+
+    &.has-image {
+      .pod-heading {
+        background-color: $primary;
+
+        .heading {
+          background-image: linear-gradient(to top, $primary, rgba($primary, 0));
+        }
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    background-color: $secondary;
+
+    &.has-image {
+      .pod-heading {
+        background-color: $secondary;
+
+        .heading {
+          background-image: linear-gradient(to top, $secondary, rgba($secondary, 0));
+        }
+      }
+    }
+  }
+}
