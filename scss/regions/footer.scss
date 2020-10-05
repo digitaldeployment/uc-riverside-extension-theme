@@ -4,7 +4,7 @@
 
 .page__footer {
   @include media-breakpoint-up(lg) {
-    background-image: linear-gradient(to right, $primary 50%, #eaeaea 50%);
+    background-image: linear-gradient(to right, $primary 50%, $light 50%);
   }
 
   // Container
@@ -206,7 +206,7 @@
   // ---------------------------------------------------------------------------
 
   .secondary-section {
-    background-color: #eaeaea;
+    background-color: $light;
     color: $dark;
 
     @include media-breakpoint-up(lg) {
@@ -339,7 +339,7 @@
     }
   
     .signup-form .form-control {
-      background-color: #eaeaea;
+      background-color: $light;
     }
   }
 }

@@ -19,13 +19,13 @@
     font-size: rem-calc(14);
     letter-spacing: 0.025em;
     text-align: center;
-    box-shadow: inset 0 -10px 0 #eaeaea;
+    box-shadow: inset 0 -10px 0 $light;
 
     a {
       display: block;
       padding: 0.5rem 2rem;
       white-space: nowrap;
-      border-bottom: 10px solid #eaeaea;
+      border-bottom: 10px solid $light;
       transition: 0.2s ease-out;
       color: inherit;
 
