@@ -1,17 +1,25 @@
 // =============================================================================
-// Bootstrap :: Custom Container Options
+// Custom MAX Container
 // =============================================================================
 
-// Allows the container to maintain gutters while maximizing the width of the
-// container.
 .container-max {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 10vw; // 10% of the screen width eg. 37.5px@375px 
-  padding-right: 10vw; // 10% of the screen width eg. 76.8px@768px
+  max-width: map-get($grid-breakpoints, 'max');
+  margin: 0 auto;
+  padding-left: map-get($container-max-offsets, 'xs');
+  padding-right: map-get($container-max-offsets, 'xs');
+
+  @include media-breakpoint-up(sm) {
+    padding-left: map-get($container-max-offsets, 'sm');
+    padding-right: map-get($container-max-offsets, 'sm');
+  }
 
   @include media-breakpoint-up(lg) {
-    padding-left: 12.5vw; // 12.5% of the screen width eg. 180px@1440px
-    padding-right: 12.5vw; // 12.5% of the screen width eg. 240px@1920px
+    padding-left: map-get($container-max-offsets, 'lg');
+    padding-right: map-get($container-max-offsets, 'lg');
+  }
+
+  @include media-breakpoint-up(max) {
+    padding-left: map-get($container-max-offsets, 'max');
+    padding-right: map-get($container-max-offsets, 'max');
   }
 }

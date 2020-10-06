@@ -1,0 +1,124 @@
+// =============================================================================
+// Jquery Bonsai TreeSelect 
+// =============================================================================
+
+.bonsai {
+  margin: 0 -2px;
+  padding: 0;
+
+  & & {
+    margin-left: 0.5rem;
+  }
+
+  &,
+  & > li {
+    list-style: none;
+    overflow: hidden;
+  }
+  
+  & > li {
+    position: relative;
+    padding: 0 2px;
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    ul {
+      width: 100%;
+    }
+  }
+
+  input {
+    position: relative;
+    display: block;
+    appearance: none;
+    width: rem-calc(12);
+    height: rem-calc(12);
+    margin-right: 0.5rem;
+    background-color: #d3d3d3;
+    background-size: 100%;
+
+    &:focus {
+      outline: 2px solid $tertiary;
+      outline-offset: 0;
+    }
+
+    &:indeterminate {
+      background-color: $primary;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzAgLTg4MikiPjxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzAgODgyKSIgZmlsbD0ibm9uZSIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDkuNSAtMjI0KSI+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQyLjUgMTExMikiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSIxLjUiIHN0cm9rZT0ibm9uZSIvPjxyZWN0IHg9IjAuNSIgeT0iMC41IiB3aWR0aD0iNyIgaGVpZ2h0PSIwLjUiIGZpbGw9Im5vbmUiLz48L2c+PC9nPjwvZz48L3N2Zz4=');
+    }
+
+    &:checked {
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDE0IDE0Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTQwIC0xMTA2KSI+PHJlY3Qgd2lkdGg9IjE0IiBoZWlnaHQ9IjE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDAgMTEwNikiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNMi43NzIsMTAuNTQzLjEyLDcuODkxYS40MDguNDA4LDAsMCwxLDAtLjU3N0wuNyw2LjczN2EuNDA4LjQwOCwwLDAsMSwuNTc3LDBMMy4wNiw4LjUyMyw2Ljg4Nyw0LjdhLjQwOC40MDgsMCwwLDEsLjU3NywwbC41NzcuNTc3YS40MDguNDA4LDAsMCwxLDAsLjU3N0wzLjM0OSwxMC41NDNBLjQwOC40MDgsMCwwLDEsMi43NzIsMTAuNTQzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQyLjgyIDExMDUuNTQzKSIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4=');
+      background-color: $primary;
+      color: white;
+    }
+  }
+
+  label {
+    margin-bottom: 0;
+  }
+
+  li.has-children {
+    padding-right: rem-calc(32);
+
+    & > .thumb {
+      position: absolute;
+      top: 0;
+      right: 2px;
+      display: block;
+      width: rem-calc(24);
+      height: rem-calc(24);
+      cursor: pointer;
+      border-radius: 100%;
+      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMzAyIC04MTQpIj48cGF0aCBkPSJNNzY1LjAxNiwxMTczOC41Nmw0LjUsNC41LDQuNS00LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00NTUuNTE2IC0xMDkxNC4wNikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJiMmIyYiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz48cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMwMiA4MTQpIiBmaWxsPSJub25lIi8+PC9nPjwvc3ZnPg==');
+      background-size: 100%;
+      background-color: transparent;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        background-color: $light;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: inset 0 0 0 1px rgba($primary, 0.5);
+      }
+    }
+
+    & > .bonsai {
+      height: 0 !important;
+      overflow: hidden;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-1rem);
+      transition: 0.2s ease-out;
+    }
+
+    &.expanded {
+      & > .thumb {
+        transform: rotate(180deg);
+      }
+
+      & > .bonsai {
+        height: auto !important;
+        margin-top: 0;
+        overflow: inherit;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        visibility: inherit;
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  li:not(.has-children) > .thumb {
+    display: none;
+  }
+}

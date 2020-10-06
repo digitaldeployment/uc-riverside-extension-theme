@@ -33,7 +33,9 @@ $header-toolbar-height: (
 
 $blue:    #003da5;
 $blue-lt: #0f74cb;
+$blue-ot: #009cde;
 $gold:    #ffb81c;
+$green:   #78be20;
 $light:   #eaeaea;
 $dark:    #2b2b2b;
 
@@ -52,6 +54,12 @@ $tertiary:  $gold;
 $theme-colors: (
   "tertiary": $tertiary,
 );
+
+// Body
+// -----------------------------------------------------------------------------
+
+$body-bg:                   white;
+$body-color:                $dark;
 
 // Links
 // -----------------------------------------------------------------------------
@@ -88,20 +96,38 @@ $container-max-widths: (
 // $grid-gutter-width: 30px;
 // $grid-row-columns:  6;
 
+// Custom Max Container offsets
+// -----------------------------------------------------------------------------
+
+$container-max-offsets: (
+  xs: 2rem,
+  sm: 10vw,
+  lg: 7.5vw,
+  xl: 144px,
+);
+
 // Typography
 // -----------------------------------------------------------------------------
+
+$enable-responsive-font-sizes: true;
 
 $font-family-base: 'Fira Sans', sans-serif;
 $font-family-heading: 'Oswald', sans-serif;
 
-$font-size-base: 1rem;
+$font-size-base:              1rem;
+$line-height-base:            1.67;
 
-$h1-font-size: $font-size-base * (50/$font-size-base);
-$h2-font-size: $font-size-base * (36/$font-size-base);
+$h1-font-size: $font-size-base * (68/$font-size-base);
+$h2-font-size: $font-size-base * (30/$font-size-base);
 $h3-font-size: $font-size-base * (24/$font-size-base);
-$h4-font-size: $font-size-base * (21/$font-size-base);
-$h5-font-size: $font-size-base * (18/$font-size-base);
+$h4-font-size: $font-size-base * (22/$font-size-base);
+$h5-font-size: $font-size-base * (20/$font-size-base);
 $h6-font-size: $font-size-base;
+
+$headings-margin-bottom:      0.75rem;
+$headings-font-weight:        normal;
+$headings-line-height:        1.5;
+
 
 // Sizing with .h-* and .w-* classes.
 // -----------------------------------------------------------------------------
@@ -113,9 +139,9 @@ $sizes: (
 // Border Radius
 // -----------------------------------------------------------------------------
 
-$border-radius:               0.5rem;
-$border-radius-lg:            0.5rem;
-$border-radius-sm:            0.5rem;
+$border-radius:               0;
+$border-radius-lg:            $border-radius;
+$border-radius-sm:            $border-radius;
 
 // Cards
 // -----------------------------------------------------------------------------
@@ -150,3 +176,22 @@ $modal-sm:                          map-get($container-max-widths, 'sm');
 $modal-md:                          map-get($container-max-widths, 'md');
 $modal-lg:                          map-get($container-max-widths, 'lg');
 $modal-xl:                          map-get($container-max-widths, 'xl');
+
+// Breadcrumbs
+// -----------------------------------------------------------------------------
+
+$breadcrumb-font-size:              14px;
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding:           0.5rem;
+$breadcrumb-margin-bottom:          0rem;
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider-color:          inherit;
+$breadcrumb-active-color:           $primary;
+$breadcrumb-divider:                quote("/");
+$breadcrumb-border-radius:          none;
+
+// Blockquote
+// -----------------------------------------------------------------------------
+
+$blockquote-font-size:              $font-size-base * 1.4;

@@ -40,11 +40,11 @@
 
   &:active {
     &.previous {
-      transform: translate(-0.2em, -50%);
+      transform: translate3d(-0.2em, -50%, 0);
     }
 
     &.next {
-      transform: translate(0.2em, -50%);
+      transform: translate3d(0.2em, -50%, 0);
     }
   }
 }

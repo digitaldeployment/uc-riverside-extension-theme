@@ -1,0 +1,221 @@
+// =============================================================================
+// Program Finder Template
+// =============================================================================
+
+.page--program-finder {
+  @include media-breakpoint-down(md) {
+    .breadcrumbs {
+      margin-top: 2rem;
+    }
+  }
+
+  // Left Sidebar
+  // ---------------------------------------------------------------------------
+
+  .page-sidebar--left {
+    order: inherit;
+
+    @include media-breakpoint-up(lg) {
+      width: 35%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .page-sidebar-inner {
+        margin-right: 8.5rem;
+      }
+    }
+  }
+
+  // Program results count
+  // ---------------------------------------------------------------------------
+
+  .program-finder-count {
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: $primary;
+  }
+}
+
+// Program finder filters
+// -----------------------------------------------------------------------------
+
+.program-finder__filters {
+  position: relative;
+  margin-bottom: 1rem;
+
+  // Filters main heading
+  // ---------------------------------------------------------------------------
+
+  h2 {
+    margin-bottom: 1.3rem;
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: inherit;
+  }
+
+  // Group (heading + filters)
+  // ---------------------------------------------------------------------------
+
+  .filters-group {
+    position: relative;
+    margin-bottom: 1.2rem;
+    padding-top: 1.2rem;
+    border-top: 5px solid $tertiary;
+  }
+
+  // Filters group heading
+  // ---------------------------------------------------------------------------
+
+  h3 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: inherit;
+  }
+
+  // Bonsai filters
+  // ---------------------------------------------------------------------------
+
+  .bonsai.filters {
+    font-weight: 300;
+  }
+
+  // Clear filters button
+  // ---------------------------------------------------------------------------
+
+  .clear-filters-btn {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    margin: 0 auto;
+    padding: 0;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1;
+    background-color: transparent;
+    transition: 0.2s ease-out;
+    border-radius: 100%;
+    border: none;
+
+    .icon {
+      display: block;
+      padding: rem-calc(6);
+      box-sizing: content-box;
+    }
+
+    &.all {
+      top: 0;
+      width: auto;
+      height: auto;
+      padding: rem-calc(8 8 5 4);
+      border-radius: 4px;
+
+      .icon {
+        display: inline-block;
+        margin-bottom: 0.1rem;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $secondary;
+      color: white;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 1px rgba($primary, 0.5);
+    }
+  }
+}
+
+// Program Keyword Search
+// -----------------------------------------------------------------------------
+
+.program-finder__search {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 2.75rem;
+  }
+
+  // Search keywords input field
+  // ---------------------------------------------------------------------------
+
+  input {
+    border: none;
+    height: rem-calc(52);
+    background-color: $light;
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+
+  // Search submit button
+  // ---------------------------------------------------------------------------
+
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: rem-calc(52);
+    background-color: $tertiary;
+    transition: 0.1s ease-out;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      background-color: #f5a800;
+    }
+  }
+}
+
+// Results wrapper
+// -----------------------------------------------------------------------------
+
+.program-finder-results {
+  position: relative;
+
+  // Results count
+  // ---------------------------------------------------------------------------
+
+  .program-finder-count {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+    }
+  }
+
+  // Results grid
+  // ---------------------------------------------------------------------------
+
+  .grid {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.5rem;
+    }
+  }
+
+  // Result (teaser)
+  // ---------------------------------------------------------------------------
+
+  .program {
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+      width: calc(50% - 1rem);
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}

@@ -48,7 +48,8 @@
 
 .select2-container {
   .select2-selection {
-    padding: 1rem;
+    padding: 1.3rem;
+    border-radius: 0.75rem;
   }
 
   &.select2-container--focus.select2-container--open {
@@ -58,7 +59,7 @@
   }
 
   .select2-search--inline .select2-search__field {
-    margin-top: rem-calc(5);
+    margin-top: 0;
     letter-spacing: 0.02em;
     font-style: italic;
     color: $dark;
@@ -66,6 +67,16 @@
     &::placeholder {
       font-style: inherit;
       color: inherit;
+    }
+  }
+
+  .select2-selection--multiple {
+    .select2-selection__rendered {
+      display: block;
+    }
+
+    .select2-selection__choice {
+      margin-top: 0;
     }
   }
 
@@ -89,5 +100,9 @@
     .select2-results__options {
       margin-bottom: 0.5rem;
     }
+  }
+
+  .select2-results__message {
+    padding: 1em;
   }
 }

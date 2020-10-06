@@ -1,0 +1,23 @@
+// =============================================================================
+// Breadcrumbs
+// =============================================================================
+
+.breadcrumbs {
+  width: 100%;
+  flex-shrink: 0;
+  margin-bottom: 2rem;
+
+  @include media-breakpoint-up(lg) {
+    padding: rem-calc(60 0 0);
+    margin-bottom: rem-calc(-83);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  a:focus,
+  a:hover {
+    color: $secondary;
+  }
+}

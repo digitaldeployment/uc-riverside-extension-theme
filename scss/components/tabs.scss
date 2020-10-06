@@ -1,0 +1,63 @@
+// =============================================================================
+// Tabs
+// =============================================================================
+
+.tabs {
+
+  // Tabs Navigation
+  // ---------------------------------------------------------------------------
+
+  .tabnav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    list-style-type: none;
+    margin-bottom: 2rem;
+    padding-left: 0;
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-size: rem-calc(14);
+    letter-spacing: 0.025em;
+    text-align: center;
+    box-shadow: inset 0 -10px 0 $light;
+
+    a {
+      display: block;
+      padding: 0.5rem 2rem;
+      white-space: nowrap;
+      border-bottom: 10px solid $light;
+      transition: 0.2s ease-out;
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        outline: none;
+        border-bottom-color: $tertiary;
+        color: $secondary;
+      }
+
+      &.tab-active {
+        padding: 0.5rem 2.5rem;
+        border-bottom-color: $primary;
+        color: $primary;
+      }
+    }
+  }
+
+  // Tab Content
+  // ---------------------------------------------------------------------------
+
+  .tab-content {
+    transition: 0.5s ease-out;
+  }
+
+  .collapsible-collapsed {
+    .tab-content {
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+}

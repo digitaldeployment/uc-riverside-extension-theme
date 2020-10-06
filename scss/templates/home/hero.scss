@@ -41,7 +41,7 @@
       height: 110%;
       opacity: 0.44;
       max-width: none;
-      transform: translate(-50%, -50%);
+      transform: translate3d(-50%, -50%, 0);
   
       @media (min-width: 1125px) {
         width: 110%;
@@ -106,8 +106,6 @@
     position: relative;
     margin-top: 1.5rem;
     max-width: 34.5rem;
-    border-radius: $border-radius;
-    background-color: white;
     transition: 0.5s ease-out;
     opacity: 0;
 
@@ -119,10 +117,11 @@
       position: absolute;
       z-index: 2;
       right: rem-calc(4);
-      bottom: rem-calc(4);
+      bottom: 50%;
       width: rem-calc(60);
       height: rem-calc(60);
       line-height: 1;
+      transform: translateY(50%);
 
       svg {
         margin-top: rem-calc(-3);

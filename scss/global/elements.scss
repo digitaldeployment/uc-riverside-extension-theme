@@ -18,7 +18,70 @@ body {
   overflow-x: hidden;
 }
 
+h1, .h1 {
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-family: $font-family-heading;
+  font-weight: 300;
+  color: $blue;
+}
+
+h2, .h2 {
+  line-height: 1.2;
+}
+
+h3, .h3 {
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  letter-spacing: 0.025em;
+  font-family: $font-family-heading;
+  font-weight: 400;
+}
+
+h4, .h4 {
+  line-height: 1.4;
+  font-weight: 500;
+  color: $blue;
+}
+
+h5, .h5 {
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-family: $font-family-heading;
+  font-weight: 400;
+}
+
+h6, .h6 {
+  font-weight: 500;
+  color: $blue;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+
+// Readmore
+// -----------------------------------------------------------------------------
+
+.readmore {
+  position: relative;
+  text-decoration: underline;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+
+  &:after {
+    content: '\2192';
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+    opacity: 0;
+  }
+
+  &:focus,
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: translateX(0.3em);
+    }
+  }
 }

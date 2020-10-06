@@ -1,0 +1,45 @@
+// =============================================================================
+// Pods Section
+// =============================================================================
+
+@mixin pod-columns($columns: 2, $gap: 10) {
+  .pods {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 rem-calc(-$gap);
+  }
+
+  .pod {
+    width: calc(#{percentage(1/$columns)} - #{rem-calc($gap * 2)});
+    margin-left: rem-calc($gap);
+    margin-right: rem-calc($gap);
+  }
+}
+
+.section__pods {
+  // Pods appearing within the right sidebar on larger displays.
+  // ---------------------------------------------------------------------------
+
+  &.pods-right {
+    @include media-breakpoint-between(sm, md) {
+      @include pod-columns(2, 10);
+    }
+
+    @include media-breakpoint-only(md) {
+      @include pod-columns(3, 10);
+    }
+  }
+
+  // Pods appearing below the main/center content on larger displays.
+  // ---------------------------------------------------------------------------
+
+  &.pods-below {
+    @include media-breakpoint-up(sm) {
+      @include pod-columns(3, 10);
+    }
+
+    @include media-breakpoint-up(lg) {
+      @include pod-columns(3, 21);
+    }
+  }
+}

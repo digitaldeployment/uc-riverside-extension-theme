@@ -1,0 +1,89 @@
+// =============================================================================
+// Accordions
+// =============================================================================
+
+.accordions {
+  // Accordion Section Wrapper
+  // ---------------------------------------------------------------------------
+
+  .accordion {
+    margin: 1rem 0;
+    user-select: none;
+    transition: 0.2s ease-out;
+    background-color: $light;
+  }
+
+  // Accordion Heading
+  // ---------------------------------------------------------------------------
+  .accordion-heading {
+    display: flex;
+    margin: 0;
+    padding: rem-calc(24);
+    align-items: center;
+    transition: 0.2s ease-out;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    svg {
+      flex-shrink: 0;
+      border-radius: 100%;
+      line-height: 1;
+      transform: rotate(45deg);
+      transition: 0.2s ease-out;
+      background-color: $tertiary;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      svg {
+        background-color: #f5a800;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  // Accordion Content
+  // ---------------------------------------------------------------------------
+
+  .accordion-content {
+    margin-top: 0;
+    padding: rem-calc(0 24 24);
+    transition: 0.2s ease-out;
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Collapsed State of each section
+  // ---------------------------------------------------------------------------
+
+  .collapsible-collapsed {
+    &:hover {
+      background-color: #dadada;
+    }
+
+    .accordion-heading {
+      svg {
+        transform: rotate(0);
+      }
+    }
+
+    .accordion-content {
+      height: 0;
+      padding-bottom: 0;
+      overflow: hidden;
+      visibility: hidden;
+      transform: translateY(rem-calc(-24));
+      opacity: 0;
+    }
+  }
+}

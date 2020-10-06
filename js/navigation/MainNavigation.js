@@ -1,19 +1,27 @@
-import AccessibleMenu from '@digitaldeployment/accessible-menu';
+import Navigation from '../components/Navigation';
 
-const defaults = {
-  menuElement: null,
-  submenuItemSelector: '.subnav-item',
-  submenuToggleSelector: '.subnav-toggle',
-  submenuSelector: '.subnav-menu',
-}
+const settings = {
+  menuBlock: 'main-navigation',
+  expandActiveMenus: true,
+  closeUnnestedMenus: false,
+  focusout: false,
+  hover: false,
+};
 
 export default class MainNavigation {
-  constructor(options = {}) {
-    this.settings = { ...defaults, ...options };
-    this.a11yMenu = this.create();
+  constructor(element) {
+    this.element = element;
+
+    if (this.menu) {
+      this.Navigation = this.addNavigationLogic();
+    }
   }
 
-  create() {
-    return new AccessibleMenu.DisclosureMenu(this.settings);
+  addNavigationLogic() {
+    return new Navigation(this.menu, settings);
+  }
+  
+  get menu() {
+    return this.element.querySelector('#main-navigation');
   }
 }

@@ -128,7 +128,7 @@ section.videos {
         top: 50%;
         left: 50%;
         width: 195%;
-        transform: translate(-50%, -50%);
+        transform: translate3d(-50%, -50%, 0);
       }
     }
 
@@ -232,6 +232,7 @@ section.videos {
       margin-bottom: 1rem;
       overflow: hidden;
       user-select: none;
+      cursor: pointer;
 
       figure {
         display: inline-block;
@@ -250,7 +251,15 @@ section.videos {
         left: 50%;
         width: 185%;
         max-width: none;
-        transform: translate(-50%, -50%);
+        transition: 0.25s ease-in;
+        transform: translate3d(-50%, -50%, 0);
+      }
+
+      &:hover {
+        img {
+          filter: brightness(120%);
+          transform: translate3d(-50%, -50%, 0) scale(1.05);
+        }
       }
 
       p {
