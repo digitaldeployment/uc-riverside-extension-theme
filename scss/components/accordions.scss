@@ -11,6 +11,11 @@
     user-select: none;
     transition: 0.2s ease-out;
     background-color: $light;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
   }
 
   // Accordion Heading
