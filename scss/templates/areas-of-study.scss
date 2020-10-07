@@ -5,6 +5,7 @@
 .areas-of-study {
   @import './areas-of-study/overview';
   @import './areas-of-study/video';
+  @import './areas-of-study/teasers';
 
   .page-center {
     @include media-breakpoint-down(md) {
