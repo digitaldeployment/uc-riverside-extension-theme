@@ -3,14 +3,14 @@
 // =============================================================================
 
 html {
-  font-size: 16px;
+  font-size: $custom-font-size-base;
 
   @include media-breakpoint-up(xl) {
-    font-size: 1.11111vw;
+    font-size: ($custom-font-size-base / map-get($grid-breakpoints, 'xl')) * 100vw;
   }
-
+  
   @include media-breakpoint-up(max) {
-    font-size: 21px;
+    font-size: ($custom-font-size-base / map-get($grid-breakpoints, 'xl')) * map-get($grid-breakpoints, 'max');
   }
 }
 
