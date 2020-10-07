@@ -79,7 +79,7 @@ export default () => {
   // Page anchors — active state management
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('.page-anchors').forEach((element) => {
+  document.querySelectorAll('.page__anchors').forEach((element) => {
     if (!element.PageAnchors) {
       element.PageAnchors = new PageAnchors(element);
     }
@@ -91,6 +91,8 @@ export default () => {
   if (!document.body.SmoothScroll) {
     document.body.SmoothScroll = new SmoothScroll('a[href*="#"]', {
       header: '.page__header',
+      updateURL: false,
+      popstate: false,
       offset: 40,
     });
   }

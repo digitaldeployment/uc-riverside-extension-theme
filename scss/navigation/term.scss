@@ -48,8 +48,8 @@
       color: inherit;
 
       @include media-breakpoint-down(md) {
-        font-size: 1.2em;
-        padding: 1.25rem 0;
+        font-size: rem-calc(18);
+        padding: 1.3rem 0;
       }
 
       @include media-breakpoint-up(lg) {
@@ -123,7 +123,7 @@
       height: 0;
       padding: 0 map-get($container-max-offsets, 'sm');
       overflow: hidden;
-      border: none;
+      border: 0 solid rgba(white, 0.21);
       transition: 0.3s ease-out;
       visibility: hidden;
       opacity: 0;
@@ -140,7 +140,6 @@
         height: auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        border: solid rgba(white, 0.21);
         border-width: 5px 0;
         visibility: inherit;
         opacity: 1;
