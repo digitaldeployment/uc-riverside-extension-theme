@@ -184,12 +184,14 @@
     .type {
       font-size: 0;
       margin: 0;
+      border-color: $tertiary !important;
 
       .icon { display: none; }
     }
 
     .heading {
       padding: rem-calc(20);
+      margin-bottom: 0 !important;
     }
 
     @include media-breakpoint-up(lg) {
