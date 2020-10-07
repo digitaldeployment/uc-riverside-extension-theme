@@ -10,6 +10,8 @@ import 'fg-collapsible/src/collapsible.tab'
 import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
 import Checkboxes from '../components/Checkboxes'
+import SmoothScroll from 'smooth-scroll'
+import PageAnchors from '../navigation/PageAnchors'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
 
@@ -73,4 +75,23 @@ export default () => {
       element.Sticky = new Sticky(element);
     }
   });
+
+  // Page anchors — active state management
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.page-anchors').forEach((element) => {
+    if (!element.PageAnchors) {
+      element.PageAnchors = new PageAnchors(element);
+    }
+  });
+
+  // Smooth scroll control of all anchor links
+  // ---------------------------------------------------------------------------
+
+  if (!document.body.SmoothScroll) {
+    document.body.SmoothScroll = new SmoothScroll('a[href*="#"]', {
+      header: '.page__header',
+      offset: 40,
+    });
+  }
 }
