@@ -23,8 +23,13 @@ h1, .h1 {
   line-height: 1.1;
   text-transform: uppercase;
   font-family: $font-family-heading;
+  font-size: rem-calc(50);
   font-weight: 300;
   color: $blue;
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem-calc(68);
+  }
 }
 
 h2, .h2 {
