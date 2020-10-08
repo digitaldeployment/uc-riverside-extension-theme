@@ -30,6 +30,15 @@
     padding: rem-calc(8 24 16);
   }
 
+  .heading {
+    @include media-breakpoint-up(lg) {
+      height: 4rem;
+      overflow: hidden;
+  
+      @include max-lines(2);
+    }
+  }
+
   // Type
   // ---------------------------------------------------------------------------
 
