@@ -5,6 +5,11 @@
 .section__program-teasers {
   padding: 2rem 0;
 
+  @include media-breakpoint-up(lg) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .program__teasers {
     @include media-breakpoint-up(lg) {
       display: flex;
