@@ -55,13 +55,18 @@
 // Navigation
 @import 'navigation/main';
 @import 'navigation/term';
+@import 'navigation/anchors';
 
 // Templates
 @import 'templates/home';
 @import 'templates/program-finder';
+@import 'templates/landing-page';
+@import 'templates/areas-of-study';
 
 // Sections
 @import 'sections/banner';
 @import 'sections/overview';
+@import 'sections/accordions';
 @import 'sections/teasers';
+@import 'sections/tabs';
 @import 'sections/pods';

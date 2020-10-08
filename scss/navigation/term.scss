@@ -9,7 +9,7 @@
   
   @include media-breakpoint-down(md) {
     margin: 0 -#{map-get($container-max-offsets, 'sm')};
-    background-color: $primary;
+    background-color: $tertiary;
   }
 
   @include media-breakpoint-up(lg) {
@@ -30,7 +30,7 @@
       align-items: center;
       justify-content: space-between;
       transition: 0.2s ease-out;
-      background-color: $light;
+      background-color: $tertiary;
     }
 
     @include media-breakpoint-up(lg) {
@@ -48,14 +48,19 @@
       color: inherit;
 
       @include media-breakpoint-down(md) {
-        font-size: 1.2em;
-        padding: 1rem 0;
+        font-size: rem-calc(18);
+        padding: 1.3rem 0;
       }
 
       @include media-breakpoint-up(lg) {
         &:hover,
         &:focus {
           color: $secondary;
+        }
+
+        &.active {
+          font-weight: bold;
+          color: $primary;
         }
       }
     }
@@ -64,22 +69,30 @@
     // -------------------------------------------------------------------------
 
     .term-navigation-toggle__button {
-      border-radius: 4px;
-      border: 1px solid #dadada;
-      background-color: rgba(white, 0.5);
-      color: inherit;
+      padding: rem-calc(12);
+      border-radius: 100%;
 
       @include media-breakpoint-up(lg) {
         display: none;
       }
 
-      &:hover,
-      &:focus {
+      svg {
+        display: block;
+        border-radius: 100%;
+        transition: 0.2s ease-out;
         background-color: white;
+        fill: $dark;
       }
 
-      svg {
-        fill: currentColor;
+      &:hover,
+      &:focus {
+        outline-color: $tertiary;
+        box-shadow: none;
+
+        svg {
+          background-color: $primary;
+          fill: white;
+        }
       }
     }
   }
@@ -90,7 +103,7 @@
   &.term-navigation-menu--expanded {
     .term-navigation-toggle__button {
       svg {
-        transform: rotate(180deg);
+        transform: rotate(-45deg);
       }
     }
   }
@@ -110,7 +123,7 @@
       height: 0;
       padding: 0 map-get($container-max-offsets, 'sm');
       overflow: hidden;
-      border: none;
+      border: 0 solid rgba(white, 0.21);
       transition: 0.3s ease-out;
       visibility: hidden;
       opacity: 0;
@@ -127,7 +140,6 @@
         height: auto;
         padding-top: 2rem;
         padding-bottom: 2rem;
-        border: solid $tertiary;
         border-width: 5px 0;
         visibility: inherit;
         opacity: 1;
@@ -154,8 +166,8 @@
     padding: 0.75rem 0;
     max-width: calc(100% - #{rem-calc(24)});
     letter-spacing: 0.025em;
-    background-color: $primary;
-    color: white;
+    background-color: $tertiary;
+    color: inherit;
 
     @include media-breakpoint-up(lg) {
       padding: 0.2rem 0;
@@ -167,7 +179,6 @@
     &:hover {
       outline-offset: -1px;
       text-decoration: underline;
-      color: $tertiary;
 
       @include media-breakpoint-up(lg) {
         color: $secondary;
@@ -176,6 +187,7 @@
 
     &.active {
       font-weight: bold;
+      text-decoration: underline;
 
       @include media-breakpoint-up(lg) {
         color: $primary;
@@ -188,6 +200,9 @@
     &.l1 {
       @include media-breakpoint-down(md) {
         padding: 1rem 0;
+        font-size: rem-calc(18);
+        text-transform: uppercase;
+        font-family: $font-family-heading;    
       }
     }
   }
@@ -203,55 +218,40 @@
     flex-shrink: 0;
     flex-grow: 0;
     line-height: 1;
+    border-radius: 100%;
 
     @include media-breakpoint-up(lg) {
-      border-radius: 100%;
-      padding: rem-calc(6);
+      padding: 0;
     }
 
     svg {
       display: block;
-      border: 1px solid white;
+      border: 1px solid $dark;
       border-radius: 100%;
+      transition: 0.1s ease-out;
       line-height: 1;
-      fill: white;
-
-      @include media-breakpoint-down(md) {
-        transition: 0.1s ease-out;
-
-        &.icon-down {
-          display: none;
-        }
-      }
+      fill: $dark;
 
       @include media-breakpoint-up(lg) {
-        width: rem-calc(12);
-        height: rem-calc(12);
-        font-size: rem-calc(12);
+        width: rem-calc(20);
+        height: rem-calc(20);
         fill: currentColor;
         line-height: 1;
         border: none;
-
-        &.icon-plus {
-          display: none;
-        }
       }
     }
 
-    &[aria-expanded="true"] svg {
+    &[aria-expanded=true] svg {
       transform: rotate(-45deg);
-      
-      @include media-breakpoint-up(lg) {
-        transform: rotate(180deg);
-      }
     }
 
     &:hover,
     &:focus {
       @include media-breakpoint-down(md) {
         svg {
-          border-color: $tertiary;
-          fill: $tertiary;
+          border-color: $primary;
+          background-color: $primary;
+          fill: white;
         }
       }
 
@@ -261,6 +261,8 @@
     }
 
     &:focus {
+      box-shadow: 0 0 0 0.2rem $tertiary;
+
       @include media-breakpoint-up(lg) {
         box-shadow: inset 0 0 0 1px rgba($primary, 0.5);
       }
@@ -273,15 +275,16 @@
   .nav-link.l1 + button {
     @include media-breakpoint-down(md) {
       svg {
-        background-color: white;
-        fill: $primary;
+        background-color: $dark;
+        fill: $tertiary;
       }
   
       &:hover,
       &:focus {
         svg {
-          background-color: $tertiary;
-          fill: $primary;
+          border-color: $primary;
+          background-color: $primary;
+          fill: white;
         }
       }
     }
@@ -299,10 +302,10 @@
     flex-direction: column;
     
     @include media-breakpoint-down(md) {
-      padding-left: 1.5rem;
+      padding-left: 0;
 
-      ul ul {
-        padding-left: 1rem;
+      .l2 + button + ul {
+        padding-left: 1.5rem;
 
         &:before {
           content: '';
@@ -310,21 +313,25 @@
           top: 1rem;
           left: 0;
           bottom: 2rem;
-          border-left: 3px solid $tertiary;
+          border-left: 3px solid $primary;
         }
       }
     }
 
     @include media-breakpoint-up(lg) {
       padding-left: 0.75rem;
+    }
+  }
 
+  @include media-breakpoint-up(lg) {
+    .l1 + button + ul {
       &:before {
         content: '';
         position: absolute;
         top: 0.35rem;
         left: 0;
         bottom: 1.35rem;
-        border-left: 5px solid $light;
+        border-left: 4px solid $light;
       }
     }
   }

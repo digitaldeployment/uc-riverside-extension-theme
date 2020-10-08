@@ -11,6 +11,11 @@
     user-select: none;
     transition: 0.2s ease-out;
     background-color: $light;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
   }
 
   // Accordion Heading
@@ -54,11 +59,11 @@
     padding: rem-calc(0 24 24);
     transition: 0.2s ease-out;
 
-    *:first-child {
+    > *:first-child {
       margin-top: 0;
     }
 
-    *:last-child {
+    > *:last-child {
       margin-bottom: 0;
     }
   }
@@ -85,5 +90,14 @@
       transform: translateY(rem-calc(-24));
       opacity: 0;
     }
+  }
+
+  // Grid view
+  // ---------------------------------------------------------------------------
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.75rem;
   }
 }

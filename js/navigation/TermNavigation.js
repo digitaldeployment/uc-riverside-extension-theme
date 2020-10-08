@@ -51,12 +51,6 @@ export default class TermNavigation {
     }
   }
 
-  // keydownHandler({ key }) {
-  //   if (key === 'Escape' && this.open) {
-  //     this.clickHandler();
-  //   }
-  // }
-
   keydownHandler(event) {
     const keyCode = Keyboard.getCode(event);
     if (keyCode === Keyboard.Escape && this.open) {

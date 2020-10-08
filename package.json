@@ -16,6 +16,7 @@
     "@ttskch/select2-bootstrap4-theme": "^1.4.0",
     "array-shuffle": "^1.0.1",
     "bootstrap": "^4.5.0",
+    "breakpoints-js": "^1.0.6",
     "fg-collapsible": "^0.14.0",
     "flickity": "^2.2.1",
     "flickity-fade": "^1.0.0",
@@ -24,6 +25,7 @@
     "keyboard-key": "^1.1.0",
     "popper.js": "^1.16.1",
     "select2": "^4.0.13",
+    "smooth-scroll": "^16.1.3",
     "tabbable": "^5.1.0",
     "tick-tock": "^1.0.0",
     "typewriter-effect": "^2.13.1"

@@ -109,12 +109,13 @@ $container-max-offsets: (
 // Typography
 // -----------------------------------------------------------------------------
 
-$enable-responsive-font-sizes: true;
+$enable-responsive-font-sizes: false;
 
 $font-family-base: 'Fira Sans', sans-serif;
 $font-family-heading: 'Oswald', sans-serif;
 
 $font-size-base:              1rem;
+$custom-font-size-base:       16px; // Used for custom dynamic font sizing on larger displays
 $line-height-base:            1.67;
 
 $h1-font-size: $font-size-base * (68/$font-size-base);

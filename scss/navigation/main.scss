@@ -41,6 +41,15 @@
       text-decoration: underline;
       color: $tertiary;
     }
+
+    &.active {
+      text-decoration: underline;
+      color: $tertiary;
+
+      &:not(.l1) {
+        font-weight: bold;
+      }
+    }
   }
 
   // Navigation Dropdown Menu Toggle button
@@ -94,6 +103,7 @@
 
   ul {
     width: 100%;
+    padding-left: 0;
     flex-wrap: nowrap;
     flex-direction: column;
 
