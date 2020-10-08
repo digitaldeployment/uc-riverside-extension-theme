@@ -31,8 +31,8 @@
   }
 
   .heading {
-    @include media-breakpoint-up(lg) {
-      height: 4rem;
+    @include media-breakpoint-up(md) {
+      height: 3.9rem;
       overflow: hidden;
   
       @include max-lines(2);
