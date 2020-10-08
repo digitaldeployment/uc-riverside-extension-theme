@@ -2,14 +2,11 @@ import $ from 'jquery'
 import 'select2'
 import 'popper.js'
 import 'bootstrap'
-import 'jquery-qubit'
-import 'jquery-bonsai'
 import 'fg-collapsible/src/collapsible'
 import 'fg-collapsible/src/collapsible.set'
 import 'fg-collapsible/src/collapsible.tab'
 import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
-import Checkboxes from '../components/Checkboxes'
 import SmoothScroll from 'smooth-scroll'
 import PageAnchors from '../navigation/PageAnchors'
 import MainNavigation from '../navigation/MainNavigation'
@@ -44,40 +41,9 @@ export default () => {
   // ---------------------------------------------------------------------------
   $('.tabs .collapsible').collapsible();
 
-  // Program Finder Filters powered by Jquery Bonsai
-  // ---------------------------------------------------------------------------
-
-  $('.program-finder__filters ul.filters').bonsai({
-    createInputs: 'checkbox',
-    checkboxes: true,
-  });
-
-  // Add a bit of a11y support to thumb components added by bonsai.
-  document.querySelectorAll('.program-finder__filters .thumb').forEach((element) => {
-    element.setAttribute('aria-label', 'Toggle visibility of nested filters');
-    element.setAttribute('role', 'button');
-    element.setAttribute('tabindex', 0);
-  });
-
-  // Program Finder Filters - Checkbox Management
-  // ---------------------------------------------------------------------------
-
-  document.querySelectorAll('.program-finder__filters').forEach((element) => {
-    if (!element.Checkboxes) {
-      element.Checkboxes = new Checkboxes(element);
-    }
-  });
-
-  // Program Finder Filters Menu Toggle Control
-  // ---------------------------------------------------------------------------
-
-  const programFinderFilters = document.querySelector('.program-finder__filters');
-  if (programFinderFilters) {
-    $(programFinderFilters).find('.filters-group').collapsible();
-  }
-
   // Sticky sidebars
   // ---------------------------------------------------------------------------
+
   document.querySelectorAll('.page-sidebar-inner').forEach((element) => {
     if (!element.Sticky) {
       element.Sticky = new Sticky(element);
