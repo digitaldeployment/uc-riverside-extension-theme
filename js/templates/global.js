@@ -1,4 +1,4 @@
-import 'jquery'
+import $ from 'jquery'
 import 'select2'
 import 'popper.js'
 import 'bootstrap'
