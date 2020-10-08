@@ -68,6 +68,14 @@ export default () => {
     }
   });
 
+  // Program Finder Filters Menu Toggle Control
+  // ---------------------------------------------------------------------------
+
+  const programFinderFilters = document.querySelector('.program-finder__filters');
+  if (programFinderFilters) {
+    $(programFinderFilters).find('.filters-group').collapsible();
+  }
+
   // Sticky sidebars
   // ---------------------------------------------------------------------------
   document.querySelectorAll('.page-sidebar-inner').forEach((element) => {
