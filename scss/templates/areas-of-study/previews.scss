@@ -26,7 +26,7 @@
 
   .program__teaser {
     padding-top: 2rem;
-    margin: 2rem;
+    margin: 2rem 0;
     border-top: 5px solid $tertiary;
 
     @include media-breakpoint-up(lg) {
@@ -53,7 +53,7 @@
   }
 
   .readmore {
-    display: block;
+    display: inline-block;
     margin-top: 1.5rem;
   }
 }
