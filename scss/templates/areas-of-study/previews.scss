@@ -28,6 +28,7 @@
     padding-top: 2rem;
     margin: 2rem 0;
     border-top: 5px solid $tertiary;
+    flex-grow: 1;
 
     @include media-breakpoint-up(lg) {
       width: calc(#{percentage(1/2)} - 2rem);
