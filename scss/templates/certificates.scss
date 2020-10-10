@@ -2,6 +2,12 @@
 // CERTIFICATES TEMPLATE
 // =============================================================================
 
-body.certificates {
-  
+body.certificate {
+  @import './certificates/overview';
+  @import './certificates/career-opportunities';
+  @import './certificates/getting-started';
+
+  .page-center {
+    margin-bottom: 0;
+  }
 }

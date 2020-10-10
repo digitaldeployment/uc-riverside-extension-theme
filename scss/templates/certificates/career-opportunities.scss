@@ -2,7 +2,7 @@
 // CERTIFICATES :: CAREER OPPORTUNITIES
 // =============================================================================
 
-.sections__career-opportunities {
+.section__career-opportunities {
   padding: 4rem 0;
   background-color: $light;
 
@@ -46,6 +46,9 @@
   
     @include media-breakpoint-up(lg) {
       display: flex;
+      margin-bottom: 0;
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
     }
   }  
   
@@ -67,7 +70,7 @@
       margin: 0 1rem;
     }
   
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       width: calc(#{percentage(1/4)} - 3rem);
       margin: 0 1.5rem;
     }
@@ -89,9 +92,16 @@
     .card-body {
       padding: 1.5rem 0 0;
 
-      .pay-rate {
+      .card-subtitle {
+        font-size: rem-calc(14);
+        font-weight: normal;
+      }
+
+      .card-pay {
         margin-top: 1rem;
+        margin-bottom: 0;
         font-weight: 500;
+        font-size: rem-calc(14);
         font-style: italic;
 
         & > span {
@@ -100,6 +110,9 @@
           font-style: normal;
         }
       }
+    }
+
+    .card-subtitle {
     }
 
     &:hover,

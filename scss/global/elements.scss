@@ -75,11 +75,14 @@ img {
   text-decoration: underline;
   letter-spacing: 0.02em;
   font-weight: 500;
+  transition: color 0.2s ease-out;
 
   &:after {
     content: '\2192';
     position: absolute;
+    top: 50%;
     left: 100%;
+    transform: translateY(-50%);
     transition: transform 0.2s ease-out;
     opacity: 0;
   }
@@ -88,7 +91,7 @@ img {
   &:hover {
     &:after {
       opacity: 1;
-      transform: translateX(0.3em);
+      transform: translateX(0.3em) translateY(-50%);
     }
   }
 }
