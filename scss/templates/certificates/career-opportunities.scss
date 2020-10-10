@@ -149,12 +149,12 @@
     }
   
     &.previous {
-      left: calc(50vw - 17.5vw);
+      left: 0;
       margin-left: -0.5em;
     }
   
     &.next {
-      right: calc(50vw - 17.5vw);
+      right: 0;
       margin-right: -0.5em;
     }
   }
