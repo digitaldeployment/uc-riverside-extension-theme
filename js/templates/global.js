@@ -95,7 +95,7 @@ export default () => {
   // Certificate Related Programs Slider
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('.section__related-programs .slider').forEach(element => {
+  document.querySelectorAll('.certificate .section__related-programs .slider').forEach(element => {
     if (!element.Slider) {
       const defaults = {
         wrapAround: true,
@@ -113,6 +113,29 @@ export default () => {
         defaults['prevNextButtons'] = true;
         defaults['pageDots'] = false;
 
+      }
+      element.Slider = new Flickity(element, defaults);
+    }
+  });
+  
+  // Course Testimonials Slider
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.course .section__testimonials .slider').forEach(element => {
+    if (!element.Slider) {
+      const defaults = {
+        wrapAround: true,
+        autoPlay: false,
+        adaptiveHeight: false,
+        arrowShape: 'M24.5,51.6v-3.2l19.6-19.6l3.2,3.2L31.5,47.8h44.1v4.5H31.5L47.2,68l-3.2,3.2L24.5,51.6z',
+        groupCells: '1',
+        pageDots: true,
+      }
+
+      if (window.matchMedia("(max-width: 992px)").matches) {
+        defaults['prevNextButtons'] = false;
+      } else {
+        defaults['prevNextButtons'] = true;
       }
       element.Slider = new Flickity(element, defaults);
     }

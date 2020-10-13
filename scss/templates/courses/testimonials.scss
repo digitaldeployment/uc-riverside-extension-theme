@@ -1,0 +1,168 @@
+// =============================================================================
+// COURSES :: TESTIMONIALS
+// =============================================================================
+
+.section__testimonials {
+  position: relative;
+  padding: 4rem 0;
+  text-align: center;
+  background: url('https://images.prismic.io/ucriverside/0a3419e0-8bf7-426f-89b6-6113018d39d9_holding-books-bg.jpg?auto=compress,format') center / cover no-repeat;
+  overflow: hidden;
+
+  @include media-breakpoint-up(lg) {
+    padding: 6rem 0;
+  }
+
+  .container-max {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section__heading {
+    position: relative;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      content: "";
+      background-color: $gold;
+      height: 5px;
+      width: 120px;
+      transform: translateX(-50%);
+    }
+  }
+  
+  // Slider
+  // ---------------------------------------------------------------------------
+  
+  .slider {
+    margin-bottom: rem-calc(60);
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 4rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }  
+  
+  // Blockquote
+  // ---------------------------------------------------------------------------
+  
+  blockquote {
+    width: 100%;
+    min-height: 100%;
+    border: none;
+    margin: 0;
+    color: white;
+    font-size: rem-calc(18);
+    font-weight: 300;
+    line-height: 1.6;
+    padding: 0 rem-calc(12);
+    margin: 0;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+
+    &.is-selected {
+      opacity: 1;
+      pointer-events: initial;
+    }
+
+    @include media-breakpoint-down(md) {
+      p {
+        margin: 0;
+      }
+
+      footer {
+        display: none;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      footer {
+        color: white;
+        font-family: $font-family-heading;
+        font-style: normal;
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  // Flickity
+  // ---------------------------------------------------------------------------
+  
+  .flickity-viewport {
+    width: 100%;
+    margin: 0;
+    overflow: visible;
+  }
+  
+  // Flickity prev/next buttons
+  // ---------------------------------------------------------------------------
+  
+  .flickity-prev-next-button {
+    font-size: 3rem;
+    height: rem-calc(40);
+    width: rem-calc(40);
+    color: white;
+    border: 2px solid white;
+
+    .flickity-button-icon {
+      left: 0%;
+      top: 0%;
+      width: 100%;
+      height: 100%;
+    }
+  
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  
+    @include media-breakpoint-up(xl) {
+      font-size: 1rem;
+    }
+  
+    &.previous {
+      left: 0;
+    }
+  
+    &.next {
+      right: 0;
+    }
+  }
+  
+  // Flickity page dots
+  // ---------------------------------------------------------------------------
+  
+  .flickity-page-dots {
+    bottom: rem-calc(-60);
+
+    @include media-breakpoint-up(lg) {
+      left: 0;
+    }
+  }
+  
+  .dot {
+    background-color: white;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    &.is-selected {
+      background-color: $tertiary;
+    }
+  
+    @include media-breakpoint-only(md) {
+      width: rem-calc(20);
+      height: rem-calc(20);
+    }
+  
+    &:not(.is-active):hover {
+      opacity: 0.75;
+    }
+  }
+}

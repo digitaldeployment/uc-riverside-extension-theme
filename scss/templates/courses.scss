@@ -8,6 +8,13 @@ body.course {
   @import './courses/info-popups';
   @import './courses/get-started';
   @import './courses/previews';
+  @import './courses/testimonials';
+
+  .page-main {
+    & > .container-max {
+      margin-bottom: 0;
+    }
+  }
 
   .page-center {
     margin-bottom: 0;
