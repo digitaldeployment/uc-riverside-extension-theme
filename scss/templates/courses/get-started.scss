@@ -1,0 +1,161 @@
+// =============================================================================
+// COURSES :: GET STARTED
+// =============================================================================
+
+.section__get-started {
+  position: relative;
+  padding: 2rem 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') center / cover no-repeat $tertiary;
+    z-index: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 5rem 0;
+  }
+
+  .container-max {
+    position: relative;
+    z-index: 1;
+  }
+
+  .accordion-heading {
+    background-color: $light;
+    text-transform: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    h4.startdate {
+      margin-bottom: 0.25rem;
+      font-family: $font-family-heading;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .course-id {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    [class*="course-header-"] {
+      display: flex;
+      font-weight: 300;
+
+      svg {
+        fill: $primary;
+        margin-right: 0.5rem;
+      }
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    .btn-enroll {
+      border-radius: 2rem;
+      font-family: $font-family-heading;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1.5rem;
+
+      .course-header {
+        margin-bottom: 1.2rem;
+      }
+
+      .course-header--tuition,
+      .course-header--format {
+        margin-bottom: 1.2rem;
+      }
+
+      .btn-enroll {
+        display: block;
+        width: 100%;
+        margin: 2rem 0;
+      }
+
+      .icon-plus {
+        align-self: center;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 2rem 3rem;
+      justify-content: space-between;
+
+      .course-header {
+        width: 20%;
+      }
+
+      [class*="course-header-"] {
+        width: 20%;
+        padding-left: 1rem;
+      }
+
+      .btn-enroll {
+        width: 10%;
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  .accordion-content {
+    display: flex;
+    background-color: white;
+
+    .cell {
+      margin: 2rem 0 0;
+      line-height: 1.8;
+
+      h4 {
+        display: flex;
+        align-items: center;
+        font-family: $font-family-heading;
+        font-weight: normal;
+        text-transform: uppercase;
+
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+
+      p {
+        padding-left: calc(30px + 0.5rem);
+
+        strong {
+          font-weight: 500;
+        }
+      }
+
+      & > a.readmore {
+        padding-left: calc(30px + 0.5rem);
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: wrap;
+
+      .cell {
+        width: percentage(1/3);
+        padding-right: 3rem;
+      }
+    }
+  }
+}

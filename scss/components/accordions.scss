@@ -29,7 +29,7 @@
     justify-content: space-between;
     text-transform: uppercase;
 
-    svg {
+    svg.icon-plus {
       flex-shrink: 0;
       border-radius: 100%;
       line-height: 1;
@@ -41,7 +41,7 @@
     &:hover {
       text-decoration: underline;
 
-      svg {
+      svg.icon-plus {
         background-color: #f5a800;
       }
     }
@@ -77,7 +77,7 @@
     }
 
     .accordion-heading {
-      svg {
+      svg.icon-plus {
         transform: rotate(0);
       }
     }
