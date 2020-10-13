@@ -16,7 +16,7 @@ export default class VideoModal {
   }
 
   //
-  // Flickity on 'show' event handler.
+  // Modal on 'show' event handler.
   //
 
   onShowHandler() {
@@ -40,7 +40,7 @@ export default class VideoModal {
   }
 
   //
-  // Flickity on 'hide' event handler.
+  // Modal on 'hide' event handler.
   //
 
   onHideHandler() {

@@ -11,9 +11,10 @@ import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
 import SmoothScroll from 'smooth-scroll'
 import PageAnchors from '../navigation/PageAnchors'
+import VideoModal from '../components/VideoModal'
+import VideoButton from '../components/VideoButton'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
-
 
 export default () => {
   // Flyout toggle functionality
@@ -35,6 +36,22 @@ export default () => {
       element.TermNavigation = new TermNavigation(element);
     }
   });
+
+  // Modal Video Buttons - Launch a remote video iframe'd in a modal
+  // ---------------------------------------------------------------------------
+  const videoModal = document.querySelector('#modal-video');
+  if (videoModal) {
+    document.querySelectorAll('[data-target="#modal-video"]').forEach(element => {
+      // Add video button logic.
+      if (!element.VideoButton) {
+        element.VideoButton = new VideoButton(element, videoModal);
+      }
+      // Add video modal logic.
+      if (!document.body.VideoModal) {
+        document.body.VideoModal = new VideoModal(videoModal);
+      }
+    });
+  }
 
   // Collapsible powered accordions
   // ---------------------------------------------------------------------------
