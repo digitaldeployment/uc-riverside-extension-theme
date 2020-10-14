@@ -4,6 +4,9 @@
 
 html {
   font-size: $custom-font-size-base;
+  letter-spacing: 0.02em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 
   @include media-breakpoint-up(xl) {
     font-size: ($custom-font-size-base / map-get($grid-breakpoints, 'xl')) * 100vw;
