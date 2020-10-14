@@ -1,0 +1,23 @@
+// =============================================================================
+// International Home :: Videos
+// =============================================================================
+
+section.videos {
+  position: relative;
+  z-index: 3;
+  overflow: inherit;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: url('https://prismic-io.s3.amazonaws.com/ucriverside/da15546c-108a-401c-a686-45511024ddd8_abstract-hills.svg');
+
+  @include media-breakpoint-up(lg) {
+    padding: 0 0 3rem;
+  }
+
+  .container-max {
+    @include media-breakpoint-up(lg) {
+      margin-top: rem-calc(-120);
+      padding: 0 12rem;
+    }
+  }
+}
