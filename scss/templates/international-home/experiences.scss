@@ -3,8 +3,9 @@
 // =============================================================================
 
 section.experiences {
-  background-size: cover;
-  background-position: 100% 100%;
+  background-size: contain;
+  background-color: $tertiary;
+  background-position: right bottom;
   background-image: url('https://images.prismic.io/ucriverside/628f0a5b-a4e5-47fa-a6f5-a93969bd35ed_lady-walking.jpg?auto=compress,format');
 
   @include media-breakpoint-up(lg) {
