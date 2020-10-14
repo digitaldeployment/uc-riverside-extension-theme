@@ -2,23 +2,28 @@
 // International Home :: Programs
 // =============================================================================
 
-.program-desc-btn {
-  padding: 0;
-  border-radius: 100%;
-  transition: 0.2s ease-out;
-  background-color: $tertiary;
-  color: $dark;
+.programs {
+  background-image: url('https://prismic-io.s3.amazonaws.com/ucriverside/be8fdae3-2d3a-4dec-a06d-34f8a1347122_vertical-rays.svg');
 
-  .icon {
-    display: block;
-  }
-
-  &[aria-describedby] {
-    transform: rotate(-45deg);
-  }
-
-  &:hover,
-  &:focus {
-      box-shadow: 0 0 0 5px $tertiary;
+  .program-desc-btn {
+    padding: 0;
+    border-radius: 100%;
+    transition: 0.2s ease-out;
+    background-color: $tertiary;
+    color: $dark;
+  
+    .icon {
+      display: block;
+    }
+  
+    &[aria-describedby] {
+      transform: rotate(-45deg);
+    }
+  
+    &:hover,
+    &:focus {
+        box-shadow: 0 0 0 5px $tertiary;
+    }
   }
 }
+
