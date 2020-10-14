@@ -1,7 +1,9 @@
 // =============================================================================
-// Template :: International Home
+// International Hompeage :: Hero
 // =============================================================================
 
-.page--international-homepage {
-  @import 'international-home/hero';
+.hero {
+  .dropdown {
+    @include banner-dropdown();
+  }
 }
