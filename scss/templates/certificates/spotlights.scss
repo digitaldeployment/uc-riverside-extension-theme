@@ -1,0 +1,21 @@
+// =============================================================================
+// Certificate Specific Spotlight Teasers
+// =============================================================================
+
+.section__spotlight-teasers {
+  padding-bottom: rem-calc(40);
+  box-shadow: inset 0 rem-calc(60) white;
+  background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') repeat-y center top $tertiary;
+  background-size: 100%;
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: rem-calc(130);
+  }
+
+  .container-max {
+    @include media-breakpoint-up(lg) {
+      padding-left: 12vw;
+      padding-right: 12vw;  
+    }
+  }
+}
