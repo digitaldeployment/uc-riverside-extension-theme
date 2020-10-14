@@ -21,4 +21,14 @@ section.videos {
       padding: 0 12rem;
     }
   }
+
+  .heading {
+    @include media-breakpoint-up(lg) {
+      max-width: none;
+      padding-top: rem-calc(45);
+      padding-bottom: rem-calc(45);
+      font-size: rem-calc(22);
+      text-align: center;
+    }
+  }
 }

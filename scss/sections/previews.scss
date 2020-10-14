@@ -5,14 +5,13 @@
 .section__preview-teasers {
   .preview-teasers {
     padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0.5rem;
   
     @include media-breakpoint-up(md) {
       display: flex;
       flex-wrap: wrap;
       margin: 0 -1rem;
       padding-top: 4rem;
-      padding-bottom: 4rem;
     }
 
     @include media-breakpoint-up(xl) {
