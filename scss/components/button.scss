@@ -57,16 +57,24 @@
 
 .btn-overview {
   display: block;
-  padding: 0.75em 2em;
-  text-transform: uppercase;
-  color: $dark;
-  font-size: 0.9rem;
-  font-family: $font-family-heading;
-  letter-spacing: 0.025em;
+  padding: 0.85em 2em;
   border: 2px solid $tertiary;
   border-radius: 3rem;
+  text-transform: uppercase;
+  font-size: rem-calc(18);
+  font-family: $font-family-heading;
   line-height: 1.5;
+  letter-spacing: 0.025em;
   transition: background-color 0.2s ease-in-out;
+  color: $dark;
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem-calc(16);
+  }
 
   &:hover,
   &:focus,
@@ -74,9 +82,5 @@
     background-color: $tertiary;
     color: $dark;
     text-decoration: none;
-  }
-
-  @include media-breakpoint-up(lg) {
-    display: inline-block;
   }
 }
