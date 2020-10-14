@@ -2,7 +2,7 @@
 // Program Finder Template
 // =============================================================================
 
-.page--program-finder {
+body.program-finder {
   position: relative;
 
   @include media-breakpoint-down(md) {

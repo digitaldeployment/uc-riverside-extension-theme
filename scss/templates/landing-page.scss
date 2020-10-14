@@ -2,7 +2,7 @@
 // LANDING PAGE TEMPLATE
 // =============================================================================
 
-.landing-page {
+body.landing-page {
   .breadcrumbs {
     @include media-breakpoint-down(md) {
       padding-top: 0;
