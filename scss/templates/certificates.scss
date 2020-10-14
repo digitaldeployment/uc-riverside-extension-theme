@@ -4,6 +4,7 @@
 
 body.certificate {
   @import './certificates/overview';
+  @import './certificates/specifics';
   @import './certificates/career-opportunities';
   @import './certificates/getting-started';
   @import './certificates/spotlights';
@@ -11,6 +12,10 @@ body.certificate {
   @import './certificates/required-courses';
 
   .page-center {
+    margin-bottom: 0;
+  }
+
+  .page-main > .container-max {
     margin-bottom: 0;
   }
 }
