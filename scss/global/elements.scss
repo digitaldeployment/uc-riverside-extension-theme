@@ -25,7 +25,7 @@ h1, .h1 {
   font-family: $font-family-heading;
   font-size: rem-calc(50);
   font-weight: 300;
-  color: $blue;
+  color: $primary;
 
   @include media-breakpoint-up(lg) {
     font-size: rem-calc(68);
@@ -47,7 +47,7 @@ h3, .h3 {
 h4, .h4 {
   line-height: 1.4;
   font-weight: 500;
-  color: $blue;
+  color: $primary;
 }
 
 h5, .h5 {
@@ -59,7 +59,7 @@ h5, .h5 {
 
 h6, .h6 {
   font-weight: 500;
-  color: $blue;
+  color: $primary;
 }
 
 img {

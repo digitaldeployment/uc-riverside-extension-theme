@@ -165,7 +165,7 @@
     transition: all 0.2s ease-in-out;
 
     &.is-selected {
-      background-color: $blue;
+      background-color: $primary;
     }
   
     @include media-breakpoint-only(md) {

@@ -153,7 +153,7 @@ section.choices {
     }
 
     &:nth-child(even) .nav-link:after {
-      background-image: linear-gradient(to bottom, $blue 25%, rgba($blue, 0));
+      background-image: linear-gradient(to bottom, $primary 25%, rgba($primary, 0));
     }
 
     @include media-breakpoint-up(lg) {
