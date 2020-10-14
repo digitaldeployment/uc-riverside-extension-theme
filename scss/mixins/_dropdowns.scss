@@ -4,10 +4,15 @@
 
 @mixin banner-dropdown() {
   margin-top: 2rem;
+  
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1.5rem;
+  }
 
   button.dropdown-toggle {
     position: relative;
     z-index: 2;
+    width: 100%;
     min-width: 17rem;
     padding: 1.15rem 3rem 1.15rem 1.5rem;
     border-radius: 2rem;
@@ -21,6 +26,10 @@
     text-transform: uppercase;
     letter-spacing: 0.025em;
     transition: 0.1s ease-out;
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
 
     @include media-breakpoint-up(lg) {
       padding: 0.75rem 3rem 0.75rem 1rem;
@@ -64,10 +73,6 @@
       .icon {
         transform: rotate(-180deg) translateY(50%);
       }
-    }
-
-    @include media-breakpoint-down(md) {
-      width: 100%;
     }
   }
 
