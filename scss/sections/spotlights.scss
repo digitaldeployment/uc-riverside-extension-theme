@@ -13,6 +13,8 @@
   }
 
   .spotlight-teaser {
+    margin-bottom: 1rem;
+
     @include media-breakpoint-up(md) {
       width: calc(#{percentage(1/2)} - 1rem);
       margin-left: 0.5rem;

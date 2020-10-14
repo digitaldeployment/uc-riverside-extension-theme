@@ -20,23 +20,38 @@
     left: 0;
     bottom: 0;
     right: 0;
-    padding: rem-calc(45 30 30);
+    padding: rem-calc(24);
     transition: 0.2s ease-out;
     background-color: rgba(black, 0.52);
     color: white;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem-calc(40 30 30);
+    }
   }
 
   .heading {
+    margin-bottom: 0;
     text-transform: uppercase;
-    font-size: rem-calc(22);
+    font-size: rem-calc(18);
     color: inherit;
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(22);
+    }
   }
 
   .subheading {
+    margin-top: 0.5rem;
     margin-bottom: 0;
     font-size: rem-calc(18);
+    line-height: 1.65;
     font-weight: 300;
     color: inherit;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   &:hover,
@@ -44,7 +59,11 @@
     outline: 5px solid $tertiary;
 
     header {
-      padding: rem-calc(55 30 40);
+      padding: rem-calc(34 24);
+
+      @include media-breakpoint-up(lg) {
+        padding: rem-calc(50 30 40);
+      }
     }
   }
 }
