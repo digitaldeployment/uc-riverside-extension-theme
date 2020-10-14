@@ -1,0 +1,26 @@
+// =============================================================================
+// Spotlight Teasers Section
+// =============================================================================
+
+.section__spotlight-teasers {
+  .spotlight-teasers {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0 -0.5rem;
+    }
+  }
+
+  .spotlight-teaser {
+    @include media-breakpoint-up(md) {
+      width: calc(#{percentage(1/2)} - 1rem);
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  
+    @include media-breakpoint-up(lg) {
+      width: calc(#{percentage(1/3)} - 1rem);
+    }
+  }
+}

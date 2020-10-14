@@ -1,0 +1,50 @@
+// =============================================================================
+// Spotlight teaser
+// =============================================================================
+
+.spotlight-teaser {
+  display: block;
+  position: relative;
+  outline: 0 solid $tertiary;
+  transition: 0.2s ease-out;
+
+  img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  header {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: rem-calc(45 30 30);
+    transition: 0.2s ease-out;
+    background-color: rgba(black, 0.52);
+    color: white;
+  }
+
+  .heading {
+    text-transform: uppercase;
+    font-size: rem-calc(22);
+    color: inherit;
+  }
+
+  .subheading {
+    margin-bottom: 0;
+    font-size: rem-calc(18);
+    font-weight: 300;
+    color: inherit;
+  }
+
+  &:hover,
+  &:focus {
+    outline: 5px solid $tertiary;
+
+    header {
+      padding: rem-calc(55 30 40);
+    }
+  }
+}
