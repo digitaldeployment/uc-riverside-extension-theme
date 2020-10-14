@@ -30,3 +30,25 @@
     }
   }
 }
+
+// Standard Button Base Mixin
+// -----------------------------------------------------------------------------
+
+@mixin btn-standard() {
+  padding: 0.85em 2em;
+  font-weight: 500;
+  font-family: $font-family-heading;
+  font-size: rem-calc(18);
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(sm) {
+    display: block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0.65em 2em;
+    font-size: rem-calc(16);
+  }
+}
