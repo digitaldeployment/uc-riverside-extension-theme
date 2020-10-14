@@ -9,9 +9,9 @@
     position: relative;
     z-index: 2;
     min-width: 17rem;
-    border-radius: 1.5rem;
+    padding: 1.15rem 3rem 1.15rem 1.5rem;
+    border-radius: 2rem;
     border-width: 2px;
-    padding: 0.75rem 3rem 0.75rem 1rem;
     color: white;
     font-family: $font-family-heading;
     font-size: rem-calc(18);
@@ -23,6 +23,8 @@
     transition: 0.1s ease-out;
 
     @include media-breakpoint-up(lg) {
+      padding: 0.75rem 3rem 0.75rem 1rem;
+      border-radius: 1.5rem;
       font-size: rem-calc(15);
     }
 
@@ -49,11 +51,15 @@
       box-shadow: none;
     }
 
-    &[aria-expanded="true"] {
+    &[aria-expanded=true] {
       background-color: $primary;
       border-color: $primary;
-      border-radius: 1.5rem 1.5rem 0 0;
+      border-radius: 2rem 2rem 0 0;
       color: $gold;
+
+      @include media-breakpoint-up(lg) {
+        border-radius: 1.5rem 1.5rem 0 0;
+      }
 
       .icon {
         transform: rotate(-180deg) translateY(50%);
@@ -67,19 +73,23 @@
 
   .dropdown-menu {
     z-index: 1;
+    overflow: hidden;
+    top: 50%;
     min-width: 17rem;
-    top: -0.5rem !important;
-    background-color: $primary;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0 0 0.5rem;
     border: none;
+    border-radius: 0 0 2rem 2rem;
     transition: 0.2s ease-out;
-    border-radius: 0 0 1.5rem 1.5rem;
-    overflow: hidden;
+    background-color: $primary;
+
+    @include media-breakpoint-up(lg) {
+      border-radius: 0 0 1.5rem 1.5rem;
+    }
 
     a.dropdown-item {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1.5rem;
       color: white;
       font-family: $font-family-heading;
       font-size: rem-calc(16);
@@ -91,6 +101,7 @@
       white-space: normal;
 
       @include media-breakpoint-up(lg) {
+        padding: 0.5rem 1rem;
         font-size: rem-calc(12);
       }
 
@@ -105,5 +116,9 @@
     @include media-breakpoint-down(md) {
       width: 100%;
     }
+  }
+
+  [aria-expanded=true] + .dropdown-menu {
+    margin-top: -0.5rem;
   }
 }
