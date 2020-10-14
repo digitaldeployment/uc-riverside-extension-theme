@@ -89,13 +89,6 @@ $container-max-widths: (
   xl: 1200px,
 );
 
-// Grid columns
-// -----------------------------------------------------------------------------
-
-// $grid-columns:      12;
-// $grid-gutter-width: 30px;
-// $grid-row-columns:  6;
-
 // Custom Max Container offsets
 // -----------------------------------------------------------------------------
 
@@ -181,11 +174,11 @@ $modal-xl:                          map-get($container-max-widths, 'xl');
 // Breadcrumbs
 // -----------------------------------------------------------------------------
 
-$breadcrumb-font-size:              14px;
+$breadcrumb-font-size:              16px;
 $breadcrumb-padding-y:              0;
 $breadcrumb-padding-x:              0;
-$breadcrumb-item-padding:           0.5rem;
-$breadcrumb-margin-bottom:          0rem;
+$breadcrumb-item-padding:           0.4rem;
+$breadcrumb-margin-bottom:          0;
 $breadcrumb-bg:                     transparent;
 $breadcrumb-divider-color:          inherit;
 $breadcrumb-active-color:           $primary;
