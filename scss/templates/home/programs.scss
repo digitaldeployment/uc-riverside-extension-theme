@@ -117,7 +117,7 @@ section.programs {
     }
 
     .heading {
-      max-width: 200px;
+      max-width: rem-calc(200);
       margin-left: auto;
       margin-right: auto;
       line-height: 1.4;
@@ -125,7 +125,7 @@ section.programs {
       text-transform: uppercase;
       font-family: $font-family-heading;
       font-weight: normal;
-      font-size: 21px;
+      font-size: rem-calc(16);
       color: $dark;
     }
 
