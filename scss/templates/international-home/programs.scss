@@ -1,0 +1,24 @@
+// =============================================================================
+// International Home :: Programs
+// =============================================================================
+
+.program-desc-btn {
+  padding: 0;
+  border-radius: 100%;
+  transition: 0.2s ease-out;
+  background-color: $tertiary;
+  color: $dark;
+
+  .icon {
+    display: block;
+  }
+
+  &[aria-describedby] {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus {
+      box-shadow: 0 0 0 5px $tertiary;
+  }
+}
