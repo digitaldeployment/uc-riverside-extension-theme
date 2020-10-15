@@ -37,6 +37,9 @@ export default class VideoModal {
         embedContainer.appendChild(iframe);
       }
     }
+
+    // Add a helper classname to the body to aid theme.
+    document.body.classList.add('modal-video--active');
   }
 
   //
@@ -44,6 +47,10 @@ export default class VideoModal {
   //
 
   onHideHandler() {
+    // Remove the helper classname.
+    document.body.classList.remove('modal-video--active');
+
+    // Remove the video within the modal
     this.element.querySelectorAll('iframe').forEach((iframe) => {
       iframe.remove();
     });
