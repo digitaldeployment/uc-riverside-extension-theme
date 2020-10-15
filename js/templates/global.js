@@ -22,6 +22,10 @@ import SliderRelatedPrograms from '../components/SliderRelatedPrograms'
 import SliderCareerOpportunities from '../components/SliderCareerOpportunites'
 
 export default () => {
+  // Grab helpful reference to the page header
+  // ---------------------------------------------------------------------------
+  const header = document.querySelector('.page__header');
+
   // Flyout toggle functionality
   // ---------------------------------------------------------------------------
   document.body.Flyout = new Flyout();
@@ -103,12 +107,11 @@ export default () => {
   // Smooth scroll control of all anchor links
   // ---------------------------------------------------------------------------
 
-  if (!document.body.SmoothScroll) {
+  if (!document.body.SmoothScroll && header) {
     document.body.SmoothScroll = new SmoothScroll('a[href*="#"]', {
-      header: '.page__header',
       updateURL: false,
       popstate: false,
-      offset: 40,
+      offset: () => header.clientHeight + 40,
     });
   }
   
