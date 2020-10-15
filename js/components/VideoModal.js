@@ -44,7 +44,7 @@ export default class VideoModal {
   //
 
   onHideHandler() {
-    document.querySelectorAll('iframe').forEach((iframe) => {
+    this.element.querySelectorAll('iframe').forEach((iframe) => {
       iframe.remove();
     });
   }
