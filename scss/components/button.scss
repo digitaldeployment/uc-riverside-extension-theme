@@ -58,9 +58,9 @@
 
 .btn-overview {
   @include btn-standard();
+  @include btn-round();
 
   border: 2px solid $tertiary;
-  border-radius: 3rem;
   transition: background-color 0.2s ease-in-out;
   color: $dark;
 
@@ -71,4 +71,12 @@
     color: $dark;
     text-decoration: none;
   }
+}
+
+.btn-standard {
+  @include btn-standard();
+}
+
+.btn-round {
+  @include btn-round();
 }

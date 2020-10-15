@@ -53,3 +53,7 @@
     font-size: 0.9rem;
   }
 }
+
+@mixin btn-round() {
+  border-radius: 3rem;
+}
