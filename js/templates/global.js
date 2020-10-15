@@ -11,8 +11,10 @@ import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
 import SmoothScroll from 'smooth-scroll'
 import PageAnchors from '../navigation/PageAnchors'
+import InfoModal from '../components/InfoModal'
 import VideoModal from '../components/VideoModal'
 import VideoButton from '../components/VideoButton'
+import InfoPopupButton from '../components/InfoPopupButton'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
 
@@ -49,6 +51,22 @@ export default () => {
       // Add video modal logic.
       if (!document.body.VideoModal) {
         document.body.VideoModal = new VideoModal(videoModal);
+      }
+    });
+  }
+
+  // Modal InfoPopup Buttons - Launch content within a modal
+  // ---------------------------------------------------------------------------
+  const infoModal = document.querySelector('#modal-info-popup');
+  if (infoModal) {
+    document.querySelectorAll('[data-target="#modal-info-popup"]').forEach(element => {
+      // Add infoPopup button logic.
+      if (!element.InfoPopupButton) {
+        element.InfoPopupButton = new InfoPopupButton(element, infoModal);
+      }
+      // Add info modal logic.
+      if (!document.body.InfoModal) {
+        document.body.InfoModal = new InfoModal(infoModal);
       }
     });
   }
