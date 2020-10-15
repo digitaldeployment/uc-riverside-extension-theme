@@ -19,7 +19,7 @@
   // ---------------------------------------------------------------------------
 
   .section-heading {
-    margin: 0 1.5rem 2rem;
+    margin: 0 0 2rem;
     font-family: $font-family-heading;
     font-size: rem-calc(22);
     text-transform: uppercase;
@@ -84,11 +84,11 @@
   // ---------------------------------------------------------------------------
 
   .slide {
-    width: percentage(295/375);
+    width: percentage(310/375);
     min-height: 100%;
     padding: rem-calc(0 10);
     margin: 0;
-    
+
     @include media-breakpoint-up(lg) {
       width: percentage(1/4);
       padding: 0 1rem;
@@ -98,23 +98,44 @@
       padding: 0 1.5rem;
     }
   }
-  
+
   // Card
   // ---------------------------------------------------------------------------
 
   .card {
     background-color: transparent;
 
-    img {
+    .image {
+      position: relative;
+      overflow: hidden;
       width: 100%;
-      max-width: none;
       outline: 0 solid transparent;
       border-bottom: 13px solid $tertiary;
       transition: 0.2s ease-in-out;
+      
+      @include media-breakpoint-down(md) {
+        padding-bottom: percentage(190/277);
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        max-width: none;
+        transform: translate3d(-50%, -50%, 0);
+      }
     }
 
     .card-body {
       padding: 1.25rem 0 0;
+      transition: 0.2s ease-out;
 
       .card-title {
         text-transform: none;
@@ -133,10 +154,15 @@
     &:focus {
       color: $dark;
 
-      img {
+      .image {
+        margin-bottom: 13px;
         border-bottom-width: 0;
         outline: 2px solid $tertiary;
         outline-offset: -1rem;
+      }
+
+      .card-body {
+        transform: translateY(-13px);
       }
 
       .card-title {
@@ -144,7 +170,7 @@
       }
     }
   }
-  
+
   // Flickity
   // ---------------------------------------------------------------------------
   
@@ -152,10 +178,10 @@
     width: 100%;
     margin: 0;
   }
-  
+
   // Flickity prev/next buttons
   // ---------------------------------------------------------------------------
-  
+
   .flickity-prev-next-button {
     z-index: 3;
     top: 4.8rem;
@@ -203,14 +229,14 @@
       background-color: $tertiary;
     }
   }
-  
+
   // Flickity page dots
   // ---------------------------------------------------------------------------
-  
+
   .flickity-page-dots {
     bottom: rem-calc(-60);
   }
-  
+
   .dot {
     background-color: #d3d3d3;
     opacity: 1;
