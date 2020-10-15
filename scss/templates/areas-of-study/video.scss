@@ -142,14 +142,14 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      font-size: rem-calc(30);
+      font-size: rem-calc(26);
     }
   }
 
   .subheading {
     margin: 0.75rem 0 0;
     color: white;
-    font-size: rem-calc(25);
+    font-size: rem-calc(20);
     font-weight: 300;
     line-height: 1.3;
 
