@@ -5,7 +5,7 @@ export default class InfoModal {
     this.element = element;
     this.timer = null;
 
-    if (this.modalBody) {
+    if (this.modalBody && this.modalHeading) {
       this.listen();
     }
   }
@@ -38,13 +38,20 @@ export default class InfoModal {
     }
 
     this.timer = setTimeout(() => {
+      // Reset aria-label and heading
       this.element.setAttribute('aria-label', 'Info modal');
+      this.modalHeading.textContent = 'Info modal';
+
       // Remove the content from within the modal.
       this.modalBody.innerHTML = '';
-    }, 500);
 
-    // Remove the helper classname.
-    document.body.classList.remove('modal-info-popup--active');
+      // Remove the helper classname.
+      document.body.classList.remove('modal-info-popup--active');
+    }, 350);
+  }
+
+  get modalHeading() {
+    return this.element.querySelector('.modal-header .heading');
   }
 
   get modalBody() {
