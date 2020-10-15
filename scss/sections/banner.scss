@@ -47,10 +47,6 @@
       font-size: rem-calc(19);
       color: inherit;
 
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
-      
       @include media-breakpoint-up(lg) {
         margin-top: 1.75rem;
       }
