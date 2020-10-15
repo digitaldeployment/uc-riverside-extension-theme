@@ -1,16 +1,6 @@
-import Breakpoints from 'breakpoints-js/dist/breakpoints';
+import Breakpoints from 'breakpoints-js/dist/breakpoints'
+import { breakpoints } from '../config'
 
-const settings = {
-  mobile:  {
-    min: 0,
-    max: 991,
-  },
-  desktop: {
-    min: 992,
-    max: Infinity,
-  },
-};
-
-Breakpoints(settings);
+Breakpoints(breakpoints);
 
 export default Breakpoints;
