@@ -6,6 +6,10 @@
   position: relative;
   padding: 2rem 0;
 
+  @include media-breakpoint-up(lg) {
+    padding: 5rem 0;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -17,20 +21,34 @@
     z-index: 0;
   }
 
-  @include media-breakpoint-up(lg) {
-    padding: 5rem 0;
-  }
+  // Container/Wrapper
+  // ---------------------------------------------------------------------------
 
   .container-max {
     position: relative;
     z-index: 1;
   }
 
+  // Accordion Heading
+  // ---------------------------------------------------------------------------
+
   .accordion-heading {
     position: relative;
     z-index: 2;
     background-color: $light;
     text-transform: none;
+    font-size: 0.9rem;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 1.35rem 2rem 1.35rem 3rem;
+      justify-content: space-between;
+    }
 
     &:hover {
       text-decoration: none;
@@ -48,12 +66,50 @@
       text-transform: uppercase;
     }
 
+    // Course header
+    // -------------------------------------------------------------------------
+
+    .course-header {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 1.2rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 25%;
+        max-width: 300px;
+      }
+    }
+
+    // Course headers
+    // -------------------------------------------------------------------------
+
     [class*="course-header-"] {
       font-weight: 300;
 
-      svg {
+      @include media-breakpoint-only(lg) {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: auto;
+      }
+  
+      @include media-breakpoint-up(lg) {
+        flex-grow: 1;
+        padding: 0 1rem;
+      }
+
+      // Tuition, Format, Duration Icons
+      // -----------------------------------------------------------------------
+
+      .icon {
         fill: $primary;
-        margin-right: 0.5rem;
+        margin-right: 0.2rem;
+
+        @include media-breakpoint-only(lg) {
+          margin: 0 auto;
+        }
       }
 
       strong {
@@ -61,85 +117,66 @@
       }
     }
 
+    // Specific headers styling
+    // -------------------------------------------------------------------------
+
+    .course-header--tuition,
+    .course-header--format {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    // Enroll Button
+    // -------------------------------------------------------------------------
+
     .btn-enroll {
       border-radius: 2rem;
       font-family: $font-family-heading;
       text-transform: uppercase;
-      padding: 0.85rem 2rem;
-    }
+      padding: 0.65rem 2rem;
 
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 2rem 1.5rem;
-
-      .course-header {
-        margin-bottom: 1.2rem;
-      }
-
-      .course-header--tuition,
-      .course-header--format {
-        margin-bottom: 1.2rem;
-      }
-
-      .btn-enroll {
+      @include media-breakpoint-down(md) {
         display: block;
         width: 100%;
         margin: 2rem 0;
       }
 
-      .icon-plus {
+      @include media-breakpoint-only(lg) {
+        width: auto;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin: 0 72px;
+      }
+    }
+
+    // Plus Icon
+    // -------------------------------------------------------------------------
+
+    .icon-plus {
+      @include media-breakpoint-down(md) {
         align-self: center;
       }
     }
-
-    @include media-breakpoint-up(lg) {
-      padding: 2rem 3rem;
-      justify-content: space-between;
-
-      .course-header {
-        width: 20%;
-      }
-
-      [class*="course-header-"] {
-        width: 24%;
-        padding-left: 1rem;
-      }
-
-      .btn-enroll {
-        width: 10%;
-        margin-right: 2rem;
-      }
-    }
-
-    @include media-breakpoint-between(lg, xl) {
-      .course-header {
-        width: 25%;
-      }
-
-      [class*="course-header-"] {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        width: auto;
-
-        .icon {
-          margin: 0 auto;
-        }
-      }
-
-      .btn-enroll {
-        width: auto;
-      }
-    }
   }
+
+  // Accordion content
+  // ---------------------------------------------------------------------------
 
   .accordion-content {
     position: relative;
     z-index: 1;
     display: flex;
     background-color: white;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: wrap;
+    }
 
     .cell {
       margin: 2rem 0 0;
@@ -172,16 +209,8 @@
       & > a.readmore {
         padding-left: calc(30px + 0.5rem);
       }
-    }
 
-    @include media-breakpoint-down(md) {
-      flex-direction: column;
-    }
-
-    @include media-breakpoint-up(lg) {
-      flex-wrap: wrap;
-
-      .cell {
+      @include media-breakpoint-up(lg) {
         width: percentage(1/3);
         padding-right: 3rem;
       }
