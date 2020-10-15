@@ -17,6 +17,7 @@
     "array-shuffle": "^1.0.1",
     "bootstrap": "^4.5.0",
     "breakpoints-js": "^1.0.6",
+    "deepmerge": "^4.2.2",
     "fg-collapsible": "^0.14.0",
     "flickity": "^2.2.1",
     "flickity-fade": "^1.0.0",
