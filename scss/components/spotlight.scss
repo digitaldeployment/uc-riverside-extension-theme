@@ -5,8 +5,9 @@
 .spotlight-teaser {
   display: block;
   position: relative;
+  width: 100%;
   outline: 0 solid $tertiary;
-  transition: 0.2s ease-out;
+  transition: outline 0.2s ease-out;
 
   img {
     position: relative;
