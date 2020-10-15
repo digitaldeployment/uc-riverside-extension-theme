@@ -3,9 +3,13 @@
 // =============================================================================
 
 .section__related-programs {
-  padding: 4rem 0;
+  padding: 3rem 0;
   background-color: $light;
   overflow: hidden;
+  
+  @include media-breakpoint-up(lg) {
+    padding: 5rem 0;
+  }
 
   @include media-breakpoint-up(lg) {
     padding: 5.5rem 0;

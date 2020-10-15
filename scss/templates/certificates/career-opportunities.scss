@@ -3,8 +3,12 @@
 // =============================================================================
 
 .section__career-opportunities {
-  padding: 4rem 0;
+  padding: 3rem 0;
   background-color: $light;
+  
+  @include media-breakpoint-up(lg) {
+    padding: 5rem 0;
+  }
 
   // Section Heading
   // ---------------------------------------------------------------------------
@@ -38,11 +42,7 @@
   // ---------------------------------------------------------------------------
   
   .slider {
-    margin-bottom: rem-calc(96);
-  
-    @include media-breakpoint-up(md) {
-      margin-bottom: rem-calc(140);
-    }
+    margin-bottom: rem-calc(80);
   
     @include media-breakpoint-up(lg) {
       display: flex;

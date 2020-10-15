@@ -4,8 +4,12 @@
 
 .section__required-courses {
   position: relative;
-  padding-top: 4rem;
+  padding-top: 3rem;
   margin-bottom: 0;
+  
+  @include media-breakpoint-up(lg) {
+    padding-top: 5rem;
+  }
 
   header {
     position: relative;
