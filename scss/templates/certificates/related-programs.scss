@@ -251,7 +251,7 @@
       height: rem-calc(20);
     }
   
-    &:not(.is-active):hover {
+    &:not(.is-selected):hover {
       opacity: 0.75;
     }
   }
