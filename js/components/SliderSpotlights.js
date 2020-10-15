@@ -2,7 +2,7 @@ import Slider from './Slider'
 
 const settings = {
   wrapAround: true,
-  prevNexButtons: false,
+  prevNextButtons: false,
   responsive: {
     desktop: {
       disabled: true,
