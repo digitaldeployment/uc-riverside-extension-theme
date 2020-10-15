@@ -6,69 +6,123 @@
   display: flex;
   padding-bottom: 3rem;
 
-  .btn.info {
-    width: 100%;
-
-    .heading {
-      font-weight: normal;
-      text-transform: uppercase;
-    }
-  }
-
-  .icon-plus {
-    background-color: white;
-    fill: $primary;
-    border-radius: 100%;
-  }
-
   @include media-breakpoint-down(md) {
     flex-direction: column;
-
-    .info-popup {
-      margin-bottom: 0.5rem;
-    }
-
-    .btn.info {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1rem;
-
-      .heading {
-        margin-bottom: 0;
-        font-size: rem-calc(18);
-        line-height: 3;
-      }
-    }
   }
 
   @include media-breakpoint-up(lg) {
     justify-content: space-between;
     margin: 0 -1rem;
     padding-bottom: 5rem;
+  }
 
-    .info-popup {
+  @include media-breakpoint-up(xl) {
+    margin: 0 -1.5rem;
+  }
+
+  // Info Popup container
+  // ---------------------------------------------------------------------------
+
+  .info-popup {
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
       width: calc(#{percentage(1/3)} - 2rem);
       margin-left: 1rem;
       margin-right: 1rem;
     }
 
-    .btn.info {
-      padding: 3rem 1.5rem;
-
-      .heading {
-        font-size: rem-calc(24);
-      }
-    }
-  }
-
-  @include media-breakpoint-up(xl) {
-    margin: 0 -1.5rem;
-
-    .info-popup {
+    @include media-breakpoint-up(xl) {
       width: calc(#{percentage(1/3)} - 3rem);
       margin-left: 1.5rem;
       margin-right: 1.5rem;
     }
+  }
+
+  // Button Info
+  // ---------------------------------------------------------------------------
+
+  .btn.info {
+    width: 100%;
+    height: 100%;
+    outline: 0 solid $tertiary;
+    transition: 0.2s ease-out;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+    }
+  
+    @include media-breakpoint-up(lg) {
+      padding: 3rem 1.5rem;
+    }
+
+    // Button heading
+    // -------------------------------------------------------------------------
+
+    .heading {
+      font-weight: normal;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 0;
+        font-size: rem-calc(18);
+        line-height: 3;
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: rem-calc(24);
+      }
+    }
+
+    // Hover/Focus states of the button
+    // -------------------------------------------------------------------------
+
+    &:hover,
+    &:focus {
+      outline: 5px solid $tertiary;
+
+      .icon {
+        background-color: $tertiary;
+        color: $dark;
+      }
+    }
+
+    // Noop Button exception
+    // -------------------------------------------------------------------------
+
+    &.btn-noop {
+      cursor: default !important;
+  
+      &:hover,
+      &:focus {
+        outline: none;
+        background-color: $primary;
+      }
+    }
+  }
+
+  // Plus Icon
+  // ---------------------------------------------------------------------------
+
+  .icon-plus {
+    background-color: white;
+    fill: $primary;
+    border-radius: 100%;
+    transition: 0.2s ease-out;
+  }
+
+  // Lists
+  // ---------------------------------------------------------------------------
+
+  ul {
+    margin-bottom: 0;
   }
 }
