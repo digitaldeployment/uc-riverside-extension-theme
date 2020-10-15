@@ -17,7 +17,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: url('https://prismic-io.s3.amazonaws.com/ucriverside/fd4db3d2-86fc-4018-836a-32a8055899f2_abstract-orange.svg') center / 100% repeat-y $tertiary;
+    background: url('https://prismic-io.s3.amazonaws.com/ucriverside/fd4db3d2-86fc-4018-836a-32a8055899f2_abstract-orange.svg') center top / 100% repeat-y $tertiary;
     z-index: 0;
   }
 
@@ -168,6 +168,7 @@
     position: relative;
     z-index: 1;
     display: flex;
+    font-size: 0.9rem;
     background-color: white;
 
     @include media-breakpoint-down(md) {
@@ -176,11 +177,19 @@
 
     @include media-breakpoint-up(lg) {
       flex-wrap: wrap;
+      padding-left: 1rem;
+      padding-right: 7.5rem;
     }
 
     .cell {
       margin: 2rem 0 0;
       line-height: 1.8;
+
+      @include media-breakpoint-up(lg) {
+        width: percentage(1/3);
+        margin-top: 1.6rem;
+        padding: 0 1.5rem;
+      }
 
       h4 {
         display: flex;
@@ -188,6 +197,7 @@
         font-family: $font-family-heading;
         font-weight: normal;
         text-transform: uppercase;
+        font-size: rem-calc(15);
 
         svg {
           margin-right: 0.5rem;
@@ -208,11 +218,6 @@
 
       & > a.readmore {
         padding-left: calc(30px + 0.5rem);
-      }
-
-      @include media-breakpoint-up(lg) {
-        width: percentage(1/3);
-        padding-right: 3rem;
       }
     }
   }
