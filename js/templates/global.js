@@ -6,7 +6,6 @@ import 'fg-collapsible/src/collapsible'
 import 'fg-collapsible/src/collapsible.set'
 import 'fg-collapsible/src/collapsible.tab'
 import 'flickity-fade';
-import Flickity from 'flickity';
 import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
 import SmoothScroll from 'smooth-scroll'
@@ -17,6 +16,9 @@ import VideoButton from '../components/VideoButton'
 import InfoPopupButton from '../components/InfoPopupButton'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
+import SliderTestimonials from '../components/SliderTestimonials'
+import SliderRelatedPrograms from '../components/SliderRelatedPrograms'
+import SliderCareerOpportunities from '../components/SliderCareerOpportunites'
 
 export default () => {
   // Flyout toggle functionality
@@ -114,65 +116,28 @@ export default () => {
 
   document.querySelectorAll('.section__career-opportunities .slider').forEach(element => {
     if (!element.Slider) {
-      const defaults = {
-        wrapAround: true,
-        pageDots: true,
-        autoPlay: false,
-        adaptiveHeight: false,
-        arrowShape: 'M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z',
-        defaults: 1,
-      }
-      
-      element.Slider = new Flickity(element, defaults);
+      element.Slider = new SliderCareerOpportunities(element);
     }
   });
   
-  // Certificate Related Programs Slider
+  // Related Programs Slider
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('.certificate .section__related-programs .slider').forEach(element => {
+  document.querySelectorAll('.section__related-programs .slider').forEach(element => {
     if (!element.Slider) {
-      const defaults = {
-        wrapAround: true,
-        autoPlay: false,
-        adaptiveHeight: false,
-        arrowShape: 'M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z',
-      }
-
-      if (window.matchMedia("(max-width: 992px)").matches) {
-        defaults['groupCells'] = 1;
-        defaults['prevNextButtons'] = false;
-        defaults['pageDots'] = true;
-      } else {
-        defaults['groupCells'] = 4;
-        defaults['prevNextButtons'] = true;
-        defaults['pageDots'] = false;
-
-      }
-      element.Slider = new Flickity(element, defaults);
+      element.Slider = new SliderRelatedPrograms(element);
     }
   });
   
-  // Course Testimonials Slider
+  // Testimonials Slider
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('.course .section__testimonials .slider').forEach(element => {
+  document.querySelectorAll('.section__testimonials .slider').forEach(element => {
     if (!element.Slider) {
-      const defaults = {
-        wrapAround: true,
-        autoPlay: false,
-        adaptiveHeight: false,
-        arrowShape: 'M24.5,51.6v-3.2l19.6-19.6l3.2,3.2L31.5,47.8h44.1v4.5H31.5L47.2,68l-3.2,3.2L24.5,51.6z',
-        groupCells: '1',
-        pageDots: true,
-      }
+      element.Slider = new SliderTestimonials(element);
+    }
+  });
 
-      if (window.matchMedia("(max-width: 992px)").matches) {
-        defaults['prevNextButtons'] = false;
-      } else {
-        defaults['prevNextButtons'] = true;
-      }
-      element.Slider = new Flickity(element, defaults);
     }
   });
 }
