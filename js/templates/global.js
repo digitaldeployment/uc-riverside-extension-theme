@@ -16,6 +16,7 @@ import VideoButton from '../components/VideoButton'
 import InfoPopupButton from '../components/InfoPopupButton'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
+import SliderSpotlights from '../components/SliderSpotlights'
 import SliderTestimonials from '../components/SliderTestimonials'
 import SliderRelatedPrograms from '../components/SliderRelatedPrograms'
 import SliderCareerOpportunities from '../components/SliderCareerOpportunites'
@@ -137,7 +138,13 @@ export default () => {
       element.Slider = new SliderTestimonials(element);
     }
   });
+  
+  // Spotlights Slider
+  // ---------------------------------------------------------------------------
 
+  document.querySelectorAll('.section__spotlight-teasers .spotlight-teasers').forEach(element => {
+    if (!element.Slider) {
+      element.Slider = new SliderSpotlights(element);
     }
   });
 }
