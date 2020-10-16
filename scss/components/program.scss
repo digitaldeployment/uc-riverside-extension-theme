@@ -7,7 +7,7 @@
   flex-direction: column;
   transition: 0.2s ease-out;
   outline: 0 solid white;
-  background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') repeat-y center 20px $primary;
+  background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') center 20px / 100% repeat-y $primary;
   color: inherit;
 
   @include media-breakpoint-up(xl) {
