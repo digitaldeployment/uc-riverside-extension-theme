@@ -6,4 +6,10 @@
   margin-bottom: 0;
   padding-bottom: 0;
   border-bottom: none;
+
+  .accordion-content {
+    & > p {
+      font-size: rem-calc(14);
+    }
+  }
 }
