@@ -7,7 +7,7 @@ export default () => {
   // Home Hero
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('section.hero').forEach(element => {
+  document.querySelectorAll('.homepage section.hero').forEach(element => {
     if (!element.Hero) {
       element.Hero = new Hero(element);
     }
@@ -16,7 +16,7 @@ export default () => {
   // Home Experiences Slider
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('section.experiences .slider').forEach(element => {
+  document.querySelectorAll('.homepage section.experiences .slider').forEach(element => {
     if (!element.Slider) {
       element.Slider = new SliderExperiences(element);
     }
@@ -25,7 +25,7 @@ export default () => {
   // Home Videos
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('section.videos').forEach(element => {
+  document.querySelectorAll('.homepage section.videos').forEach(element => {
     if (!element.Videos) {
       element.Videos = new Videos(element);
     }
