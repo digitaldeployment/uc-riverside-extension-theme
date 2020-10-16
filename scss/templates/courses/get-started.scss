@@ -1,0 +1,224 @@
+// =============================================================================
+// COURSES :: GET STARTED
+// =============================================================================
+
+.section__get-started {
+  position: relative;
+  padding: 2rem 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 5rem 0;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('https://prismic-io.s3.amazonaws.com/ucriverside/fd4db3d2-86fc-4018-836a-32a8055899f2_abstract-orange.svg') center top / 100% repeat-y $tertiary;
+    z-index: 0;
+  }
+
+  // Container/Wrapper
+  // ---------------------------------------------------------------------------
+
+  .container-max {
+    position: relative;
+    z-index: 1;
+  }
+
+  // Accordion Heading
+  // ---------------------------------------------------------------------------
+
+  .accordion-heading {
+    position: relative;
+    z-index: 2;
+    background-color: $light;
+    text-transform: none;
+    font-size: 0.9rem;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem 1.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 1.35rem 2rem 1.35rem 3rem;
+      justify-content: space-between;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    h4.startdate {
+      margin-bottom: 0.25rem;
+      font-family: $font-family-heading;
+      font-weight: normal;
+      text-transform: uppercase;
+    }
+
+    .course-id {
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    // Course header
+    // -------------------------------------------------------------------------
+
+    .course-header {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 1.2rem;
+      }
+
+      @include media-breakpoint-up(lg) {
+        width: 25%;
+        max-width: 300px;
+      }
+    }
+
+    // Course headers
+    // -------------------------------------------------------------------------
+
+    [class*="course-header-"] {
+      font-weight: 300;
+
+      @include media-breakpoint-only(lg) {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: auto;
+      }
+  
+      @include media-breakpoint-up(lg) {
+        flex-grow: 1;
+        padding: 0 1rem;
+      }
+
+      // Tuition, Format, Duration Icons
+      // -----------------------------------------------------------------------
+
+      .icon {
+        fill: $primary;
+        margin-right: 0.2rem;
+
+        @include media-breakpoint-only(lg) {
+          margin: 0 auto;
+        }
+      }
+
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    // Specific headers styling
+    // -------------------------------------------------------------------------
+
+    .course-header--tuition,
+    .course-header--format {
+      @include media-breakpoint-down(md) {
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    // Enroll Button
+    // -------------------------------------------------------------------------
+
+    .btn-enroll {
+      border-radius: 2rem;
+      font-family: $font-family-heading;
+      text-transform: uppercase;
+      padding: 0.65rem 2rem;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+        width: 100%;
+        margin: 2rem 0;
+      }
+
+      @include media-breakpoint-only(lg) {
+        width: auto;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin: 0 72px;
+      }
+    }
+
+    // Plus Icon
+    // -------------------------------------------------------------------------
+
+    .icon-plus {
+      @include media-breakpoint-down(md) {
+        align-self: center;
+      }
+    }
+  }
+
+  // Accordion content
+  // ---------------------------------------------------------------------------
+
+  .accordion-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    font-size: 0.9rem;
+    background-color: white;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: wrap;
+      padding-left: 1rem;
+      padding-right: 7.5rem;
+    }
+
+    .cell {
+      margin: 2rem 0 0;
+      line-height: 1.8;
+
+      @include media-breakpoint-up(lg) {
+        width: percentage(1/3);
+        margin-top: 1.6rem;
+        padding: 0 1.5rem;
+      }
+
+      h4 {
+        display: flex;
+        align-items: center;
+        font-family: $font-family-heading;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: rem-calc(15);
+
+        svg {
+          margin-right: 0.5rem;
+        }
+      }
+
+      ul {
+        padding-left: calc(30px + 0.5rem);
+      }
+
+      p {
+        padding-left: calc(30px + 0.5rem);
+
+        strong {
+          font-weight: 500;
+        }
+      }
+
+      & > a.readmore {
+        padding-left: calc(30px + 0.5rem);
+      }
+    }
+  }
+}

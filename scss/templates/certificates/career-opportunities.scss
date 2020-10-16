@@ -1,0 +1,199 @@
+// =============================================================================
+// CERTIFICATES :: CAREER OPPORTUNITIES
+// =============================================================================
+
+.section__career-opportunities {
+  padding: 3rem 0;
+  background-color: $light;
+  
+  @include media-breakpoint-up(lg) {
+    padding: 5rem 0;
+  }
+
+  // Section Heading
+  // ---------------------------------------------------------------------------
+  
+  .section-heading {
+    max-width: 6em;
+    margin: 0 auto 3rem;
+    color: $primary;
+    font-family: $font-family-heading;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+  
+    @include media-breakpoint-up(lg) {
+      max-width: none;
+      margin-bottom: 3rem;
+      font-size: rem-calc(69);
+    }
+  
+    &:after {
+      content: '';
+      display: block;
+      margin: 1rem auto;
+      width: rem-calc(92);
+      height: 5px;
+      background-color: $gold;
+    }
+  }
+
+  // Slider
+  // ---------------------------------------------------------------------------
+
+  .slider {
+    margin-bottom: rem-calc(80);
+    margin-left: -2rem;
+    margin-right: -2rem;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: -10vw;
+      margin-right: -10vw;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+    }
+  }  
+
+  // Slide
+  // ---------------------------------------------------------------------------
+
+  .slide {
+    width: percentage(310/375);
+    min-height: 100%;
+    padding: rem-calc(0 10);
+    margin: 0;
+
+    @include media-breakpoint-up(lg) {
+      width: percentage(1/4);
+      padding: 0 1rem;
+    }
+  
+    @include media-breakpoint-up(xl) {
+      padding: 0 1.5rem;
+    }
+  }
+
+  // Card
+  // ---------------------------------------------------------------------------
+
+  .card {
+    background-color: transparent;
+
+    .image {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      outline: 0 solid transparent;
+      border-bottom: 13px solid $tertiary;
+      transition: 0.2s ease-in-out;
+      
+      @include media-breakpoint-down(md) {
+        padding-bottom: percentage(190/277);
+      }
+    }
+
+    img {
+      width: 100%;
+
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: auto;
+        height: 100%;
+        max-width: none;
+        transform: translate3d(-50%, -50%, 0);
+      }
+    }
+
+    .card-body {
+      padding: 1.25rem 0 0;
+      transition: 0.2s ease-out;
+
+      .card-subtitle {
+        font-size: rem-calc(14);
+        font-weight: normal;
+      }
+
+      .card-pay {
+        margin-top: 1rem;
+        margin-bottom: 0;
+        font-weight: 500;
+        font-size: rem-calc(14);
+        font-style: italic;
+
+        & > span {
+          padding-left: 0.3rem;
+          font-weight: normal;
+          font-style: normal;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $dark;
+
+      .image {
+        margin-bottom: 13px;
+        border-bottom-width: 0;
+        outline: 2px solid $tertiary;
+        outline-offset: -1rem;
+      }
+
+      .card-body {
+        transform: translateY(-13px);
+      }
+
+      .card-title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Flickity
+  // ---------------------------------------------------------------------------
+  
+  .flickity-viewport {
+    width: 100%;
+    margin: 0;
+  }
+
+  // Flickity page dots
+  // ---------------------------------------------------------------------------
+
+  .flickity-page-dots {
+    bottom: rem-calc(-60);
+  }
+
+  .dot {
+    background-color: #d3d3d3;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    &.is-selected {
+      background-color: $primary;
+    }
+  
+    @include media-breakpoint-only(md) {
+      width: rem-calc(20);
+      height: rem-calc(20);
+    }
+  
+    &:not(.is-selected):hover {
+      opacity: 0.75;
+    }
+  }
+}

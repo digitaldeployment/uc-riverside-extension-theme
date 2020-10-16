@@ -43,10 +43,19 @@ section.choices {
     padding: 0;
     min-height: 265px;
     max-height: 750px;
-    
+    overflow: hidden;
+    margin-bottom: -1px;
+    transform: skewY(-5deg);
+
+    @include media-breakpoint-up(md) {
+      transform: skewY(-2deg);
+    }
+
     @include media-breakpoint-up(lg) {
-      overflow: hidden;
       height: 40vw;
+      margin-bottom: 0;
+      margin-right: -1px;
+      transform: none;
       background-color: #bfbfbf;
     }
 
@@ -63,11 +72,6 @@ section.choices {
       bottom: -1px;
       opacity: 0.85;
       transition: opacity 0.3s ease-out;
-      transform: skewY(-5deg);
-
-      @include media-breakpoint-up(md) {
-        transform: skewY(-2deg);
-      }
 
       @include media-breakpoint-up(lg) {
         transform: none;
@@ -85,11 +89,15 @@ section.choices {
     left: 0;
     right: 0;
     padding: rem-calc(60 36);
-    letter-spacing: 0.02em;
     font-family: $font-family-base;
-    font-weight: normal;
+    font-weight: 500;
     font-size: rem-calc(28);
+    transform: skewY(5deg);
     color: white;
+
+    @include media-breakpoint-up(md) {
+      transform: skewY(2deg);
+    }
 
     @include media-breakpoint-up(lg) {
       padding: rem-calc(60);
@@ -112,19 +120,21 @@ section.choices {
 
   .image {
     position: absolute;
-    top: 0;
+    top: -5vw;
     left: 0;
     right: 0;
-    bottom: 0;
-    transform: skewY(-5deg);
+    bottom: -5vw;
+    transform: skewY(5deg);
     background-position: 50% 50%;
     background-size: cover;
 
     @include media-breakpoint-up(md) {
-      transform: skewY(-2deg);
+      transform: skewY(2deg);
     }
 
     @include media-breakpoint-up(lg) {
+      top: 0;
+      bottom: 0;
       left: -2.5vw;
       right: -2.5vw;
       transform: skewX(7deg);
@@ -142,7 +152,7 @@ section.choices {
     }
 
     &:nth-child(even) .nav-link:after {
-      background-image: linear-gradient(to bottom, $blue 25%, rgba($blue, 0));
+      background-image: linear-gradient(to bottom, $primary 25%, rgba($primary, 0));
     }
 
     @include media-breakpoint-up(lg) {

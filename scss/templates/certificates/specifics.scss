@@ -1,0 +1,49 @@
+// =============================================================================
+// Program Specifics Section
+// =============================================================================
+
+.section__specifics {
+  margin: rem-calc(20 0 40);
+
+  @include media-breakpoint-up(md) {
+    margin: rem-calc(15 0 56);
+  }
+
+  .details {
+    padding-left: 0;
+    list-style-type: none;
+
+    @include media-breakpoint-up(md) {
+      display: flex;
+    }
+  }
+
+  .detail {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+    padding: rem-calc(20 0);
+    border-bottom: 5px solid #f6f6f6;
+
+    @include media-breakpoint-down(sm) {
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      padding: rem-calc(30 0);
+      border-bottom-color: $light;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .small {
+      display: inline-block;
+      font-size: 0.7rem;
+      line-height: 1.2;
+    }
+  }
+}

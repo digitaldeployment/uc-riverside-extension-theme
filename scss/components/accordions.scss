@@ -29,7 +29,11 @@
     justify-content: space-between;
     text-transform: uppercase;
 
-    svg {
+    @include media-breakpoint-up(lg) {
+      padding: rem-calc(28 32);
+    }
+
+    svg.icon-plus {
       flex-shrink: 0;
       border-radius: 100%;
       line-height: 1;
@@ -41,7 +45,7 @@
     &:hover {
       text-decoration: underline;
 
-      svg {
+      svg.icon-plus {
         background-color: #f5a800;
       }
     }
@@ -58,6 +62,10 @@
     margin-top: 0;
     padding: rem-calc(0 24 24);
     transition: 0.2s ease-out;
+
+    @include media-breakpoint-up(lg) {
+      padding: rem-calc(0 32 32);
+    }
 
     > *:first-child {
       margin-top: 0;
@@ -77,7 +85,7 @@
     }
 
     .accordion-heading {
-      svg {
+      svg.icon-plus {
         transform: rotate(0);
       }
     }
@@ -89,6 +97,10 @@
       visibility: hidden;
       transform: translateY(rem-calc(-24));
       opacity: 0;
+
+      @include media-breakpoint-up(lg) {
+        transform: translateY(rem-calc(-28));
+      }
     }
   }
 
@@ -98,6 +110,6 @@
   .grid {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -0.75rem;
+    margin: 2rem -0.75rem;
   }
 }

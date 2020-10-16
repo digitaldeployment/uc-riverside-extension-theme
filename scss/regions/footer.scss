@@ -65,7 +65,6 @@
 
   .footer-address {
     margin-bottom: 3rem;
-    letter-spacing: 0.02em;
     font-size: rem-calc(20);
 
     @include media-breakpoint-down(md) {
@@ -101,7 +100,6 @@
       font-size: rem-calc(18);
       text-transform: uppercase;
       font-family: $font-family-heading;
-      letter-spacing: 0.02em;
       color: white;
 
       svg {

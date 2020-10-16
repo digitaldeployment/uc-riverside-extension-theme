@@ -2,7 +2,7 @@
 // Program Finder Template
 // =============================================================================
 
-.page--program-finder {
+body.program-finder {
   position: relative;
 
   @include media-breakpoint-down(md) {
@@ -33,7 +33,6 @@
 
   .program-finder-count {
     margin-bottom: 1rem;
-    letter-spacing: 0.02em;
     font-size: 0.9rem;
     font-weight: 300;
     color: $primary;
@@ -290,5 +289,14 @@
       margin-left: 0.5rem;
       margin-right: 0.5rem;
     }
+  }
+
+  // More results button
+  // ---------------------------------------------------------------------------
+
+  .btn-overview {
+    display: block;
+    margin: 3rem 0;
+    border-radius: 0;
   }
 }

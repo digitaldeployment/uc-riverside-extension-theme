@@ -1,0 +1,45 @@
+// =============================================================================
+// COURSE :: BANNER
+// =============================================================================
+
+.banner {
+  .metadata {
+    display: flex;
+    padding: 0;
+
+    li {
+      color: white;
+      font-family: $font-family-heading;
+      font-size: rem-calc(18);
+      font-weight: normal;
+      line-height: 1;
+      text-transform: uppercase;
+      list-style: none;
+
+      & + li {
+        padding-left: 0.75rem;
+      }
+
+      &:first-child {
+        color: $tertiary;
+      }
+
+      &.units {
+        border-left: 2px solid $tertiary;
+        margin-left: 0.75rem;
+      }
+    }
+  }
+
+  .btn-overview {
+    margin-top: 1.5rem;
+    color: white;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $dark;
+      text-shadow: none;
+    }
+  }
+}

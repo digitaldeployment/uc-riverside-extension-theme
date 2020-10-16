@@ -46,97 +46,14 @@
       margin-top: 1rem;
       font-size: rem-calc(19);
       color: inherit;
-      
+
       @include media-breakpoint-up(lg) {
         margin-top: 1.75rem;
       }
     }
+  }
 
-    .dropdown {
-      margin-top: 2rem;
-
-      button.dropdown-toggle {
-        position: relative;
-        min-width: 15rem;
-        border-radius: 2rem;
-        border-width: 2px;
-        padding: 0.75rem 3rem 0.75rem 1.5rem;
-        color: white;
-        font-family: $font-family-heading;
-        font-size: rem-calc(18) !important;
-        font-weight: normal;
-        line-height: 1.2;
-        text-align: left;
-        text-transform: uppercase;
-        letter-spacing: 0.025em;
-
-        &:after {
-          content: none;
-        }
-
-        .icon {
-          position: absolute;
-          top: 50%;
-          right: 1.25rem;
-          font-size: rem-calc(5);
-          transform: translateY(-50%);
-          transition: transform 0.2s ease-in-out;
-        }
-
-        &:hover {
-          color: $dark;
-        }
-
-        &[aria-expanded="true"] {
-          background-color: $blue;
-          border-color: $blue;
-          border-radius: 2rem 2rem 0 0;
-          color: $gold;
-
-          .icon {
-            transform: rotate(-180deg) translateY(50%);
-          }
-        }
-
-        @include media-breakpoint-down(md) {
-          width: 100%;
-        }
-      }
-
-      .dropdown-menu {
-        width: 15rem;
-        top: -1px !important;
-        background-color: $blue;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 0 0 1rem;
-        border: none;
-        border-radius: 0 0 2rem 2rem;
-        overflow: hidden;
-
-        a.dropdown-item {
-          padding: 0.5rem 1.5rem;
-          color: white;
-          font-family: $font-family-heading;
-          font-size: rem-calc(15);
-          line-height: 1.3;
-          text-transform: uppercase;
-          letter-spacing: 0.025em;
-          text-shadow: none;
-          transition: all 0.2s ease-in-out;
-          white-space: normal;
-
-          &:hover,
-          &:focus {
-            background-color: transparent;
-            text-decoration: underline;
-          }
-        }
-
-        @include media-breakpoint-down(md) {
-          width: 100%;
-        }
-      }
-    }
+  .dropdown {
+    @include banner-dropdown();
   }
 }

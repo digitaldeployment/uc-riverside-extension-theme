@@ -5,7 +5,7 @@
 section.programs {
   padding: 6rem 0 4rem;
   text-align: center;
-  background: no-repeat right top white;
+  background: no-repeat right center white;
 
   @include media-breakpoint-up(md) {
     padding: 6.25rem 0;
@@ -58,6 +58,7 @@ section.programs {
       display: flex;
       width: 100%;
       padding: 1.2rem 2rem;
+      border-radius: 0.5rem;
       align-items: center;
       justify-content: space-between;
       font-style: italic;
@@ -103,7 +104,7 @@ section.programs {
   .programs-grid {
     margin-bottom: 3rem;
 
-    .nav-link {
+    & > * {
       width: percentage(1/5);
       margin-bottom: 1.5rem;
     }
@@ -116,7 +117,7 @@ section.programs {
     }
 
     .heading {
-      max-width: 200px;
+      max-width: rem-calc(200);
       margin-left: auto;
       margin-right: auto;
       line-height: 1.4;
@@ -124,13 +125,18 @@ section.programs {
       text-transform: uppercase;
       font-family: $font-family-heading;
       font-weight: normal;
-      font-size: 21px;
+      font-size: rem-calc(16);
       color: $dark;
     }
 
-    .nav-link {
+    & > * {
       &:hover,
       &:focus {
+        &,
+        a {
+          text-decoration: none;
+        }
+
         img {
           transform: scale(1.2);
         }

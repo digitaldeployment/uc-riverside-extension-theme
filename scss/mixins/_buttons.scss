@@ -30,3 +30,33 @@
     }
   }
 }
+
+// Standard Button Base Mixin
+// -----------------------------------------------------------------------------
+
+@mixin btn-standard() {
+  display: block;
+  padding: 0.85em 2em;
+  font-weight: 500;
+  font-family: $font-family-heading;
+  font-size: rem-calc(18);
+  letter-spacing: 0.025em;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  @include media-breakpoint-up(md) {
+    display: inline-block;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding: 0.65em 2em;
+    font-size: 0.9rem;
+  }
+}
+
+// Rounded Button Mixin
+// -----------------------------------------------------------------------------
+
+@mixin btn-round() {
+  border-radius: 3rem;
+}

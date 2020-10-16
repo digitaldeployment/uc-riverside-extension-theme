@@ -7,7 +7,7 @@
   flex-direction: column;
   transition: 0.2s ease-out;
   outline: 0 solid white;
-  background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') repeat-y center 20px $primary;
+  background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') center 20px / 100% repeat-y $primary;
   color: inherit;
 
   @include media-breakpoint-up(xl) {
@@ -83,7 +83,6 @@
 
   .body {
     padding: rem-calc(20);
-    letter-spacing: 0.02em;
     color: $tertiary;
 
     .icon {
@@ -186,21 +185,14 @@
     margin-bottom: 1.5rem;
 
     header {
-      padding: 0;
+      box-shadow: inset 0 5px 0 $tertiary;
+      padding: rem-calc(29 24 8);
+      transition: 0.2s ease-out;
       background-color: white;
     }
 
     .type {
-      font-size: 0;
-      margin: 0;
-      border-color: $tertiary !important;
-
-      .icon { display: none; }
-    }
-
-    .heading {
-      padding: rem-calc(20);
-      margin-bottom: 0 !important;
+      display: none;
     }
 
     @include media-breakpoint-up(lg) {
@@ -209,6 +201,13 @@
 
     @include media-breakpoint-up(xl) {
       width: calc(#{percentage(1/3)} - 1.5rem);
+    }
+
+    &:hover,
+    &:focus {
+      .header {
+        box-shadow: none;
+      }
     }
   }
 }

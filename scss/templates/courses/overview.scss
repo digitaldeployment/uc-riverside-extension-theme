@@ -1,0 +1,11 @@
+// =============================================================================
+// Course Overview
+// =============================================================================
+
+.section__overview--course {
+  margin-bottom: 3rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 5rem;
+  }
+}

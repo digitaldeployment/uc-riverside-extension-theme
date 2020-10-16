@@ -1,0 +1,21 @@
+// =============================================================================
+// COURSE TEMPLATE
+// =============================================================================
+
+body.course {
+  @import './courses/banner';
+  @import './courses/overview';
+  @import './courses/get-started';
+  @import './courses/testimonials';
+  @import './courses/previews';
+
+  .page-main {
+    & > .container-max {
+      margin-bottom: 0;
+    }
+  }
+
+  .page-center {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,20 @@
+// =============================================================================
+// Previews Teasers Section
+// =============================================================================
+
+.section__preview-teasers {
+  padding-bottom: 1rem;
+
+  .preview-teasers {
+    padding-top: 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 4rem;
+
+    .preview-teasers {
+      padding-top: 4rem;
+      padding-bottom: 0;
+    }
+  }
+}

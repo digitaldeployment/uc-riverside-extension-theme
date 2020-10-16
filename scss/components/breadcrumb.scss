@@ -9,8 +9,8 @@
   margin-bottom: 2rem;
 
   @include media-breakpoint-up(lg) {
-    padding: rem-calc(60 0 0);
-    margin-bottom: rem-calc(-83);
+    margin-bottom: 0;
+    padding: rem-calc(35 0 0);
   }
 
   a {
@@ -20,5 +20,11 @@
   a:focus,
   a:hover {
     color: $secondary;
+  }
+
+  .breadcrumb {
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(12);
+    }
   }
 }

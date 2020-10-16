@@ -1,0 +1,81 @@
+// =============================================================================
+// Certificate Specific Spotlight Teasers
+// =============================================================================
+
+.section__spotlight-teasers {
+  padding-bottom: rem-calc(130);
+  box-shadow: inset 0 rem-calc(60) white;
+  background: url('https://prismic-io.s3.amazonaws.com/ucriverside/fd4db3d2-86fc-4018-836a-32a8055899f2_abstract-orange.svg') repeat-y 50% 50% $tertiary;
+  background-size: cover;
+
+  .container-max {
+    @include media-breakpoint-up(lg) {
+      padding-left: 12vw;
+      padding-right: 12vw;  
+    }
+  }
+
+  // Spotlight Teasers
+  // ---------------------------------------------------------------------------
+
+  .spotlight-teasers {
+    margin-left: -2rem;
+    margin-right: -2rem;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: -10vw;
+      margin-right: -10vw;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  // Slide
+  // ---------------------------------------------------------------------------
+
+  .spotlight-teaser {
+    @include media-breakpoint-down(md) {
+      width: calc(#{percentage(310/375)} - #{rem-calc(20)});
+      margin: rem-calc(0 10);
+    }
+  }
+
+  // Flickity
+  // ---------------------------------------------------------------------------
+  
+  .flickity-viewport {
+    overflow: inherit;
+    width: 100%;
+    margin: 0;
+    padding-top: 5px;
+  }
+
+  // Flickity page dots
+  // ---------------------------------------------------------------------------
+
+  .flickity-page-dots {
+    bottom: rem-calc(-60);
+  }
+
+  .dot {
+    background-color: white;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    &.is-selected {
+      background-color: $primary;
+    }
+  
+    @include media-breakpoint-only(md) {
+      width: rem-calc(20);
+      height: rem-calc(20);
+    }
+  
+    &:not(.is-selected):hover {
+      opacity: 0.75;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+// =============================================================================
+// Banner Dropdown Mixin
+// =============================================================================
+
+@mixin banner-dropdown() {
+  margin-top: 2rem;
+  
+  @include media-breakpoint-down(md) {
+    margin-bottom: 1.5rem;
+  }
+
+  button.dropdown-toggle {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-width: 17rem;
+    padding: 1.15rem 3rem 1.15rem 1.5rem;
+    border-radius: 2rem;
+    border-width: 2px;
+    color: white;
+    font-family: $font-family-heading;
+    font-size: rem-calc(18);
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: 0.1s ease-out;
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 0.75rem 3rem 0.75rem 1rem;
+      border-radius: 1.5rem;
+      font-size: rem-calc(15);
+    }
+
+    &:after {
+      content: none;
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 1.25rem;
+      font-size: rem-calc(5);
+      transform: translateY(-50%);
+    }
+
+    &:hover,
+    &:focus {
+      box-shadow: none !important;
+      background-color: $tertiary;
+      color: $dark;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+
+    &[aria-expanded=true] {
+      background-color: $primary;
+      border-color: $primary;
+      border-radius: 2rem 2rem 0 0;
+      color: $gold;
+
+      @include media-breakpoint-up(lg) {
+        border-radius: 1.5rem 1.5rem 0 0;
+      }
+
+      .icon {
+        transform: rotate(-180deg) translateY(50%);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    z-index: 1;
+    overflow: hidden;
+    top: 50%;
+    min-width: 17rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0 0.5rem;
+    border: none;
+    border-radius: 0 0 2rem 2rem;
+    transition: 0.2s ease-out;
+    background-color: $primary;
+
+    @include media-breakpoint-up(lg) {
+      border-radius: 0 0 1.5rem 1.5rem;
+    }
+
+    a.dropdown-item {
+      padding: 0.5rem 1.5rem;
+      color: white;
+      font-family: $font-family-heading;
+      font-size: rem-calc(16);
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      text-shadow: none;
+      transition: 0.2s ease-in-out;
+      white-space: normal;
+
+      @include media-breakpoint-up(lg) {
+        padding: 0.5rem 1rem;
+        font-size: rem-calc(12);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        text-decoration: underline;
+        color: $tertiary;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  [aria-expanded=true] + .dropdown-menu {
+    margin-top: -0.5rem;
+  }
+}

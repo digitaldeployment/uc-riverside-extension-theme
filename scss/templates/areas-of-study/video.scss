@@ -4,38 +4,26 @@
 
 .sections__video {
   position: relative;
-  padding: 0 0 4rem;
   text-align: center;
-  background-size: 130% auto;
-  background-repeat: no-repeat;
-  background-position: 50% bottom;
-  background-color: white;
-  overflow: hidden;
-
-  &:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: percentage(3/4);
-    background: url('https://images.prismic.io/ucriverside/a95706a3-ee7d-4516-b185-bd1c84d23a70_pod-bg.png?auto=compress,format') center / cover no-repeat $tertiary;
-  }
+  border-top: 4.5rem solid white;
+  background: url('https://prismic-io.s3.amazonaws.com/ucriverside/fd4db3d2-86fc-4018-836a-32a8055899f2_abstract-orange.svg') repeat-y 50% 50% $tertiary;
+  background-size: cover;
 
   @include media-breakpoint-up(md) {
-    padding: 0 0 6.25rem;
-
-    &:before {
-      height: 85%;
-    }
+    border-top: 7.5rem solid white;
   }
 
   @include media-breakpoint-up(lg) {
-    padding: 0 0 7.5rem;
+    padding-bottom: 2rem;
   }
 
   .container-max {
     position: relative;
+    transform: translateY(-4.5rem);
+
+    @include media-breakpoint-up(md) {
+      transform: translateY(-7.5rem);
+    }
 
     @include media-breakpoint-up(lg) {
       padding-left: 12vw;
@@ -154,14 +142,14 @@
     color: white;
 
     @include media-breakpoint-up(lg) {
-      font-size: rem-calc(30);
+      font-size: rem-calc(26);
     }
   }
 
   .subheading {
     margin: 0.75rem 0 0;
     color: white;
-    font-size: rem-calc(25);
+    font-size: rem-calc(20);
     font-weight: 300;
     line-height: 1.3;
 

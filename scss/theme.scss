@@ -15,6 +15,7 @@
 @import 'third-party/eezee';
 
 // Mixins
+@import 'mixins/dropdowns';
 @import 'mixins/buttons';
 @import 'mixins/layout';
 
@@ -35,6 +36,8 @@
 @import 'components/container';
 @import 'components/breadcrumb';
 @import 'components/accordions';
+@import 'components/spotlight';
+@import 'components/popover';
 @import 'components/tabs';
 @import 'components/blockquote';
 @import 'components/button';
@@ -42,6 +45,7 @@
 @import 'components/modal';
 @import 'components/card';
 @import 'components/teaser';
+@import 'components/preview';
 @import 'components/program';
 @import 'components/pod';
 
@@ -59,14 +63,20 @@
 
 // Templates
 @import 'templates/home';
+@import 'templates/international-home';
 @import 'templates/program-finder';
 @import 'templates/landing-page';
 @import 'templates/areas-of-study';
+@import 'templates/certificates';
+@import 'templates/courses';
 
 // Sections
 @import 'sections/banner';
 @import 'sections/overview';
 @import 'sections/accordions';
+@import 'sections/spotlights';
 @import 'sections/teasers';
+@import 'sections/previews';
 @import 'sections/tabs';
 @import 'sections/pods';
+@import 'sections/info-popups';

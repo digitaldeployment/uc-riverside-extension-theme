@@ -1,0 +1,22 @@
+// =============================================================================
+// CERTIFICATES TEMPLATE
+// =============================================================================
+
+body.certificate {
+  @import './certificates/overview';
+  @import './certificates/specifics';
+  @import './certificates/career-opportunities';
+  @import './certificates/getting-started';
+  @import './certificates/spotlights';
+  @import './certificates/related-programs';
+  @import './certificates/required-courses';
+  @import './courses/previews';
+
+  .page-center {
+    margin-bottom: 0;
+  }
+
+  .page-main > .container-max {
+    margin-bottom: 0;
+  }
+}

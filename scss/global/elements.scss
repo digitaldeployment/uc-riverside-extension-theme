@@ -4,6 +4,9 @@
 
 html {
   font-size: $custom-font-size-base;
+  letter-spacing: 0.02em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 
   @include media-breakpoint-up(xl) {
     font-size: ($custom-font-size-base / map-get($grid-breakpoints, 'xl')) * 100vw;
@@ -25,7 +28,7 @@ h1, .h1 {
   font-family: $font-family-heading;
   font-size: rem-calc(50);
   font-weight: 300;
-  color: $blue;
+  color: $primary;
 
   @include media-breakpoint-up(lg) {
     font-size: rem-calc(68);
@@ -47,7 +50,7 @@ h3, .h3 {
 h4, .h4 {
   line-height: 1.4;
   font-weight: 500;
-  color: $blue;
+  color: $primary;
 }
 
 h5, .h5 {
@@ -59,7 +62,7 @@ h5, .h5 {
 
 h6, .h6 {
   font-weight: 500;
-  color: $blue;
+  color: $primary;
 }
 
 img {
@@ -73,13 +76,15 @@ img {
 .readmore {
   position: relative;
   text-decoration: underline;
-  letter-spacing: 0.02em;
   font-weight: 500;
+  transition: color 0.2s ease-out;
 
   &:after {
     content: '\2192';
     position: absolute;
+    top: 50%;
     left: 100%;
+    transform: translateY(-50%);
     transition: transform 0.2s ease-out;
     opacity: 0;
   }
@@ -88,7 +93,7 @@ img {
   &:hover {
     &:after {
       opacity: 1;
-      transform: translateX(0.3em);
+      transform: translateX(0.3em) translateY(-50%);
     }
   }
 }
