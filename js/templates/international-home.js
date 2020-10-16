@@ -1,5 +1,3 @@
-import 'popper.js'
-import $ from 'jquery'
 import SliderVideos from '../components/SliderVideos'
 import SliderExperiences from '../components/SliderExperiences'
 
@@ -22,13 +20,12 @@ export default () => {
     }
   });
 
-  // What's Your Dream - Popup Descriptions
+  // What's Your Dream - Full Desc Toggle
   // ---------------------------------------------------------------------------
 
-  $('.program-desc-btn[data-toggle="popover"]').popover({
-    animation: true,
-    trigger: 'focus',
-    offset: '0, 5px',
-    placement: 'bottom',
+  document.querySelectorAll('button.program-desc-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      button.parentNode.classList.toggle('show-full-desc')
+    })
   })
 }
