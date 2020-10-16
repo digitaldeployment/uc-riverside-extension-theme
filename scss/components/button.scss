@@ -73,9 +73,53 @@
   }
 }
 
+// All Button with More arrow icon
+// -----------------------------------------------------------------------------
+
+.btn-all {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: rem-calc(18);
+  font-family: $font-family-heading;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: $dark;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 0.94rem;
+  }
+
+  .icon {
+    width: rem-calc(18);
+    height: rem-calc(18);
+    margin-left: 0.3em;
+    transition: 0.2s ease-out;
+    color: $tertiary;
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    text-decoration: underline;
+    color: $primary;
+
+    .icon {
+      transform: translateX(0.2em);
+    }
+  }
+}
+
+// Standard button style modifier
+// -----------------------------------------------------------------------------
+
 .btn-standard {
   @include btn-standard();
 }
+
+// Round button style modifier
+// -----------------------------------------------------------------------------
 
 .btn-round {
   @include btn-round();
