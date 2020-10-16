@@ -1,5 +1,6 @@
 import 'popper.js'
 import $ from 'jquery'
+import SliderVideos from '../components/SliderVideos'
 import SliderExperiences from '../components/SliderExperiences'
 
 export default () => {
@@ -9,6 +10,15 @@ export default () => {
   document.querySelectorAll('section.experiences .slider').forEach(element => {
     if (!element.Slider) {
       element.Slider = new SliderExperiences(element);
+    }
+  });
+
+  // Videos Slider
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('section.videos .slider').forEach(element => {
+    if (!element.Slider) {
+      element.Slider = new SliderVideos(element);
     }
   });
 
