@@ -192,7 +192,8 @@
     .type {
       font-size: 0;
       margin: 0;
-      border-color: $tertiary !important;
+      border-color: $tertiary;
+      transition: 0.2s ease-out;
 
       .icon { display: none; }
     }
@@ -208,6 +209,14 @@
 
     @include media-breakpoint-up(xl) {
       width: calc(#{percentage(1/3)} - 1.5rem);
+    }
+
+    &:hover,
+    &:focus {
+      .type {
+        transform: translateY(-5px);
+        opacity: 0;
+      }
     }
   }
 }
