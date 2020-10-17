@@ -18,8 +18,18 @@ const typeOptions = {
 export default class Hero {
   constructor(element) {
     this.element = element;
-    this.addTypewriter();
-    this.addSelect();
+
+    // Add typing of words feature, if applicable.
+    if (this.words) {
+      this.addTypewriter();
+    }
+
+    // Add select/search box feature, if applicable.
+    if (this.select) {
+      this.addSelect();
+    }
+
+    // Add ready state to main element.
     this.element.classList.add('ready');
   }
 
@@ -32,7 +42,7 @@ export default class Hero {
   }
 
   addTypewriter() {
-    const words = this.element.getAttribute('data-words').split('|');
+    const words = this.words.split('|');
     const strings = arrayShuffle(words);
     const shell = document.createElement('span');
     this.heading.appendChild(shell);
@@ -48,5 +58,9 @@ export default class Hero {
 
   get heading() {
     return this.element.querySelector('.heading');
+  }
+
+  get words() {
+    return this.element.getAttribute('data-words');
   }
 }
