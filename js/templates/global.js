@@ -11,12 +11,14 @@ import Flyout from '../components/Flyout'
 import SmoothScroll from 'smooth-scroll'
 import PageAnchors from '../navigation/PageAnchors'
 import InfoModal from '../components/InfoModal'
+import Hero from '../components/Hero'
+import Videos from '../components/Videos'
 import VideoModal from '../components/VideoModal'
-import VideoButton from '../components/VideoButton'
 import InfoPopupButton from '../components/InfoPopupButton'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
 import SliderSpotlights from '../components/SliderSpotlights'
+import SliderExperiences from '../components/SliderExperiences'
 import SliderTestimonials from '../components/SliderTestimonials'
 import SliderRelatedPrograms from '../components/SliderRelatedPrograms'
 import SliderCareerOpportunities from '../components/SliderCareerOpportunites'
@@ -46,21 +48,20 @@ export default () => {
     }
   });
 
-  // Modal Video Buttons - Launch a remote video iframe'd in a modal
+  // Modal Video Functionality
   // ---------------------------------------------------------------------------
   const videoModal = document.querySelector('#modal-video');
-  if (videoModal) {
-    document.querySelectorAll('[data-target="#modal-video"]').forEach(element => {
-      // Add video button logic.
-      if (!element.VideoButton) {
-        element.VideoButton = new VideoButton(element, videoModal);
-      }
-      // Add video modal logic.
-      if (!document.body.VideoModal) {
-        document.body.VideoModal = new VideoModal(videoModal);
-      }
-    });
+  if (videoModal && !document.body.VideoModal) {
+    document.body.VideoModal = new VideoModal(videoModal);
   }
+
+  // Video(s) Slider
+  // ---------------------------------------------------------------------------
+  document.querySelectorAll('section.videos').forEach(element => {
+    if (!element.Videos) {
+      element.Videos = new Videos(element, videoModal);
+    }
+  });
 
   // Modal InfoPopup Buttons - Launch content within a modal
   // ---------------------------------------------------------------------------
@@ -150,4 +151,31 @@ export default () => {
       element.Slider = new SliderSpotlights(element);
     }
   });
+
+  // Hero
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('section.hero').forEach(element => {
+    if (!element.Hero) {
+      element.Hero = new Hero(element);
+    }
+  });
+
+  // Experiences Slider
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('section.experiences .slider').forEach(element => {
+    if (!element.Slider) {
+      element.Slider = new SliderExperiences(element);
+    }
+  });
+
+  // What's Your Dream - Full Desc Toggle
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('button.program-desc-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      button.parentNode.classList.toggle('show-full-desc')
+    })
+  })
 }
