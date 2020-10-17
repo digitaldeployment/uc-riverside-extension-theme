@@ -6,11 +6,9 @@
   padding: 4rem 0;
   text-align: center;
 
-  .container-max {
+  .container-limited-max {
     @include media-breakpoint-up(lg) {
       display: flex;
-      padding-left: 12vw;
-      padding-right: 10vw;
     }
   }
 

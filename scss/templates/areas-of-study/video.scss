@@ -2,7 +2,7 @@
 // AREAS OF STUDY :: VIDEO
 // =============================================================================
 
-.sections__video {
+.section__video {
   position: relative;
   text-align: center;
   border-top: 4.5rem solid white;
@@ -17,17 +17,12 @@
     padding-bottom: 2rem;
   }
 
-  .container-max {
+  .container-limited-max {
     position: relative;
     transform: translateY(-4.5rem);
 
     @include media-breakpoint-up(md) {
       transform: translateY(-7.5rem);
-    }
-
-    @include media-breakpoint-up(lg) {
-      padding-left: 12vw;
-      padding-right: 12vw;
     }
 
     .inner {
