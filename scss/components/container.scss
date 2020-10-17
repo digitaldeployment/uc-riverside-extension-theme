@@ -23,3 +23,29 @@
     padding-right: map-get($container-max-offsets, 'max');
   }
 }
+
+// =============================================================================
+// Custom Limited max Container
+// =============================================================================
+
+.container-limited-max {
+  max-width: map-get($grid-breakpoints, 'max');
+  margin: 0 auto;
+  padding-left: map-get($container-max-offsets, 'xs');
+  padding-right: map-get($container-max-offsets, 'xs');
+
+  @include media-breakpoint-up(sm) {
+    padding-left: map-get($container-max-offsets, 'sm');
+    padding-right: map-get($container-max-offsets, 'sm');
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-left: 12vw;
+    padding-right: 12vw;
+  }
+
+  @include media-breakpoint-up(max) {
+    padding-left: 230px;
+    padding-right: 230px;
+  }
+}
