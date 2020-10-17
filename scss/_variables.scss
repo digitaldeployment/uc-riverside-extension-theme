@@ -165,7 +165,8 @@ $card-bg:                           white;
 // -----------------------------------------------------------------------------
 
 $modal-content-border-radius:       0;
-$modal-backdrop-opacity:            0.95;
+$modal-backdrop-opacity:            0.87;
+$modal-backdrop-bg:                 white;
 $modal-sm:                          map-get($container-max-widths, 'sm');
 $modal-md:                          map-get($container-max-widths, 'md');
 $modal-lg:                          map-get($container-max-widths, 'lg');
