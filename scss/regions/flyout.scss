@@ -203,7 +203,9 @@ form.site-search {
 
 @include media-breakpoint-up(md) {
   body.flyout--expanded {
-    #root > div > *:not(.flyout) {
+    .page__header,
+    .page-main,
+    .page__footer {
       transition: opacity 0.3s ease-in-out, filter 0s 0.3s;
       overflow: hidden;
       opacity: 0.2;
