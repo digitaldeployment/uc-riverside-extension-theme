@@ -18,6 +18,7 @@ section.experiences {
   }
 
   @include media-breakpoint-up(lg) {
+    padding-bottom: 12rem;
     background-position: 85% 65%;
     background-size: cover;
   }

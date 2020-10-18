@@ -136,6 +136,13 @@
     }
   }
 
+  // Add dropdown option to the hero
+  // ---------------------------------------------------------------------------
+
+  .dropdown {
+    @include banner-dropdown();
+  }
+
   // Ready state
 
   &.ready {

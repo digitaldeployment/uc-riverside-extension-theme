@@ -8,13 +8,6 @@
   background: url('https://prismic-io.s3.amazonaws.com/ucriverside/fd4db3d2-86fc-4018-836a-32a8055899f2_abstract-orange.svg') repeat-y 50% 50% $tertiary;
   background-size: cover;
 
-  .container-max {
-    @include media-breakpoint-up(lg) {
-      padding-left: 12vw;
-      padding-right: 12vw;  
-    }
-  }
-
   // Spotlight Teasers
   // ---------------------------------------------------------------------------
 
@@ -28,8 +21,8 @@
     }
 
     @include media-breakpoint-up(lg) {
-      margin-left: 0;
-      margin-right: 0;
+      margin-left: -0.5rem;
+      margin-right: -0.5rem;
     }
   }
 

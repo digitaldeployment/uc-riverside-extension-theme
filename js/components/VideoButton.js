@@ -1,17 +1,19 @@
 export default class VideoButton {
-  constructor(button, modal) {
+  constructor(button, modal, addOnClickHandler = false) {
     this.button = button;
     this.modal = modal;
 
-    if (this.videoURL && this.videoTitle) {
+    if (addOnClickHandler) {
       this.listen();
     }
   }
   
   clickHandler() {
-    // Update modal data attributes relavent to the new video.
-    this.modal.setAttribute('data-iframe-src', this.videoURL);
-    this.modal.setAttribute('aria-label', this.videoTitle);
+    if (this.videoURL && this.videoTitle) {
+      // Update modal data attributes relavent to the new video.
+      this.modal.setAttribute('data-iframe-src', this.videoURL);
+      this.modal.setAttribute('aria-label', this.videoTitle);
+    }
   }
 
   listen() {
