@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import Flickity from 'flickity';
+import Slider from './Slider';
 import VideoButton from './VideoButton';
 
 const flickityArrow = 'M50,0A50,50,0,1,1,0,50,50.06,50.06,0,0,1,50,0Zm0,95.91A45.91,45.91,0,1,0,4.09,50,46,46,0,0,0,50,95.91Zm1.45-25.28a2.05,2.05,0,0,0,0-2.9L33.71,50,51.45,32.26a2,2,0,1,0-2.9-2.89L29.37,48.55a2,2,0,0,0,0,2.89L48.55,70.63a2.05,2.05,0,0,0,2.9,0ZM71.23,50a2.05,2.05,0,0,0-2-2H30.82a2,2,0,1,0,0,4.09H69.18A2,2,0,0,0,71.23,50Z';
@@ -26,16 +26,21 @@ export default class Videos {
   }
 
   addSlider() {
-    const Slider = new Flickity(this.slider, {
+    const slider = new Slider(this.slider, {
       prevNextButtons: false,
       fade: true,
     });
+
+    // Exit now if a slider wasn't built based on there is only one slide.
+    if (!slider.shouldBuildSlider) {
+      return slider
+    }
 
     // Make sure the nav group state is relative to the active slider slide.
     // -----------------------------------------------------------------------
 
     if (this.inDeluxeMode) {
-      Slider.on('change', (index) => {
+      slider.on('change', (index) => {
         const group = index / 3;
         const currentNavIndex = this.Navigation.selectedIndex;
         if (group !== currentNavIndex) {
@@ -47,7 +52,7 @@ export default class Videos {
     // Activate video in modal, when play button is clicked.
     // -----------------------------------------------------------------------
 
-    Slider.on('staticClick', (event) => {
+    slider.on('staticClick', (event) => {
       let element = event.target;
       // Checks to see if the element clicked is the button,
       // or is a child of the button.
@@ -65,7 +70,7 @@ export default class Videos {
       }
     });
 
-    return Slider;
+    return slider;
   }
 
   addNavigation() {
