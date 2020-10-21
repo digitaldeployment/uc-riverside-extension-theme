@@ -40,9 +40,33 @@
   }
   
   .heading {
-    padding-top: rem-calc(40);
+    position: relative;
+    padding-top: rem-calc(20);
     font-family: $font-family-base;
+    font-weight: 500;
     line-height: 1.2;
+
+    // Orange Separator
+    // -------------------------------------------------------------------------
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      bottom: rem-calc(-16);
+      left: 0;
+      height: 5px;
+      width: rem-calc(45);
+      background: $tertiary;
+    }
+
+    // Icon
+    // -------------------------------------------------------------------------
+
+    svg {
+      display: block;
+      margin-bottom: rem-calc(10);
+    }
   }
 
   // Offset heading
@@ -54,30 +78,20 @@
     right: 0;
     bottom: 100%;
     margin-bottom: -1px;
+    padding-top: rem-calc(40);
     padding-left: rem-calc(20);
     padding-right: rem-calc(20);
+
+    &:before {
+      left: rem-calc(20);
+    }
   }
 
   .subheading {
     position: relative;
     margin-bottom: 0;
     padding-top: rem-calc(8);
-    font-weight: 300;
     font-size: rem-calc(14);
-
-    // Orange Separator
-    // -------------------------------------------------------------------------
-
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      top: rem-calc(-8);
-      left: 0;
-      height: 5px;
-      width: rem-calc(45);
-      background: $tertiary;
-    }
   }
 
   // Odd/Even color scheme
@@ -91,7 +105,7 @@
         background-color: $primary;
 
         .heading {
-          background-image: linear-gradient(to top, $primary, rgba($primary, 0));
+          background-image: linear-gradient(to bottom, rgba($primary, 0) 0, $primary 90px);
         }
       }
     }
@@ -105,7 +119,7 @@
         background-color: $secondary;
 
         .heading {
-          background-image: linear-gradient(to top, $secondary, rgba($secondary, 0));
+          background-image: linear-gradient(to bottom, rgba($secondary, 0) 0, $secondary 90px);
         }
       }
     }
