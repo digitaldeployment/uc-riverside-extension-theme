@@ -50,6 +50,23 @@
 @import 'components/program';
 @import 'components/pod';
 
+// Sections
+@import 'sections/hero';
+@import 'sections/banner';
+@import 'sections/overview';
+@import 'sections/accordions';
+@import 'sections/spotlights';
+@import 'sections/teasers';
+@import 'sections/previews';
+@import 'sections/tabs';
+@import 'sections/pods';
+@import 'sections/videos';
+@import 'sections/choices';
+@import 'sections/programs';
+@import 'sections/experiences';
+@import 'sections/spotlights-stats';
+@import 'sections/info-popups';
+
 // Regions
 @import 'regions/page';
 @import 'regions/header';
@@ -70,15 +87,3 @@
 @import 'templates/areas-of-study';
 @import 'templates/certificates';
 @import 'templates/courses';
-
-// Sections
-@import 'sections/banner';
-@import 'sections/overview';
-@import 'sections/accordions';
-@import 'sections/spotlights';
-@import 'sections/teasers';
-@import 'sections/videos';
-@import 'sections/previews';
-@import 'sections/tabs';
-@import 'sections/pods';
-@import 'sections/info-popups';

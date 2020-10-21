@@ -26,11 +26,9 @@ section.videos {
   .container-max,
   .container-limited-max {
     position: relative;
-    margin-bottom: 5rem;
 
     @include media-breakpoint-up(lg) {
       box-sizing: border-box;
-      margin-top: rem-calc(-120);
     }
   }
 
