@@ -6,48 +6,154 @@
   .search-result {
     padding: rem-calc(20) 0 rem-calc(25);
 
+    &:first-child {
+      padding-top: 0;
+    }
+
     & + .search-result {
       border-top: 1px solid #d3d3d3;
     }
+
+    &.international {
+      .meta .type {
+        padding-left: 2.5rem;
+      }
+    }
+
+    &.course,
+    &.certificate,
+    &.credential,
+    &.bootcamp {
+      .meta .date {
+        &:before {
+          content: "Starts: ";
+        }
+      }
+
+      .search-result-header {
+        h2.heading {
+          padding-left: rem-calc(18);
+
+          &:before {
+            content: "";                 
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 1rem;
+            width: rem-calc(10);
+          }
+        }
+      }
+    }
+
+    &.course .search-result-header h2.heading:before { background-color: $dark; }
+    &.certificate .search-result-header h2.heading:before { background-color: $primary; }
+    &.credential .search-result-header h2.heading:before { background-color: $tertiary; }
+    &.bootcamp .search-result-header h2.heading:before { background-color: $green; }
+    &.international .search-result-header h2.heading:before { background-color: $blue-ot; }
   }
 
   .meta {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1rem;
 
     span {
       position: relative;
-      padding-right: 1rem;
+      padding-right: 0.75rem;
       font-size: rem-calc(18);
-      line-height: 1;
+      line-height: rem-calc(30);
       font-weight: 300;
     }
 
-    .top-level {
-      * {
+    .alt {
+      padding-right: 0;
+
+      span {
         font-family: $font-family-heading;
         font-size: rem-calc(17);
         font-weight: normal;
         text-transform: uppercase;
       }
+    }
 
-      .type {
-        color: $primary;
+    .type {
+      color: $primary;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: -0.25rem;
+        transform: translateY(-50%);
       }
     }
 
-    .details {
-      span {
-        & + span {
-          padding-left: 1rem;
+    & > span:not(.alt) {
+      & + span {
+        padding-left: 0.75rem;
 
-          &:before {
-            content: "|";
-            position: absolute;
-            top: 50%;
-            left: -3px;
-            transform: translateY(-50%);
-          }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          height: rem-calc(16);
+          width: 1px;
+          background-color: $dark;
+          transform: translateY(-55%);
         }
+      }
+    }
+
+    .location {
+      padding-left: 1.5rem;
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-55%);
+      }
+    }
+
+    span + .location,
+    span + .attachment {
+      padding-left: 2.5rem !important;
+
+      svg {
+        left: 1rem !important;
+      }
+    }
+
+    .attachment {
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-55%);
+        fill: #6a6a6a;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .alt {
+        width: 100%;
+      }
+    }
+  }
+
+  .search-result-header {
+    h2.heading {     
+      position: relative;
+      font-size: rem-calc(18);
+      font-weight: 500;
+    }
+
+    @include media-breakpoint-up(lg) {
+      h2.heading {
+        font-size: rem-calc(22);
       }
     }
   }
