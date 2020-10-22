@@ -1,0 +1,54 @@
+// =============================================================================
+// SEARCH RESULTS
+// =============================================================================
+
+.section__search-results {
+  .search-result {
+    padding: rem-calc(20) 0 rem-calc(25);
+
+    & + .search-result {
+      border-top: 1px solid #d3d3d3;
+    }
+  }
+
+  .meta {
+    display: flex;
+
+    span {
+      position: relative;
+      padding-right: 1rem;
+      font-size: rem-calc(18);
+      line-height: 1;
+      font-weight: 300;
+    }
+
+    .top-level {
+      * {
+        font-family: $font-family-heading;
+        font-size: rem-calc(17);
+        font-weight: normal;
+        text-transform: uppercase;
+      }
+
+      .type {
+        color: $primary;
+      }
+    }
+
+    .details {
+      span {
+        & + span {
+          padding-left: 1rem;
+
+          &:before {
+            content: "|";
+            position: absolute;
+            top: 50%;
+            left: -3px;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+  }
+}
