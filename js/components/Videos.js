@@ -98,9 +98,16 @@ export default class Videos {
     return Navigation;
   }
 
+  handleClick() {
+    $(this.modal).modal('show')
+  }
+
   connectPlayButtons() {
     this.playButtons.forEach(button => {
-      button.VideoButton = new VideoButton(button, this.modal);
+      button.VideoButton = new VideoButton(button, this.modal, !this.shouldBuildSlider);
+      if (!this.shouldBuildSlider) {
+        button.addEventListener('click', this.handleClick.bind(this));
+      }
     });
   }
 
