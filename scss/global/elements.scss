@@ -24,6 +24,7 @@ body {
 
 h1, .h1 {
   line-height: 1.1;
+  letter-spacing: normal;
   text-transform: uppercase;
   font-family: $font-family-heading;
   font-size: rem-calc(50);
