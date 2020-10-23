@@ -91,6 +91,7 @@
   .subheading {
     text-shadow: 0 3px 6px rgba(black, 0.35);
     font-size: 18px;
+    font-weight: 500;
     color: white;
 
     @include media-breakpoint-up(lg) {
