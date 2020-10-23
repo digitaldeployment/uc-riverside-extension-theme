@@ -26,6 +26,7 @@
 
 .page-center {
   flex-grow: 1;
+  position: relative;
 
   @include media-breakpoint-up(lg) {
     width: 50%;

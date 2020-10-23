@@ -37,6 +37,17 @@ body.has-content-filters {
   font-size: 0.9rem;
   font-weight: 300;
   color: $primary;
+
+  // Modify position when in the main content channel
+  // ---------------------------------------------------------------------------
+
+  .page-center & {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+    }
+  }
 }
 
 // Content filters

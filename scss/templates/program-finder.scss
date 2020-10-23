@@ -3,19 +3,6 @@
 // =============================================================================
 
 .program-finder__results {
-  position: relative;
-
-  // Results count
-  // ---------------------------------------------------------------------------
-
-  .search-results__count {
-    @include media-breakpoint-up(lg) {
-      position: absolute;
-      bottom: 100%;
-      right: 0;
-    }
-  }
-
   // Results grid
   // ---------------------------------------------------------------------------
 
