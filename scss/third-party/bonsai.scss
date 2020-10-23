@@ -60,7 +60,9 @@
   }
 
   label {
-    margin-bottom: 0;
+    margin: 0.25rem 0;
+    width: calc(100% - 1.25rem);
+    line-height: 1.2;
   }
 
   li.has-children {

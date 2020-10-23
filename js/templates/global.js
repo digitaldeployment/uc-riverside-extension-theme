@@ -2,6 +2,7 @@ import $ from 'jquery'
 import 'select2'
 import 'popper.js'
 import 'bootstrap'
+import 'jquery-bonsai'
 import 'fg-collapsible/src/collapsible'
 import 'fg-collapsible/src/collapsible.set'
 import 'fg-collapsible/src/collapsible.tab'
@@ -9,6 +10,8 @@ import 'flickity-fade';
 import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
 import SmoothScroll from 'smooth-scroll'
+import Breakpoints from '../utils/Breakpoints'
+import Checkboxes from '../components/Checkboxes'
 import PageAnchors from '../navigation/PageAnchors'
 import InfoModal from '../components/InfoModal'
 import Hero from '../components/Hero'
@@ -178,4 +181,59 @@ export default () => {
       button.parentNode.classList.toggle('show-full-desc')
     })
   })
+
+  // Content Filtering powered by Jquery Bonsai
+  // ---------------------------------------------------------------------------
+
+  $('.content-filters ul.filters').bonsai({
+    createInputs: 'checkbox',
+    checkboxes: true,
+  });
+
+  // Add a bit of a11y support to thumb components added by bonsai.
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.content-filters .thumb').forEach((element) => {
+    element.setAttribute('aria-label', 'Toggle visibility of nested filters');
+    element.setAttribute('role', 'button');
+    element.setAttribute('tabindex', 0);
+  });
+
+  // Checkbox Management
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.content-filters').forEach((element) => {
+    if (!element.Checkboxes) {
+      element.Checkboxes = new Checkboxes(element);
+    }
+  });
+
+  // Expandable Filter Groups
+  // ---------------------------------------------------------------------------
+
+  const contentFilters = document.querySelector('.content-filters');
+ 
+  if (contentFilters && !contentFilters.processed) {
+    contentFilters.processed = true;
+
+    // Create expandable filter groups with the collapsible library.
+    // -------------------------------------------------------------------------
+    const $groups = $(contentFilters).find('.filters-group').collapsible();
+
+    // Automatically collapse/expand filter groups based on breakpoints.
+    // -------------------------------------------------------------------------
+
+    Breakpoints.on('desktop', {
+      enter: () => {
+        $groups.each((i, group) => {
+          $(group).data('collapsible').expand();
+        });
+      },
+      leave: () => {
+        $groups.each((i, group) => {
+          $(group).data('collapsible').collapse();
+        });
+      },
+    });
+  }
 }

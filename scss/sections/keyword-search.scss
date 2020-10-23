@@ -1,0 +1,66 @@
+// =============================================================================
+// Keyword Search
+// =============================================================================
+
+.keyword-search {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 2.75rem;
+  }
+
+  // Search keywords input field
+  // ---------------------------------------------------------------------------
+
+  input {
+    border: none;
+    height: rem-calc(52);
+
+    &::placeholder {
+      color: inherit;
+    }
+  }
+
+  // Search submit button
+  // ---------------------------------------------------------------------------
+
+  button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: rem-calc(52);
+    height: rem-calc(52);
+    background-color: $tertiary;
+    transition: 0.1s ease-out;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      background-color: #f5a800;
+    }
+  }
+
+  // Modifiers / Themes
+  // ---------------------------------------------------------------------------
+
+  &.keyword-search--light {
+    color: $dark;
+
+    input {
+      background-color: white;
+    }
+  }
+
+  &.keyword-search--dark {
+    color: $dark;
+
+    input {
+      background-color: $light;
+    }
+  }
+}

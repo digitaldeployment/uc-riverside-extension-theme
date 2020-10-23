@@ -196,3 +196,27 @@ $breadcrumb-border-radius:          0;
 // -----------------------------------------------------------------------------
 
 $blockquote-font-size:              $font-size-base * 1.4;
+
+// Pagination
+// -----------------------------------------------------------------------------
+
+$pagination-padding-y:              0.5rem;
+$pagination-padding-x:              0.75rem;
+$pagination-line-height:            1.25;
+
+$pagination-color:                  $dark;
+$pagination-bg:                     transparent;
+$pagination-border-width:           2px;
+$pagination-border-color:           $tertiary;
+
+$pagination-hover-color:            white;
+$pagination-hover-bg:               $secondary;
+$pagination-hover-border-color:     $primary;
+
+$pagination-active-color:           $dark;
+$pagination-active-bg:              $tertiary;
+$pagination-active-border-color:    $tertiary;
+
+$pagination-disabled-color:         #757575;
+$pagination-disabled-bg:            white;
+$pagination-disabled-border-color:  #ccc;
