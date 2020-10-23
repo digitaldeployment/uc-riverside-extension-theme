@@ -143,6 +143,18 @@
     @include banner-dropdown();
   }
 
+  // Button styling modifications
+  // ---------------------------------------------------------------------------
+
+  .btn-overview {
+    color: white;
+
+    &:hover,
+    &:focus {
+      color: $dark;
+    }
+  }
+
   // Ready state
 
   &.ready {
