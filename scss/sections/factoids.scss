@@ -1,0 +1,152 @@
+// =============================================================================
+// FACTOIDS
+// =============================================================================
+
+.section_factoids {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .factoid {
+    flex-grow: 1;
+  }
+
+  .factoid--content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    min-height: rem-calc(430);
+    line-height: 1.5;
+
+    .rank {
+      position: relative;
+      padding-left: rem-calc(45);
+      margin-bottom: 1.5rem;
+      font-family: $font-family-heading;
+      font-size: 110px;
+      font-weight: 300;
+      line-height: 1;
+
+      svg {
+        position: absolute;
+        top: 25px;
+        left: 0;
+      }
+    }
+
+    h4.heading {
+      font-size: rem-calc(20);
+      font-weight: normal;
+    }
+
+    p.source {
+      font-size: 18px;
+    }
+
+    &.item-1 {
+      background-color: $primary;
+
+      .rank,
+      h4.heading,
+      .source {
+        color: white;
+      }
+    }
+
+    &.item-3 {
+      background-color: $tertiary;
+
+      .rank,
+      h4.heading,
+      .source {
+        color: $dark;
+      }
+    }
+
+    &.item-5 {
+      background-color: $secondary;
+
+      .rank,
+      h4.heading,
+      .source {
+        color: white;
+      }
+    }
+  }
+
+  .factoid--image {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: 0;
+      height: auto;
+      width: auto;
+      min-width: calc(100% + 2px);
+      min-height: calc(100% + 2px);
+      max-width: none;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .factoid {
+      width: 100%;
+    }
+
+    .factoid--content {
+      padding: 2rem;
+    }
+
+    .factoid--image {
+      min-height: rem-calc(350);
+    }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    .factoid {
+      width: 50%;
+
+      &.item-1 { order: 1; }
+      &.item-2 { order: 2; }
+      &.item-3 { order: 4; }
+      &.item-4 { order: 3; }
+      &.item-5 { order: 5; }
+      &.item-6 { order: 6; }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .factoid--content {
+      padding: 3rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .factoid {
+      &.item-1,
+      &.item-3,
+      &.item-5 {
+        width: 25%;
+      }
+
+      &.item-2 {
+        width: 50%;
+      }
+
+      &.item-4 {
+        width: 45%;
+      }
+
+      &.item-6 {
+        width: 30%;
+      }
+    }
+  }
+}
