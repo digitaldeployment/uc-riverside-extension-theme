@@ -3,6 +3,35 @@
 // =============================================================================
 
 .resources {
+  .page-sidebar--left {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .page-sidebar-inner {
+    @include media-breakpoint-down(md) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .keyword-search {
+        width: 100%;
+        order: 2;
+        margin-top: 2rem;
+        margin-bottom: 0;
+
+        .form-group {
+          margin-bottom: 0;
+        }
+      }
+
+      .term-navigation {
+        flex-grow: 1;
+        order: 1;
+      }
+    }
+  }
+
   .pods {
     @include media-breakpoint-up(md) {
       display: flex;
@@ -16,7 +45,7 @@
       }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       margin: 0 -0.5rem;
 
       .pod {
