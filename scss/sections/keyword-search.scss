@@ -63,4 +63,16 @@
       background-color: $light;
     }
   }
+
+  // Overrides
+  // ---------------------------------------------------------------------------
+
+  .banner & {
+    max-width: 768px;
+    margin: rem-calc(30 0 0);
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
 }
