@@ -39,6 +39,7 @@ section.videos {
     position: relative;
     z-index: 1;
     width: 100%;
+    overflow: hidden;
 
     @include media-breakpoint-down(sm) {
       padding-bottom: 105%;
