@@ -30,16 +30,4 @@
       }
     }
   }
-
-  .btn-overview {
-    margin-top: 1.5rem;
-    color: white;
-
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $dark;
-      text-shadow: none;
-    }
-  }
 }
