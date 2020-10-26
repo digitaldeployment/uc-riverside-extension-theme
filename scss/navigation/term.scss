@@ -47,6 +47,10 @@
       font-family: $font-family-heading;
       color: inherit;
 
+      &.active {
+        font-weight: 500;
+      }
+
       @include media-breakpoint-down(md) {
         font-size: rem-calc(18);
         padding: 1.3rem 0;
@@ -59,7 +63,6 @@
         }
 
         &.active {
-          font-weight: bold;
           color: $primary;
         }
       }
