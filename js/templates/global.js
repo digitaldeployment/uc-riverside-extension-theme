@@ -70,14 +70,15 @@ export default () => {
   // ---------------------------------------------------------------------------
   const infoModal = document.querySelector('#modal-info-popup');
   if (infoModal) {
+    // Add info modal logic.
+    if (!document.body.InfoModal) {
+      document.body.InfoModal = new InfoModal(infoModal);
+    }
+
+    // Add infoPopup button logic.
     document.querySelectorAll('[data-target="#modal-info-popup"]').forEach(element => {
-      // Add infoPopup button logic.
       if (!element.InfoPopupButton) {
         element.InfoPopupButton = new InfoPopupButton(element, infoModal);
-      }
-      // Add info modal logic.
-      if (!document.body.InfoModal) {
-        document.body.InfoModal = new InfoModal(infoModal);
       }
     });
   }
