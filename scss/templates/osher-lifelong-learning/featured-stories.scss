@@ -81,21 +81,21 @@
         padding-bottom: 70%;
       }
 
-      img {
+      figure {
         position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        height: auto;
-        width: auto;
-        min-height: 100%;
-        min-width: 100%;
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        background: center / cover no-repeat;
+        margin: 0;
       }
     }
 
     .content {
+      flex-grow: 1;
       padding: 3rem 5vw;
-      background: $primary;
+      background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') center 20px / 100% repeat-y $primary;
 
       .type {
         margin-bottom: 1.5rem;
@@ -131,7 +131,23 @@
     }
 
     @include media-breakpoint-up(lg) {
+      display: flex;
       padding: 0 1rem;
+
+      a.image {
+        width: 55%;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 45%;
+
+        & > * {
+          align-self: flex-start;
+        }
+      }
     }
   
     @include media-breakpoint-up(xl) {
