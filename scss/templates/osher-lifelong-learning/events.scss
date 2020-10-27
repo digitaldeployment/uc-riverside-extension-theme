@@ -1,0 +1,127 @@
+// =============================================================================
+// Osher Lifelong Learning :: Upcoming Events
+// =============================================================================
+
+.section__upcoming-events {
+  padding-top: 2.5rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .section-heading {
+    position: relative;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      content: "";
+      background-color: $gold;
+      height: 5px;
+      width: 120px;
+      transform: translateX(-50%);
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-bottom: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .events {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 3rem;
+    }
+  }
+
+  .event {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem;
+
+    .month {
+      margin: 0;
+      font-family: $font-family-heading;
+      font-size: 30px;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    .day {
+      margin-bottom: 1.5rem;
+      color: $primary;
+      font-family: $font-family-heading;
+      font-size: 90px;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .time {
+      margin: 0;
+      font-size: rem-calc(20);
+      font-weight: 300;
+    }
+
+    .heading {
+      margin: 0;
+      font-family: $font-family-base;
+      font-size: rem-calc(20);
+      font-weight: 500;
+    }
+
+    @include media-breakpoint-down(md) {
+      & + .event {
+        padding-top: 2.5rem;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: -2px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: $gray;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: percentage(1/3);
+
+      & + .event {
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -2px;
+          width: 2px;
+          height: 100%;
+          background-color: $gray;
+        }
+      }
+    }
+  }
+
+  .btn-overview {
+    margin-top: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 3rem;
+    }
+  }
+}
