@@ -86,7 +86,7 @@ export default () => {
 
   // Collapsible powered accordions
   // ---------------------------------------------------------------------------
-  $('.accordions .collapsible').collapsible();
+  $('.accordion.collapsible').collapsible();
 
   // Collapsible powered tabs
   // ---------------------------------------------------------------------------

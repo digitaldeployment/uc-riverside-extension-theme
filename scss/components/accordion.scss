@@ -1,21 +1,16 @@
 // =============================================================================
-// Accordions
+// Accordion
 // =============================================================================
 
-.accordions {
-  // Accordion Section Wrapper
-  // ---------------------------------------------------------------------------
+.accordion {
+  margin: 1rem 0;
+  user-select: none;
+  transition: 0.2s ease-out;
+  background-color: $light;
 
-  .accordion {
-    margin: 1rem 0;
-    user-select: none;
-    transition: 0.2s ease-out;
-    background-color: $light;
-
-    @include media-breakpoint-down(sm) {
-      margin-left: -1.5rem;
-      margin-right: -1.5rem;
-    }
+  @include media-breakpoint-down(sm) {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
   }
 
   // Accordion Heading
@@ -79,7 +74,7 @@
   // Collapsed State of each section
   // ---------------------------------------------------------------------------
 
-  .collapsible-collapsed {
+  &.collapsible-collapsed {
     &:hover {
       background-color: #dadada;
     }
@@ -102,14 +97,5 @@
         transform: translateY(rem-calc(-28));
       }
     }
-  }
-
-  // Grid view
-  // ---------------------------------------------------------------------------
-
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem -0.75rem;
   }
 }
