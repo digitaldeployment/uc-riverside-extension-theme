@@ -4,6 +4,7 @@
 
 .icon {
   display: inline-block;
+  overflow: inherit;
   fill: currentColor;
 
   // Adds dynamic icon sizing by using rem values as measurements.
