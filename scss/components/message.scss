@@ -1,0 +1,54 @@
+// =============================================================================
+// Message
+// =============================================================================
+
+.message {
+  padding: rem-calc(24 60 24 30);
+  margin: 1rem 0;
+  border-left: 12px solid $tertiary;
+  background-color: $light;
+
+  .heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    font-size: rem-calc(16);
+  }
+
+  .icon {
+    margin-right: 0.5rem;
+    padding: 0.45rem;
+    border-radius: 100%;
+    box-sizing: content-box;
+    background-color: $tertiary;
+    color: white;
+  }
+
+  // Modifiers / Types
+  // ---------------------------------------------------------------------------
+
+  &.message--note {
+    border-color: $primary;
+
+    .icon {
+      background-color: $primary;
+    }
+  }
+
+  &.message--tip {
+    border-color: $blue-ot;
+
+    .icon {
+      background-color: $blue-ot;
+    }
+  }
+
+  &.message--alert {
+    border-color: #e4002b;
+
+    .icon {
+      background-color: #e4002b;
+    }
+  }
+}
