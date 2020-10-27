@@ -24,6 +24,7 @@ import SliderSpotlights from '../components/SliderSpotlights'
 import SliderExperiences from '../components/SliderExperiences'
 import SliderTestimonials from '../components/SliderTestimonials'
 import SliderRelatedPrograms from '../components/SliderRelatedPrograms'
+import SliderFeaturedStories from '../components/SliderFeaturedStories'
 import SliderCareerOpportunities from '../components/SliderCareerOpportunites'
 
 export default () => {
@@ -171,6 +172,15 @@ export default () => {
   document.querySelectorAll('section.experiences .slider').forEach(element => {
     if (!element.Slider) {
       element.Slider = new SliderExperiences(element);
+    }
+  });
+
+  // Featured Stories Slider
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.section__featured-stories .slider').forEach(element => {
+    if (!element.Slider) {
+      element.Slider = new SliderFeaturedStories(element);
     }
   });
 
