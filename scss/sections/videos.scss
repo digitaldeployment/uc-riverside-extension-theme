@@ -34,128 +34,10 @@ section.videos {
 
   // Slide
   // ---------------------------------------------------------------------------
-  
+
   .slide {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    overflow: hidden;
-
-    @include media-breakpoint-down(sm) {
-      padding-bottom: 105%;
-    }
-
     &.is-selected {
       z-index: 2;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      opacity: 0.52;
-      transition: all 0.2s ease-out;
-      background-image: linear-gradient(to top, $dark, rgba(black, 0));
-      
-      @include media-breakpoint-up(lg) {
-        opacity: 1;
-        background-image: linear-gradient(to top, #111, rgba(#111, 0) 60%);
-      }
-    }
-
-    // Dark gradient overlaying the image
-    // -------------------------------------------------------------------------
-
-    &:after {
-      content: '';
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 30%;
-      opacity: 0.74;
-      background-image: linear-gradient(to left, rgba(#100f0f, 0.96) 20%, rgba(black, 0));
-    }
-
-    // Play button overlay
-    // -------------------------------------------------------------------------
-
-    .button__play {
-      display: block;
-      position: absolute;
-      z-index: 4;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 0;
-      border-radius: 0;
-
-      svg {
-        box-shadow: inset 0 3px 6px rgba(black, 0.2);
-        transition: all 0.2s ease-in;
-        fill: currentColor;
-        border-radius: 50rem;
-        border: rem-calc(4) solid;
-        color: white;
-      }
-
-      &:hover,
-      &:focus {
-        svg {
-          background-color: $tertiary;
-        }
-      }
-
-      &:active {
-        svg {
-          transform: scale(0.9);
-        }
-      }
-    }
-
-    img {
-      width: 100%;
-      max-width: none;
-
-      @include media-breakpoint-down(sm) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 195%;
-        transform: translate3d(-50%, -50%, 0);
-      }
-    }
-
-    .heading {
-      position: absolute;
-      z-index: 2;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin-bottom: 0;
-      padding: rem-calc(35 25);
-      letter-spacing: 0.025em;
-      text-transform: uppercase;
-      font-family: $font-family-heading;
-      font-size: rem-calc(18);
-      font-weight: normal;
-      transition: all 0.2s ease-in;
-      background: rgba(black, 0.52);
-      color: white;
-
-      @include media-breakpoint-up(lg) {
-        padding: rem-calc(45 50);
-        font-size: rem-calc(22);
-        text-align: center;
-        background: none;
-      }
     }
   }
 
@@ -319,7 +201,31 @@ section.videos {
       }
     }
 
-    .slide {
+    // Video Slide
+    // -------------------------------------------------------------------------
+
+    .video {
+
+      // Dark gradient overlaying the image (from the right)
+      // -----------------------------------------------------------------------
+
+      &:after {
+        @include media-breakpoint-up(xl) {
+          content: '';
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 30%;
+          opacity: 0.74;
+          background-image: linear-gradient(to left, rgba(#100f0f, 0.96) 20%, rgba(black, 0));
+        }
+      }
+
+      // Heading
+      // -----------------------------------------------------------------------
+
       .heading {
         @include media-breakpoint-up(lg) {
           padding: rem-calc(60 50);
@@ -332,6 +238,9 @@ section.videos {
         }
       }
     }
+
+    // Slider Dots
+    // -----------------------------------------------------------------------
 
     .flickity-page-dots {
       @include media-breakpoint-up(xl) {
