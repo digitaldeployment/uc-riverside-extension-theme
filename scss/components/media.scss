@@ -1,0 +1,40 @@
+// =============================================================================
+// Media Credit / Contact
+// =============================================================================
+
+.media-credit,
+.media-contact {
+  font-weight: 300;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  a {
+    font-weight: normal;
+  }
+
+  .icon {
+    margin-right: 0.2em;
+  }
+}
+
+// Media Credit Specific
+// -----------------------------------------------------------------------------
+
+.media-credit {
+  margin: map-get($spacers, 4) 0;
+}
+
+// Media Contact Specific
+// -----------------------------------------------------------------------------
+
+.media-contact {
+  margin: 2rem 0 map-get($spacers, 5);
+  padding-left: 1rem;
+  border-left: 10px solid $light;
+
+  .contact-paths a {
+    margin-right: 2rem;
+  }
+}
