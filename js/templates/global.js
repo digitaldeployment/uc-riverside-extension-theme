@@ -20,10 +20,10 @@ import VideoModal from '../components/VideoModal'
 import InfoPopupButton from '../components/InfoPopupButton'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
+import SliderRelated from '../components/SliderRelated'
 import SliderSpotlights from '../components/SliderSpotlights'
 import SliderExperiences from '../components/SliderExperiences'
 import SliderTestimonials from '../components/SliderTestimonials'
-import SliderRelatedPrograms from '../components/SliderRelatedPrograms'
 import SliderFeaturedStories from '../components/SliderFeaturedStories'
 import SliderCareerOpportunities from '../components/SliderCareerOpportunites'
 
@@ -130,12 +130,12 @@ export default () => {
     }
   });
   
-  // Related Programs Slider
+  // Related Slider(s)
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('.section__related-programs .slider').forEach(element => {
+  document.querySelectorAll('.section__related-slider .slider').forEach(element => {
     if (!element.Slider) {
-      element.Slider = new SliderRelatedPrograms(element);
+      element.Slider = new SliderRelated(element);
     }
   });
   
