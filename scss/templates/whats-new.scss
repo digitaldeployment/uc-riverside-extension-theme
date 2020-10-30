@@ -9,4 +9,30 @@ body.whats-new {
   .pagination {
     flex-wrap: wrap;
   }
+
+  .whats-new-footer {
+    @include media-breakpoint-down(md) {
+      .all-news {
+        margin-bottom: 3rem;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .pagination {
+        flex-grow: 1;
+        order: 1;
+        margin-bottom: 0;
+      }
+
+      .all-news {
+        width: rem-calc(200);
+        text-align: right;
+        order: 2;
+      }
+    }
+  }
 }

@@ -4,10 +4,10 @@
 
 .section__the-latest {
   padding-top: 2.5rem;
+  padding-bottom: 2rem;
 
   @include media-breakpoint-up(lg) {
     padding-top: 5rem;
-    padding-bottom: 2rem;
   }
 
   p.section-subheading {
