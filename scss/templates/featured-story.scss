@@ -1,0 +1,22 @@
+// =============================================================================
+// Featured Story Template
+// =============================================================================
+
+body.featured-story {
+  .page-sidebar {
+    @include media-breakpoint-up(lg) {
+      width: 9%;
+    }
+  }
+}
+
+// Heading
+// -----------------------------------------------------------------------------
+
+.featured-story__header {
+  .heading {
+    text-transform: inherit;
+    font-family: inherit;
+    color: inherit;
+  }
+}
