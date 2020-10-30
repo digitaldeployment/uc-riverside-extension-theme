@@ -1,0 +1,75 @@
+// =============================================================================
+// Share Block
+// =============================================================================
+
+.share {
+  color: #646262;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -1.4rem;
+    margin-left: -1.8rem;
+  }
+
+  ul {
+    justify-content: space-between;
+
+    @include media-breakpoint-up(lg) {
+      width: rem-calc(60);
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      margin: 1rem;
+    }
+  }
+
+  a {
+    display: block;
+    transition: 0.1s ease-out;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.25);
+      color: $primary;
+    }
+  }
+
+  .icon {
+    transition: 0.1s ease-out;
+  }
+
+  .btn {
+    padding: 0;
+    transition: 0.1s ease-out;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+      color: $primary;
+
+      .icon {
+        transform: scale(1.25);
+      }
+    }
+  }
+
+  .heading {
+    margin-top: 0.2rem;
+    margin-bottom: 0;
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  // Print
+  // ---------------------------------------------------------------------------
+
+  .print {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}
