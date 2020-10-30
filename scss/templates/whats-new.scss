@@ -4,4 +4,9 @@
 
 body.whats-new {
   @import './whats-new/banner';
+  @import './whats-new/latest';
+
+  .pagination {
+    flex-wrap: wrap;
+  }
 }

@@ -193,6 +193,15 @@ export default () => {
     })
   })
 
+  // What's New - Filters Toggle
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.whats-new .btn-filters').forEach(button => {
+    button.addEventListener('click', () => {
+      button.parentNode.classList.toggle('expanded')
+    })
+  })
+
   // Content Filtering powered by Jquery Bonsai
   // ---------------------------------------------------------------------------
 

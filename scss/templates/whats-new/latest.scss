@@ -1,0 +1,255 @@
+// =============================================================================
+// What's New :: The Latest
+// =============================================================================
+
+.section__the-latest {
+  padding-top: 2.5rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  p.section-subheading {
+    margin-bottom: 1.5rem;
+    font-size: rem-calc(18);
+    font-weight: 300;
+  }
+
+  .btn {
+    position: relative;
+    height: rem-calc(54);
+    padding: rem-calc(0 30);
+    font-size: rem-calc(16);
+  }
+
+  .btn-filters {
+    font-style: italic;
+    text-align: left;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      transition: transform 0.2s ease-out;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  ul.filters {
+    display: flex;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: max-height 0.3s ease-in-out;
+
+    button {
+      outline-offset: -2px;
+      outline: 2px solid $tertiary;
+      font-family: $font-family-heading;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      &.btn--all {
+        outline-color: $light;
+        background-color: $light;
+        order: 1;
+      }
+
+      &.btn--events {
+        outline-color: $primary;
+        background-color: $primary;
+        color: white;
+        order: 2;
+      }
+
+      &.btn--magazine {
+        outline-color: $blue-ot;
+        background-color: $blue-ot;
+        color: white;
+        order: 3
+      }
+
+      &.btn--deans-message {
+        outline-color: $tertiary;
+        background-color: $tertiary;
+        order: 4;
+      }
+
+      &.btn--inspire {
+        outline-color: $dark;
+        background-color: $dark;
+        color: white;
+        order: 5;
+      }
+
+      &.btn--news {
+        outline-color: $green;
+        background-color: $green;
+        order: 6;
+      }
+
+      &.btn--innovate {
+        outline-color: $gray;
+        background-color: $gray;
+        order: 7;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: white;
+        color: $dark;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      padding: 0;
+      margin-bottom: 1.5rem;
+      outline: 2px solid $light;
+      outline-offset: -2px;
+      max-height: 0;
+
+      button {
+        margin: 1rem;
+        box-sizing: border-box;
+
+        & + button {
+          margin-top: 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+      margin-bottom: rem-calc(35);
+
+      button {
+        & + button {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  .items {
+    .item {
+      figure {
+        background: center / cover no-repeat;
+        margin: 0;
+
+        &:before {
+          content: "";
+          display: block;
+          padding-bottom: 45%;
+        }
+      }
+
+      .article {
+        background-color: $light;
+        border-bottom: 8px solid $tertiary;
+        transition: all 0.2s ease-out;
+
+        &:hover,
+        &:focus {
+          background-color: $primary;
+
+          .article-content {
+            color: white;
+
+            .article-type:before {
+              opacity: 0.13;
+            }
+          }
+        }
+
+        &.article-event {
+          border-color: $primary;
+
+          &:hover,
+          &:focus {
+            border-color: $tertiary;
+          }
+        }
+
+        &.article-magazine { border-color: $blue-ot; }
+        &.article-deans-message { border-color: $tertiary; }
+        &.article-inspire { border-color: $dark; }
+        &.article-news { border-color: $green; }
+        &.article-innovate { border-color: $gray; }
+      }
+
+      .article-content {
+        padding: 2rem 1.25rem;
+
+        .article-type {
+          position: relative;
+          padding-bottom: 1.5rem;
+          font-family: $font-family-heading;
+          font-size: rem-calc(16);
+          text-transform: uppercase;
+
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            height: rem-calc(5);
+            width: rem-calc(60);
+            background-color: $gray;
+            transition: opacity 0.2s ease-out;
+          }
+        }
+
+        .article-date {
+          margin-bottom: 1rem;
+          font-size: rem-calc(16);
+          font-weight: 300;
+          line-height: 1;
+        }
+
+        .heading {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      .item {
+        & + .item {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.75rem;
+
+      .item {
+        margin: 0.75rem;
+        width: calc(#{percentage(1/3)} - 1.5rem);
+
+        .article {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &.expanded {
+    .btn-filters svg { transform: rotate(-180deg) translateY(50%); }
+
+    ul.filters {
+      @include media-breakpoint-down(md) {
+        max-height: 9999px;
+      }
+    }
+  }
+}
