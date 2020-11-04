@@ -1,62 +1,12 @@
 // =============================================================================
-// [TITLE]
+// Banner :: What's New
 // =============================================================================
 
 .banner {
   .subheading {
-    color: $dark;
+    margin-top: 1rem;
     font-size: rem-calc(18);
     font-weight: 300;
-  }
-
-  .signup-form {
-    margin-top: 1rem;
-
-    @include media-breakpoint-up(lg) {
-      display: flex;
-      margin-top: 1.5rem;
-    }
-    
-    .btn,
-    .form-control {
-      height: rem-calc(64);
-      padding: rem-calc(6 20);
-      font-size: rem-calc(18);
-      border-radius: 0;
-    }
-
-    .form-group {
-      @include media-breakpoint-down(md) {
-        flex-grow: 1;
-      }
-
-      @include media-breakpoint-up(lg) {
-        margin-bottom: 0;
-      }
-    }
-
-    .form-control {
-      border: none;
-      font-weight: 300;
-      background-color: white;
-
-      @include media-breakpoint-up(lg) {
-        width: auto;
-        min-width: 500px;
-      }
-    }
-
-    .btn {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      font-family: $font-family-heading;
-      font-weight: 500;
-      letter-spacing: 0.025em;
-      text-transform: uppercase;
-
-      @include media-breakpoint-up(lg) {
-        width: auto;
-      }
-    }
+    color: $dark;
   }
 }
