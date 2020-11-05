@@ -1,0 +1,85 @@
+// =============================================================================
+// Article Component
+// =============================================================================
+
+.article {
+  display: block;
+  background-color: $light;
+  border-bottom: 8px solid $tertiary;
+  transition: all 0.2s linear;
+  color: $dark;
+
+  @include media-breakpoint-up(lg) {
+    font-size: rem-calc(14);
+  }
+
+  a {
+    color: inherit;
+  }
+
+  // Custom theme based on type.
+  // ---------------------------------------------------------------------------
+
+  &.article-event         { border-color: $primary; }
+  &.article-magazine      { border-color: $blue-ot; }
+  &.article-deans-message { border-color: $tertiary; }
+  &.article-inspire       { border-color: $dark; }
+  &.article-news          { border-color: $green; }
+  &.article-innovate      { border-color: $gray; }
+
+  // Article Content
+  // ---------------------------------------------------------------------------
+
+  .article-content {
+    padding: 1rem 1.25rem;
+  }
+
+  // Article Type
+  // ---------------------------------------------------------------------------
+
+  .article-type {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    border-bottom: 5px solid #d3d3d3;
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+  }
+
+  // Article Date
+  // ---------------------------------------------------------------------------
+
+  .article-date {
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+
+  // Article Heading
+  // ---------------------------------------------------------------------------
+
+  .heading {
+    margin-bottom: 0.75rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // States
+  // ---------------------------------------------------------------------------
+
+  &:hover,
+  &:focus {
+    outline-offset: 0;
+    outline: 5px solid $tertiary;
+    border-bottom-width: 0;
+    padding-bottom: 8px;
+    text-decoration: none;
+    background-color: $primary;
+    color: white;
+
+    .article-type {
+      border-color: rgba(#d3d3d3, 0.17);
+    }
+  }
+}
