@@ -15,6 +15,7 @@ import Checkboxes from '../components/Checkboxes'
 import PageAnchors from '../navigation/PageAnchors'
 import InfoModal from '../components/InfoModal'
 import Hero from '../components/Hero'
+import Toggle from '../components/Toggle'
 import Videos from '../components/Videos'
 import VideoModal from '../components/VideoModal'
 import InfoPopupButton from '../components/InfoPopupButton'
@@ -193,13 +194,37 @@ export default () => {
     })
   })
 
-  // What's New - Filters Toggle
+  // Filters Toggles
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('.whats-new .btn-filters').forEach(button => {
-    button.addEventListener('click', () => {
-      button.parentNode.classList.toggle('expanded')
-    })
+  document.querySelectorAll('#filters').forEach(element => {
+    // Dropdown Filters Toggle
+    if (!element.Toggle) {
+      element.Toggle = new Toggle(element, {
+        button: '.filters-toggle',
+        menu: '.filters-group',
+      })
+      Breakpoints.on('mobile', {
+        enter: () => { element.Toggle.collapse() },
+      })
+      Breakpoints.on('desktop', {
+        enter: () => { element.Toggle.expand() },
+      })
+    }
+
+    // Search Form Toggle
+    if (!element.FormToggle) {
+      element.FormToggle = new Toggle(element, {
+        button: '.filters-search-toggle',
+        menu: '.filters-search-components',
+      })
+      Breakpoints.on('mobile', {
+        enter: () => { element.FormToggle.expand() },
+      })
+      Breakpoints.on('desktop', {
+        enter: () => { element.FormToggle.collapse() },
+      })
+    }
   })
 
   // Content Filtering powered by Jquery Bonsai
@@ -243,17 +268,19 @@ export default () => {
     // Automatically collapse/expand filter groups based on breakpoints.
     // -------------------------------------------------------------------------
 
+    Breakpoints.on('mobile', {
+      enter: () => {
+        $groups.each((i, group) => {
+          $(group).data('collapsible').collapse();
+        });
+      }
+    });
     Breakpoints.on('desktop', {
       enter: () => {
         $groups.each((i, group) => {
           $(group).data('collapsible').expand();
         });
-      },
-      leave: () => {
-        $groups.each((i, group) => {
-          $(group).data('collapsible').collapse();
-        });
-      },
+      }
     });
   }
 }

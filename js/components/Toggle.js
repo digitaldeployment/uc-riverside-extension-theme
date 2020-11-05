@@ -14,14 +14,22 @@ export default class Toggle {
     }
   }
 
-  clickHandler() {
-    const expanded = this.isExpanded;
-    this.menu.setAttribute('aria-hidden', expanded);
-    this.button.setAttribute('aria-expanded', !expanded);
+  clickHandler = () => {
+    this.isExpanded ? this.collapse() : this.expand();
+  }
+
+  expand = () => {
+    this.menu.setAttribute('aria-hidden', false);
+    this.button.setAttribute('aria-expanded', true);
+  }
+
+  collapse = () => {
+    this.menu.setAttribute('aria-hidden', true);
+    this.button.setAttribute('aria-expanded', false);
   }
 
   listen() {
-    this.button.addEventListener('click', this.clickHandler.bind(this));
+    this.button.addEventListener('click', this.clickHandler);
   }
 
   get button() {
