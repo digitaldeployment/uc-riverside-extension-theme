@@ -31,6 +31,7 @@ body.whats-new {
       .all-news {
         width: rem-calc(200);
         text-align: right;
+        transform: translateY(-0.5rem);
         order: 2;
       }
     }

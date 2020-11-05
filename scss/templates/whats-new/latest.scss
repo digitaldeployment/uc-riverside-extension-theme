@@ -23,6 +23,18 @@
     font-size: rem-calc(16);
   }
 
+  .section-filters {
+    display: flex;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-up(lg) {
+
+    }
+  }
+
   .btn-filters {
     font-style: italic;
     text-align: left;
@@ -130,9 +142,7 @@
       margin-bottom: rem-calc(35);
 
       button {
-        & + button {
-          margin-left: 1rem;
-        }
+        margin-right: 1rem;
       }
     }
   }
@@ -243,12 +253,36 @@
     }
   }
 
-  &.expanded {
+  .section-filters.expanded {
     .btn-filters svg { transform: rotate(-180deg) translateY(50%); }
 
     ul.filters {
       @include media-breakpoint-down(md) {
         max-height: 9999px;
+      }
+    }
+  }
+
+  .search-latest {
+    input[type*='text'] {
+      margin: 0;
+      padding: 0 1rem;
+      line-height: calc(3.375rem - 4px);
+      border: 2px solid $gray;
+      border-radius: 0;
+      color: $dark;
+      font-family: $font-family-base;
+      font-size: 1rem;
+      font-weight: 300;
+
+      &::placeholder {
+        color: $dark;
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      input[type*='text'] {
+        width: 100%;
       }
     }
   }
