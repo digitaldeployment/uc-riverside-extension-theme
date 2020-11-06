@@ -283,4 +283,13 @@ export default () => {
       }
     });
   }
+
+  // Print button
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('button.print').forEach(button => {
+    button.addEventListener('click', event => {
+      window.print();
+    })
+  })
 }
