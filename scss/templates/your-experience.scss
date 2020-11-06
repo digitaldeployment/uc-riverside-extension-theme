@@ -1,0 +1,11 @@
+// =============================================================================
+// Your Experience Template
+// =============================================================================
+
+body.experience {
+  section.videos {
+    @include media-breakpoint-only(md) {
+      padding-top: 0;
+    }
+  }
+}
