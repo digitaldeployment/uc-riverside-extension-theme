@@ -24,37 +24,6 @@
     @include media-breakpoint-up(md) {
       transform: translateY(-7.5rem);
     }
-
-    .inner {
-      position: relative;
-      overflow: hidden;
-
-      &:before {
-        content: "";
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.52;
-        transition: all 0.2s ease-out;
-        background-image: linear-gradient(to top, $dark, rgba(black, 0));
-        
-        @include media-breakpoint-up(lg) {
-          opacity: 1;
-          background-image: linear-gradient(to top, #111, rgba(#111, 0) 80%);
-        }
-      }
-
-      &:after {
-        @include media-breakpoint-down(sm) {
-          content: "";
-          display: block;
-          padding-bottom: 105%;
-        }
-      }
-    }
   }
 
   .video-heading {
@@ -68,10 +37,26 @@
     background: rgba(black, 0.52);
     text-align: left;
     text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    color: white;
 
     @include media-breakpoint-up(lg) {
       padding: rem-calc(40 50);
       background: none;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      font-weight: 300;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
     }
   }
 }
