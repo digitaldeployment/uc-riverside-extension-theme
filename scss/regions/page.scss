@@ -36,6 +36,7 @@
 .page-sidebar {
   @include media-breakpoint-up(lg) {
     width: 25%;
+    min-width: 300px;
   }
 }
 
