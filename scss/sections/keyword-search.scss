@@ -16,6 +16,7 @@
   input {
     border: none;
     height: rem-calc(52);
+    font-weight: 300;
 
     &::placeholder {
       color: inherit;
