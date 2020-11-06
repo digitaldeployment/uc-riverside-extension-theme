@@ -105,7 +105,7 @@
         background-color: $primary;
 
         .heading {
-          background-image: linear-gradient(to bottom, rgba($primary, 0) 0, $primary 90px);
+          background-image: linear-gradient(to bottom, rgba($primary, 0) 0, $primary 60px);
         }
       }
     }
@@ -119,7 +119,7 @@
         background-color: $secondary;
 
         .heading {
-          background-image: linear-gradient(to bottom, rgba($secondary, 0) 0, $secondary 90px);
+          background-image: linear-gradient(to bottom, rgba($secondary, 0) 0, $secondary 60px);
         }
       }
     }
