@@ -2,6 +2,7 @@
 // Student Resources Template
 // =============================================================================
 
+.resource,
 .resources {
   .page-sidebar--left {
     @include media-breakpoint-down(md) {
