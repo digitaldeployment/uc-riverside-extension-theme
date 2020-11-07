@@ -197,6 +197,8 @@
       text-decoration: underline;
 
       @include media-breakpoint-up(lg) {
+        text-decoration: none;
+        cursor: default;
         color: $primary;
       }
     }

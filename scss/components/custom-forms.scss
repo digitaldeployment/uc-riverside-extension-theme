@@ -1,0 +1,28 @@
+// =============================================================================
+// Custom Form Components
+// =============================================================================
+
+// Custom select
+// -----------------------------------------------------------------------------
+
+.custom-select {
+  font-style: italic;
+  background-size: rem-calc(16 10);
+
+  &:disabled {
+    border-color: $light;
+    background-color: $light;
+    color: #818181;
+  }
+}
+
+// Custom control indicators
+// -----------------------------------------------------------------------------
+
+.custom-control-label {
+  &:before,
+  &:after {
+    top: 0.25rem;
+  }
+}
+

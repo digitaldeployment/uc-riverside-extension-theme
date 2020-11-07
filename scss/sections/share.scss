@@ -5,19 +5,8 @@
 .share {
   color: #646262;
 
-  @include media-breakpoint-up(lg) {
-    margin-top: -1.4rem;
-    margin-left: -1.8rem;
-  }
-
   ul {
     justify-content: space-between;
-
-    @include media-breakpoint-up(lg) {
-      width: rem-calc(60);
-      flex-direction: column;
-      align-items: center;
-    }
 
     li {
       margin: 1rem;
@@ -31,8 +20,11 @@
 
     &:hover,
     &:focus {
-      transform: scale(1.25);
       color: $primary;
+
+      .icon {
+        transform: scale(1.25);
+      }
     }
   }
 
@@ -44,7 +36,7 @@
     padding: 0;
     transition: 0.1s ease-out;
     color: inherit;
-
+    
     &:hover,
     &:focus {
       box-shadow: none;
@@ -70,6 +62,40 @@
   .print {
     @include media-breakpoint-down(md) {
       display: none;
+    }
+  }
+
+  // Scedule an Appointment
+  // ---------------------------------------------------------------------------
+
+  .schedule-appt {
+    line-height: 1.2;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    .small {
+      display: block;
+      margin-left: 0.3em;
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Sidebar Specific Share instance
+  // ---------------------------------------------------------------------------
+
+  .page-sidebar & {
+    @include media-breakpoint-up(lg) {
+      margin-top: -1.4rem;
+      margin-left: -1.8rem;
+
+      ul {
+        width: rem-calc(60);
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
 }

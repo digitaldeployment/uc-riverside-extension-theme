@@ -3,11 +3,22 @@
 // =============================================================================
 
 .table {
-  .thead {
+  .thead-primary {
     th {
-      color: white;
-      background-color: $primary;
       border-color: $secondary;
+      background-color: $primary;
+      color: white;
     }
+  }
+
+  th {
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+
+  tbody,
+  tfoot {
+    font-weight: 300;
   }
 }
