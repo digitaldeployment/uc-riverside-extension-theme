@@ -3,6 +3,10 @@
 // =============================================================================
 
 body.cost-estimator {
+
+  // Results toolbar and heading
+  // ---------------------------------------------------------------------------
+
   .estimator-results {
     @include media-breakpoint-up(md) {
       display: flex;
@@ -22,5 +26,32 @@ body.cost-estimator {
         flex-wrap: nowrap;
       }
     }
+  }
+
+  // Results table
+  // ---------------------------------------------------------------------------
+
+  .table {
+    .btn {
+      font-weight: 300;
+      padding: 0;
+
+      &:hover,
+      &:focus {
+        color: $secondary;
+
+        .heading {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+
+  // Disclaimers below results
+  // ---------------------------------------------------------------------------
+
+  .disclaimers {
+    font-style: italic;
   }
 }
