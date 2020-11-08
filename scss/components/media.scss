@@ -34,7 +34,18 @@
   padding-left: 1rem;
   border-left: 10px solid $light;
 
+  .icon {
+    transition: 0.1s ease-out;
+  }
+
   .contact-paths a {
     margin-right: 2rem;
+
+    &:hover,
+    &:focus {
+      .icon {
+        transform: scale(1.25) translateX(-0.1em);
+      }
+    }
   }
 }
