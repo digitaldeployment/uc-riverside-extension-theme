@@ -3,9 +3,12 @@
 // =============================================================================
 
 .table {
+  background-color: white;
+
   .thead-primary {
     th {
       border-color: $secondary;
+      border-bottom-color: inherit;
       background-color: $primary;
       color: white;
     }
