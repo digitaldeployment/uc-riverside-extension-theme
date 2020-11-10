@@ -170,10 +170,6 @@
   .btn-enroll {
     position: absolute;
     z-index: 3;
-    border-radius: 2rem;
-    font-family: $font-family-heading;
-    text-transform: uppercase;
-    padding: 0.65rem 2rem;
 
     @include media-breakpoint-down(md) {
       display: block;

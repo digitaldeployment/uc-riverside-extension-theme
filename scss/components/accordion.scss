@@ -3,6 +3,7 @@
 // =============================================================================
 
 .accordion {
+  position: relative;
   margin: 1rem 0;
   user-select: none;
   transition: 0.2s ease-out;
@@ -48,6 +49,17 @@
     &:focus {
       outline: none;
     }
+  }
+
+  // Apply/Enroll Button
+  // -------------------------------------------------------------------------
+
+  .btn-apply,
+  .btn-enroll {
+    border-radius: 2rem;
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+    padding: 0.65rem 2rem;
   }
 
   // Accordion Content
