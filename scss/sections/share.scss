@@ -7,6 +7,7 @@
 
   ul {
     justify-content: space-between;
+    align-items: center;
 
     li {
       margin: 1rem;
@@ -87,6 +88,9 @@
   // ---------------------------------------------------------------------------
 
   .page-sidebar & {
+    margin-top: -1.6rem;
+    margin-bottom: 0.5rem;
+
     @include media-breakpoint-up(lg) {
       margin-top: -1.4rem;
       margin-left: -1.8rem;

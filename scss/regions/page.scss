@@ -15,21 +15,14 @@
   }
 }
 
-.page-center,
-.page-sidebar {
-  margin-bottom: rem-calc(48);
-
-  @include media-breakpoint-up(lg) {
-    margin-top: rem-calc(55);
-  }
-}
-
 .page-center {
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
+  margin-bottom: rem-calc(40);
 
   @include media-breakpoint-up(lg) {
     width: 50%;
+    margin-bottom: rem-calc(48);
   }
 }
 
@@ -53,7 +46,6 @@
 
 .page-sidebar--left {
   @include media-breakpoint-down(md) {
-    margin-bottom: 2rem;
     order: -1;
   }
 
