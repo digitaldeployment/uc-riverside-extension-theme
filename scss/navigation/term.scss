@@ -49,7 +49,7 @@
       color: inherit;
 
       &.active {
-        font-weight: 500;
+        font-weight: normal;
       }
 
       @include media-breakpoint-down(md) {
