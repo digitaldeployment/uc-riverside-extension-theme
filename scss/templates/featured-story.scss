@@ -9,6 +9,14 @@ body.featured-story {
       width: 9%;
     }
   }
+
+  .share {
+    @include media-breakpoint-down(md) {
+      .print {
+        display: none;
+      }
+    }
+  }
 }
 
 // Heading
