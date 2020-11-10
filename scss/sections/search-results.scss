@@ -2,6 +2,35 @@
 // SEARCH RESULTS
 // =============================================================================
 
+.page--search-results {
+  .filters {
+    li {
+      position: relative;
+
+      label {
+        &:after {
+          content: "";
+          display: inline-block;
+          vertical-align: bottom;
+          height: 1.2rem;
+          width: rem-calc(12);
+          margin-left: 0.5rem;
+        }
+      }
+
+      .icon {
+        fill: $primary;
+      }
+    }
+
+    li[data-name*="Certificate"] label:after { background-color: $primary; }
+    li[data-name*="Credential"] label:after { background-color: $tertiary; }
+    li[data-name*="Bootcamp"] label:after { background-color: $green; }
+    li[data-name*="International"] label:after { background-color: $blue-ot; }
+    li[data-name*="Course"] label:after { background-color: $dark; }
+  }
+}
+
 .section__search-results {
   .search-result {
     padding: rem-calc(20) 0 rem-calc(25);
@@ -32,7 +61,7 @@
 
       .search-result__header {
         h3.heading {
-          padding-left: rem-calc(18);
+          padding-left: rem-calc(20);
 
           &:before {
             content: "";                 
@@ -40,8 +69,8 @@
             top: 50%;
             left: 0;
             transform: translateY(-50%);
-            height: 1em;
-            width: rem-calc(10);
+            height: 1.2rem;
+            width: rem-calc(12);
           }
         }
       }

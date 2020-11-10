@@ -60,9 +60,13 @@
   }
 
   label {
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
     width: calc(100% - 1.25rem);
     line-height: 1.2;
+
+    .page--search-results & {
+      width: auto;
+    }
   }
 
   li.has-children {
