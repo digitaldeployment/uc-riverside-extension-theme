@@ -4,9 +4,13 @@
 
 .hero {
   position: relative;
-  height: 40vw; // 1920/768 = 40% ratio based on image size
   min-height: 450px;
   max-height: 768px;
+
+  @include media-breakpoint-up(lg) {
+    height: 40vw; // 1920/768 = 40% ratio based on image size
+    max-height: 768px;
+  }
 
   .container-max {
     max-width: none;
@@ -54,12 +58,21 @@
   // ---------------------------------------------------------------------------
 
   .container-max {
-    position: absolute;
+    position: relative;
     z-index: 10;
-    left: 0;
-    right: 0;
-    bottom: 50%;
-    transform: translateY(50%);
+
+    @include media-breakpoint-down(md) {
+      padding-top: rem-calc(80);
+      padding-bottom: rem-calc(80);
+    }
+
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
   }
 
   // Heading
