@@ -14,7 +14,12 @@
   .teaser-meta {
     font-weight: 300;
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    margin-top: rem-calc(-25);
+    padding: 1rem 0;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: 1.5rem;
+    }
 
     li:not(:first-child):before {
       padding: 0 0.75em;
