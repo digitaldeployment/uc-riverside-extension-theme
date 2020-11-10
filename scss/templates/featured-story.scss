@@ -5,6 +5,7 @@
 body.featured-story {
   .page-sidebar {
     @include media-breakpoint-up(lg) {
+      min-width: inherit;
       width: 9%;
     }
   }
