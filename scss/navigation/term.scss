@@ -193,7 +193,7 @@
     }
 
     &.active {
-      font-weight: bold;
+      font-weight: 500;
       text-decoration: underline;
 
       @include media-breakpoint-up(lg) {

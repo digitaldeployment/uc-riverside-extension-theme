@@ -24,4 +24,11 @@
   tfoot {
     font-weight: 300;
   }
+
+  .accordion &.table-bordered {
+    th,
+    td {
+      border-color: #d3d3d3;
+    }
+  }
 }
