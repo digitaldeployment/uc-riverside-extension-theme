@@ -17,4 +17,39 @@
   p:after {
     content: '\201D';
   }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  // ***************************************************************************
+  // * Position modifiers
+  // ***************************************************************************
+
+  @include media-breakpoint-up(sm) {
+    &.left,
+    &.right {
+      width: percentage(1/2);
+      margin-top: 0.4rem;
+    }
+  
+    &.left {
+      float: left;
+      margin-left: 0;
+      margin-right: rem-calc(32);
+    }
+  
+    &.right {
+      float: right;
+      margin-left: rem-calc(32);
+      margin-right: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    &.left,
+    &.right {
+      width: 35%;
+    }
+  }
 }

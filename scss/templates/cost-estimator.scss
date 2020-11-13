@@ -1,0 +1,58 @@
+// =============================================================================
+// Template :: Cost Estimator
+// =============================================================================
+
+body.cost-estimator {
+
+  // Results toolbar and heading
+  // ---------------------------------------------------------------------------
+
+  .estimator-results {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    .share {
+      margin-left: auto;
+      
+      ul {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  // Results table
+  // ---------------------------------------------------------------------------
+
+  .table {
+    .btn {
+      text-align: left;
+      font-weight: 300;
+      padding: 0;
+
+      &:hover,
+      &:focus {
+        color: $secondary;
+
+        .heading {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+
+  // Disclaimers below results
+  // ---------------------------------------------------------------------------
+
+  .disclaimers {
+    font-style: italic;
+  }
+}

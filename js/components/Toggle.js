@@ -8,6 +8,9 @@ export default class Toggle {
     this.element = element;
     this.expanded = false;
     this.selectors = { ...defaultSelectors, ...selectors };
+    this.clickHandler = this.clickHandler.bind(this);
+    this.expand = this.expand.bind(this);
+    this.collapse = this.collapse.bind(this);
 
     if (this.menu && this.button) {
       this.listen();
@@ -15,13 +18,21 @@ export default class Toggle {
   }
 
   clickHandler() {
-    const expanded = this.isExpanded;
-    this.menu.setAttribute('aria-hidden', expanded);
-    this.button.setAttribute('aria-expanded', !expanded);
+    this.isExpanded ? this.collapse() : this.expand();
+  }
+
+  expand() {
+    this.menu.setAttribute('aria-hidden', false);
+    this.button.setAttribute('aria-expanded', true);
+  }
+
+  collapse() {
+    this.menu.setAttribute('aria-hidden', true);
+    this.button.setAttribute('aria-expanded', false);
   }
 
   listen() {
-    this.button.addEventListener('click', this.clickHandler.bind(this));
+    this.button.addEventListener('click', this.clickHandler);
   }
 
   get button() {

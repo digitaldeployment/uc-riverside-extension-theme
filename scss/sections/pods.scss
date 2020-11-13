@@ -38,7 +38,7 @@
       @include pod-columns(3, 10);
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
       @include pod-columns(3, 21);
     }
   }

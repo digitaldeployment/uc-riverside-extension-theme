@@ -29,6 +29,13 @@
     z-index: 1;
   }
 
+  // Course Teaser
+  // ---------------------------------------------------------------------------
+
+  .course-teaser {
+    position: relative;
+  }
+
   // Accordion Heading
   // ---------------------------------------------------------------------------
 
@@ -127,18 +134,14 @@
       }
     }
 
-    // Enroll Button
+    // Carves out a position for the enroll button.
     // -------------------------------------------------------------------------
 
-    .btn-enroll {
-      border-radius: 2rem;
-      font-family: $font-family-heading;
-      text-transform: uppercase;
-      padding: 0.65rem 2rem;
-
+    .spacer {
       @include media-breakpoint-down(md) {
         display: block;
         width: 100%;
+        height: 48px;
         margin: 2rem 0;
       }
 
@@ -158,6 +161,35 @@
       @include media-breakpoint-down(md) {
         align-self: center;
       }
+    }
+  }
+
+  // Enroll Button
+  // -------------------------------------------------------------------------
+
+  .btn-enroll {
+    position: absolute;
+    z-index: 3;
+
+    @include media-breakpoint-down(md) {
+      display: block;
+      top: 13.5rem;
+      width: calc(100% - 3rem);
+      margin: 2rem 1.5rem;
+    }
+
+    @include media-breakpoint-only(lg) {
+      width: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+      top: 2rem;
+      right: rem-calc(24);
+      margin: 0 72px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      top: 1.6rem;
     }
   }
 

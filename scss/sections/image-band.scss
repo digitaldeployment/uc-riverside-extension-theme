@@ -1,0 +1,16 @@
+// =============================================================================
+// Image Band Section
+// =============================================================================
+
+.section_image-band {
+  height: 100vw;
+  background: center / cover no-repeat;
+
+  @include media-breakpoint-up(md) {
+    height: 60vw;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: rem-calc(500);
+  }
+}

@@ -1,0 +1,89 @@
+// =============================================================================
+// Image
+// =============================================================================
+
+.image {
+  // ***************************************************************************
+  // * Image Position
+  // ***************************************************************************
+
+  // Image floated left
+  // ---------------------------------------------------------------------------
+
+  &.left {
+    @include media-breakpoint-up(md) {
+      float: left;
+      margin-left: 0;
+      margin-right: rem-calc(24);
+    }
+  }
+
+  // Image floated right
+  // ---------------------------------------------------------------------------
+
+  &.right {
+    @include media-breakpoint-up(md) {
+      float: right;
+      margin-left: rem-calc(24);
+      margin-right: 0;
+    }
+  }
+
+  // Image centered
+  // ---------------------------------------------------------------------------
+
+  &.center {
+    @include media-breakpoint-up(md) {
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  // ***************************************************************************
+  // * Image Size
+  // ***************************************************************************
+
+  // 25% width image size
+  // ---------------------------------------------------------------------------
+
+  &.quarter {
+    @include media-breakpoint-up(sm) {
+      max-width: percentage(1/2);
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: percentage(1/4);
+    }
+  }
+
+  // 33% width image size
+  // ---------------------------------------------------------------------------
+
+  &.third {
+    @include media-breakpoint-up(sm) {
+      max-width: percentage(1/2);
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: percentage(1/3);
+    }
+  }
+
+  // 50% width image size
+  // ---------------------------------------------------------------------------
+
+  &.half {
+    @include media-breakpoint-up(sm) {
+      max-width: percentage(1/2);
+    }
+  }
+
+  // 100% width image size
+  // ---------------------------------------------------------------------------
+
+  &.full {
+    width: percentage(1);
+  }
+}

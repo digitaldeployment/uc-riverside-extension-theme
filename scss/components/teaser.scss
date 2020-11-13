@@ -8,17 +8,44 @@
   border-top: 1px solid #b5b5b5;
   margin-bottom: rem-calc(25);
 
+  // Teaer meta
+  // -------------------------------------------------------------------------
+
+  .teaser-meta {
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin-top: rem-calc(-25);
+    padding: 1rem 0;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: 1.5rem;
+    }
+
+    li:not(:first-child):before {
+      padding: 0 0.75em;
+      content: '|';
+    }
+
+    a {
+      font-weight: normal;
+    }
+  }
+
   // Teaer image
   // -------------------------------------------------------------------------
 
   .teaser-image {
     margin-bottom: rem-calc(16);
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(sm) {
       float: left;
-      max-width: 35%;
+      max-width: percentage(1/2);
       margin-top: rem-calc(4);
       margin-right: rem-calc(24);
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: percentage(1/3);
     }
   }
 

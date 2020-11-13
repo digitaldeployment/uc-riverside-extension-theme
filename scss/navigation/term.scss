@@ -45,21 +45,26 @@
       letter-spacing: 0.025em;
       text-transform: uppercase;
       font-family: $font-family-heading;
+      font-size: rem-calc(18);
       color: inherit;
 
+      &.active {
+        font-weight: normal;
+      }
+
       @include media-breakpoint-down(md) {
-        font-size: rem-calc(18);
         padding: 1.3rem 0;
       }
 
       @include media-breakpoint-up(lg) {
+        font-size: rem-calc(22);
+
         &:hover,
         &:focus {
           color: $secondary;
         }
 
         &.active {
-          font-weight: bold;
           color: $primary;
         }
       }
@@ -130,6 +135,8 @@
     }
 
     @include media-breakpoint-up(lg) {
+      border-top: 5px solid $tertiary;
+      padding-top: 1rem;
       font-size: 0.9rem;
     }
   }
@@ -186,10 +193,12 @@
     }
 
     &.active {
-      font-weight: bold;
+      font-weight: 500;
       text-decoration: underline;
 
       @include media-breakpoint-up(lg) {
+        text-decoration: none;
+        cursor: default;
         color: $primary;
       }
     }

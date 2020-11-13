@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>UC Riverside Extension | Featured Story</title>
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
+  <link rel="stylesheet" media="all" href="./css/theme.min.css" />
+  <link rel="shortcut icon" href="./assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="./assets/favicon-48x48.png" />
+  <link rel="manifest" href="./assets/manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#fff" />
+  <meta name="application-name" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="./assets/apple-touch-icon-167x167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="1024x1024" href="./assets/apple-touch-icon-1024x1024.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" />
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-640x1136.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-750x1334.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-828x1792.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1125x2436.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1242x2208.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1242x2688.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1536x2048.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1668x2224.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1668x2388.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-2048x2732.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1620x2160.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-1136x640.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-1334x750.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-1792x828.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2436x1125.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2208x1242.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2688x1242.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2048x1536.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2224x1668.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2388x1668.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2732x2048.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2160x1620.png" />
+  <link rel="icon" type="image/png" sizes="228x228" href="./assets/coast-228x228.png" />
+  <meta name="msapplication-TileColor" content="#fff" />
+  <meta name="msapplication-TileImage" content="./assets/mstile-144x144.png" />
+  <meta name="msapplication-config" content="./assets/browserconfig.xml" />
+  <link rel="yandex-tableau-widget" href="./assets/yandex-browser-manifest.json" />
+  <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/66770/UCRiverside/style-svg.css?vj0z29" />
+  <script defer src="https://d1azc1qln24ryf.cloudfront.net/66770/UCRiverside/svgxuse-cf.js?vj0z29"></script>
+</head>
+
+<body class="featured-story page--featured-story">
+  <header class="page__header navbar navbar-expand bg-primary sticky-top"><a class="branding__logo navbar-brand" href="https://www.uc-riverside.com/"><span class="sr-only">University of California, Riverside Extension</span><img src="https://www.uc-riverside.com/static/logo.0dddeaf7.svg" alt="University of California, Riverside Extension - Logo" /></a>
+    <nav class="navigation__secondary navbar-nav d-flex flex-row flex-wrap justify-content-end pr-3"><a class="nav-link d-flex align-items-center px-3 mr-md-4 mr-lg-0" href="https://www.uc-riverside.com/"><svg class="icon icon-apply icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-apply"></use>
+        </svg>Apply</a><a class="nav-link d-none d-lg-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-request-info icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-request-info"></use>
+        </svg>Request Info</a><a class="nav-link d-none d-lg-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-international icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-international"></use>
+        </svg>International</a><a class="nav-link d-none d-lg-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-giving icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-giving"></use>
+        </svg>Giving</a><a class="nav-link d-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-phone icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-phone"></use>
+        </svg>951.827.4105</a></nav><a class="button__cart nav-link ml-3 mr-4 d-none d-lg-block" href="https://www.uc-riverside.com/"><svg class="icon icon-cart icon-24" width="24" height="24" aria-hidden="true">
+        <use xlink:href="#icon-cart"></use>
+      </svg><span class="sr-only">Shop</span></a><button type="button" class="button__menu btn btn-tertiary rounded-0 flex-shrink-0" data-toggle="flyout" aria-controls="flyout" aria-label="Toggle Flyout Menu" aria-expanded="false"><svg class="icon icon-menu icon-32" width="32" height="32" aria-hidden="true">
+        <use xlink:href="#icon-menu"></use>
+      </svg><span class="sr-only">Toggle Flyout Menu</span></button>
+  </header>
+  <div id="flyout" class="flyout flyout-collapse">
+    <div class="container-flyout">
+      <div class="toolbar"><a class="button__cart nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-cart icon-44" width="44" height="44" aria-hidden="true">
+            <use xlink:href="#icon-cart"></use>
+          </svg><span class="sr-only">Shop</span></a><button type="button" class="button__close btn" data-toggle="flyout" aria-label="Close Flyout Menu" aria-expanded="false"><svg class="icon icon-close icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-close"></use>
+          </svg><span class="sr-only">Close Flyout Menu</span></button></div>
+      <div class="login-options dropdown" data-boundry="viewport" id="sign-in-dropdown"><button type="button" class="btn btn-outline-tertiary dropdown-toggle" data-toggle="dropdown" aria-label="Sign In Options" aria-haspopup="true" aria-expanded="false" id="sign-in-dropdown-toggle">Sign In Options<svg class="icon icon-down icon-24" width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-down"></use>
+          </svg></button>
+        <div class="dropdown-menu" aria-labelledby="sign-in-dropdown-toggle"><a class="dropdown-item" href="https://www.uc-riverside.com/login/student">Student login</a><a class="dropdown-item" href="https://www.uc-riverside.com/login/faculty">Faculty login</a><a class="dropdown-item" href="https://www.uc-riverside.com/login/parent">Parent login</a></div>
+      </div>
+      <form class="site-search" action="/search">
+        <div class="form-group"><label class="sr-only" for="search-keywords">Search our Website</label><input type="search" class="form-control" placeholder="Search our Website" aria-label="Search our Website" aria-describedby="search-submit" id="search-keywords" /></div><button class="btn" type="submit" id="search-submit"><svg class="icon icon-search icon-24" width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-search"></use>
+          </svg><span class="sr-only">Search our Website</span></button>
+      </form>
+      <nav class="main-navigation">
+        <ul id="main-navigation" class="nav">
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/" class="nav-link l1 ">Home</a></li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/landing-pages" class="nav-link l1 ">Landing Pages</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/landing-pages/standard" class="nav-link l2 ">Standard Page</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/standard-pods-below" class="nav-link l3 ">Standard Page with Pods Below</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/landing-pages/banner" class="nav-link l2 ">Banner Page</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/banner-pods-below" class="nav-link l3 ">Banner Page with Pods Below</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/banner-subheading" class="nav-link l3 ">Banner Page with Subheading</a></li>
+                </ul>
+              </li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/tabs" class="nav-link l2 ">Tabs</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/accordions" class="nav-link l2 ">Accordions</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/heading-waterfall" class="nav-link l2 ">Heading Waterfall</a></li>
+            </ul>
+          </li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/program-finder" class="nav-link l1 ">Program Finder</a></li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/areas-of-study" class="nav-link l1 ">Areas of Study</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/business" class="nav-link l2 ">Business</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/law-and-justice" class="nav-link l2 ">Law and Justice</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/healthcare-and-wellness" class="nav-link l2 ">Healthcare and Wellness</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/education-and-credentials" class="nav-link l2 ">Education and Credentials</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/sustainability-natural-resources" class="nav-link l2 ">Sustanability / Natural Resources</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/creative-arts-and-design" class="nav-link l2 ">Creative Arts and Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/certificate" class="nav-link l1 ">Certificates</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/certificate/accounting-certificate" class="nav-link l2 ">Accounting Certificate</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/certificate/professional-certificate-in-crime-and-intelligence-analysis" class="nav-link l2 ">Professional Certificate in Crime and Intelligence Analysis</a></li>
+            </ul>
+          </li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/course" class="nav-link l1 ">Courses</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/course/accounting-for-governmental-and-nonprofit-organizations" class="nav-link l2 ">Accounting for Governmental and Nonprofit Organizations</a></li>
+            </ul>
+          </li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/international-homepage" class="nav-link l1 ">International Homepage</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/search-results" class="nav-link l1 ">Search Results</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/whats-new" class="nav-link l1 ">What&#x27;s New</a></li>
+          <li class="nav-item  active-trail"><a href="https://www.uc-riverside.com/featured-story" class="nav-link l1 active">Featured Story</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/news-articles" class="nav-link l1 ">News Articles</a></li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources" class="nav-link l1 ">Student Resources</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#registration" class="nav-link l2 ">Registration</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources/academic-policies-and-information" class="nav-link l2 ">Academic Policies and Information</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#general-information" class="nav-link l2 ">General Information</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#online-learning" class="nav-link l2 ">Online Learning</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#student-success-tools" class="nav-link l2 ">Student Success Tools</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#financial-information-and-resources" class="nav-link l2 ">Financial Information and Resources</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/more-content-options" class="nav-link l1 ">More Content Options</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/your-experience" class="nav-link l1 ">Your Experience</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/osher-lifelong-learning" class="nav-link l1 ">Osher Lifelong Learning</a></li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/international-dates-and-fees" class="nav-link l1 ">Internation Dates &amp; Fees</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees/english-language-programs" class="nav-link l2 ">English Language Programs</a></li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/international-dates-and-fees#upp" class="nav-link l2 ">University Pathways Program</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#gateway" class="nav-link l3 ">Gateway</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#gpp" class="nav-link l3 ">GPP</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#mbpp" class="nav-link l3 ">MBPP</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#all-programs" class="nav-link l3 ">All Programs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#cp" class="nav-link l2 ">Certficate Programs</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#fees" class="nav-link l2 ">Additional Fees</a></li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/international-dates-and-fees/cost-estimator" class="nav-link l2 ">Cost Estimator</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees/cost-estimator?progress" class="nav-link l3 ">Estimate Form Filled In</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/image-dimensions" class="nav-link l1 ">Image Dimensions</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/homepage-dimensions" class="nav-link l2 ">Home Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/landing-page-dimensions" class="nav-link l2 ">General Landing Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/area-of-study-dimensions" class="nav-link l2 ">Area of Study Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/certificate-dimensions" class="nav-link l2 ">Certificate Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/course-dimensions" class="nav-link l2 ">Course Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/international-homepage-dimensions" class="nav-link l2 ">International Homepage</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/whats-new-dimensions" class="nav-link l2 ">What&#x27;s New Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/featured-story-dimensions" class="nav-link l2 ">Featured Story Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/news-articles-dimensions" class="nav-link l2 ">News Articles Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/student-resources-dimensions" class="nav-link l2 ">Student Resources Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/resource-dimensions" class="nav-link l2 ">Resource Example Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/more-content-options-dimensions" class="nav-link l2 ">More Content Options Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/your-experience-dimensions" class="nav-link l2 ">Your Experience Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/osher-lifelong-learning-dimensions" class="nav-link l2 ">Osher Lifelong Learning Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/international-dates-and-fees-dimensions" class="nav-link l2 ">Internation Dates &amp; Fees Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/english-language-programs-dimensions" class="nav-link l2 ">English Language Programs Example Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/cost-estimator-dimensions" class="nav-link l2 ">Cost Estimator Page</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="flyout-quicklinks nav"><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-request-info icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-request-info"></use>
+          </svg>Request Info</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-schedule-appt icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-schedule-appt"></use>
+          </svg>Schedule an Appointment</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-international icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-international"></use>
+          </svg>International</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-giving icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-giving"></use>
+          </svg>Giving</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-phone icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-phone"></use>
+          </svg>951.827.4105</a></nav>
+    </div>
+  </div>
+  <main class="page-main" aria-label="Welcome to a Featured Story">
+    <div class="container-max">
+      <nav class="breadcrumbs d-none d-lg-block" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="https://www.uc-riverside.com/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Welcome to a Featured Story</li>
+        </ol>
+      </nav><img class="mt-n1 mb-5" src="https://images.prismic.io/ucriverside/926ee41f-dddc-407e-94d0-85a199e244b2_lynnea-tan-_FH38RD-Xx4-unsplash.jpg?auto=compress,format&amp;rect=0,325,5370,2246&amp;w=1640&amp;h=686" alt="Smiling girl resting her elbow sitting at a high table" width="1640" height="686" loading="lazy" />
+      <aside class="page-sidebar page-sidebar--left" role="complementary" aria-label="Left Sidebar">
+        <div class="page-sidebar-inner">
+          <nav class="breadcrumbs d-lg-none" aria-label="Breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="https://www.uc-riverside.com/">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Welcome to a Featured Story</li>
+            </ol>
+          </nav>
+          <nav class="share">
+            <ul class="nav">
+              <li class="summary-popup"><button class="btn" data-toggle="modal" data-target="#modal-info-popup" aria-label="Toggle the brief summary of this story"><svg class="icon icon-summary icon-28" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-summary"></use>
+                  </svg>
+                  <h3 class="heading">Summary</h3>
+                </button>
+                <div class="popup sr-only">
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                </div>
+              </li>
+              <li class="facebook"><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fextension.ucr.edu" target="blank" rel="noopener noreferrer"><svg class="icon icon-facebook icon-28" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-facebook"></use>
+                  </svg><span class="sr-only">Share on Facebook</span></a></li>
+              <li class="twitter"><a href="https://twitter.com/share?url=https%3A%2F%2Fextension.ucr.edu" target="blank" rel="noopener noreferrer"><svg class="icon icon-twitter icon-28" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-twitter"></use>
+                  </svg><span class="sr-only">Share on Twitter</span></a></li>
+              <li class="linkedin"><a href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fextension.ucr.edu" target="blank" rel="noopener noreferrer"><svg class="icon icon-linkedin icon-28" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-linkedin"></use>
+                  </svg><span class="sr-only">Share on Linkedin</span></a></li>
+              <li class="email"><a href="mailto:?subject=I&#x27;d%20like%20to%20share%20a%20link%20with%20you&amp;body=https%3A%2F%2Fextension.ucr.edu" target="blank" rel="noopener noreferrer"><svg class="icon icon-email icon-28" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                  </svg><span class="sr-only">Email this page</span></a></li>
+              <li class="print"><button class="btn print" type="button" aria-label="Print this page"><svg class="icon icon-print icon-28" width="28" height="28" aria-hidden="true">
+                    <use xlink:href="#icon-print"></use>
+                  </svg><span class="sr-only">Print this page</span></button></li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <div class="page-center">
+        <article class="featured-story" aria-labelledby="page-heading">
+          <div class="author"><img class="author__image" src="https://images.prismic.io/ucriverside/9e21fcdc-7816-42a7-8dc0-3df321c1f07b_yang-profile.jpg?auto=compress,format&amp;rect=0,0,218,218&amp;w=150&amp;h=150" alt="Peter Yang Profile Photo" width="150" height="150" loading="lazy" />
+            <div>
+              <div class="author__name"><em>Author</em> <a href="https://www.uc-riverside.com/">Peter Yang</a></div>
+              <div class="author__published">October 12, 2020 - 1:38 pm</div>
+            </div>
+          </div>
+          <header class="featured-story__header">
+            <h1 class="heading h2" id="page-heading">Welcome to a Featured Story</h1>
+            <h2 class="sr-only">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</h2>
+          </header>
+          <div class="featured-story__content content">
+            <div class="image right third"><img src="https://images.prismic.io/ucriverside/f7818a30-ebe0-42d8-b539-47c699be0690_you-x-ventures-tHO1_OuKbg0-unsplash.jpg?auto=compress,format&amp;rect=2,0,4082,2764&amp;w=960&amp;h=650" alt="Girl giggling as she looks away from the camera" width="960" height="650" loading="lazy" /></div>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+              consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p><br />
+            <div class="image left half"><img src="https://images.prismic.io/ucriverside/dabca3e2-bbcc-44e7-b5e3-bf7ed5b13dff_you-x-ventures-Oalh2MojUuk-unsplash.jpg?auto=compress,format&amp;rect=0,0,3600,2400&amp;w=960&amp;h=640" alt="Brainstorm meeting with 5 people looking over a wall of sticky notes" width="960" height="640" loading="lazy" /></div>
+            <h3>Lynn’s UCR Experience</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est <a href="https://www.google.com">certificate program</a> dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum.</p>
+            <p>Dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+              voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet <a href="https://www.google.com">alumni profiles</a>, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accuser et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><br />
+            <h3>Putting a Degree into Action</h3>
+            <h4>See How Lynne was Able to Transform her Career Path after Graduation</h4>
+            <blockquote class="blockquote right">
+              <p>I loved this course and the opportunities it provided me, I feel more confident in my abilities and have a stronger sense of direction for pursuing a career in business and technology.</p>
+            </blockquote>
+            <p>Dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea <a class="external" href="https://www.google.com" target="_blank" rel="noreferrer noopener"><svg class="icon icon-external icon-24" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#icon-external"></use>
+                </svg>technology</a> sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum.</p>
+            <div class="video"><button type="button" class="btn button__play" aria-label="Play Video" data-toggle="modal" data-target="#modal-video" data-video-url="https://ucr.yuja.com/V/Video?v=1647062&amp;node=5770418&amp;a=77119681&amp;autoplay=1" data-video-title="A Day in the Life of Lynne"><svg class="icon icon-play icon-86" width="86" height="86" aria-hidden="true">
+                  <use xlink:href="#icon-play"></use>
+                </svg><span class="sr-only">Play Video</span></button><img src="https://images.prismic.io/ucriverside/a5b99028-4369-4a9c-b666-6668977d2c72_bigstock--199585999.jpg?auto=compress,format&amp;rect=0,233,3876,2117&amp;w=1465&amp;h=800" alt="Woman talking on the phone at her desk" width="1465" height="800" loading="lazy" />
+              <div class="video-heading">
+                <h2 class="heading">A Day in the Life of Lynne</h2>
+              </div>
+            </div>
+            <h3>Looking to the Future</h3>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum.</p>
+          </div>
+          <hr class="mb-4" />
+          <div class="media-credit">
+            <p>Header photo by <a class="external" href="https://unsplash.com/@thdef" target="_blank" rel="noreferrer noopener"><svg class="icon icon-external icon-24" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#icon-external"></use>
+                </svg>Thomas Def</a> on <a class="external" href="https://unsplash.com" target="_blank" rel="noreferrer noopener"><svg class="icon icon-external icon-24" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#icon-external"></use>
+                </svg>Unsplash</a></p>
+          </div>
+          <div class="media-contact">
+            <p class="contact-name"><em>Media Contact</em> <strong>Holly Ober</strong></p>
+            <p class="contact-position">Senior Public Information Officer</p>
+            <div class="contact-paths"><a class="contact-email" href="mailto:hober@gmail.com"><svg class="icon icon-email icon-20" width="20" height="20" aria-hidden="true">
+                  <use xlink:href="#icon-email"></use>
+                </svg>Email</a><a class="contact-phone" href="tel:+19518275893"><svg class="icon icon-telephone icon-18" width="18" height="18" aria-hidden="true">
+                  <use xlink:href="#icon-telephone"></use>
+                </svg>951.827.5893</a></div>
+          </div>
+          <div class="message message--default">
+            <h3 class="heading">Did you like this profile?</h3>
+            <div class="content">
+              <p>We’d love to hear about your post-grad life too! Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p><a href="https://www.uc-riverside.com/">Submit Your Story</a>
+            </div>
+          </div>
+          <div class="tags">
+            <h3 class="heading h6">Tags</h3>
+            <ul class="list nav">
+              <li class="nav-item"><a class="nav-link" href="#Certificate Programs">Certificate Programs</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Tech">Tech</a></li>
+              <li class="nav-item"><a class="nav-link" href="#Success Story">Success Story</a></li>
+            </ul>
+          </div>
+          <hr />
+          <section class="section__related-slider" aria-label="Related Stories">
+            <h2 class="section-heading h2">Related Stories</h2>
+            <div class="slider"><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/81f2a0d4-c7fa-46bd-bc7f-41f4978691d8_close-up-code-coding-160107.jpg?auto=compress,format&amp;rect=0,353,5472,2936&amp;w=960&amp;h=515" alt="Abstract view of a laptop with code onscreen" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of a Profile</h3>
+                </div>
+              </a><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/85bc147b-c22a-4f2c-8f4a-5fc4f41fc243_bigstock--159199262.jpg?auto=compress,format&amp;rect=0,230,3500,1878&amp;w=960&amp;h=515" alt="Closeup of a book opened halfway" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of a Profile or Article</h3>
+                </div>
+              </a><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/98e12c1d-b041-4685-8dd6-b88e49eec130_burst-kUqqaRjJuw0-unsplash.jpg?auto=compress,format&amp;rect=0,288,4460,2393&amp;w=960&amp;h=515" alt="Person typing on their laptop" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of an Exciting Article</h3>
+                </div>
+              </a><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/71b9b5e6-d056-4c1b-b9be-a3d927a1f9b8_RPE-UCROPENS-0924-05-1.jpg?auto=compress,format&amp;rect=0,255,3948,2118&amp;w=960&amp;h=515" alt="A group of students walking through campus" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of an Exciting Profile</h3>
+                </div>
+              </a><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/a09dc727-a2c8-44dd-b1d9-d16cb710b312_UCR-Social-Space-360-Tours-Virtual-Tour-Company-College-Vitual-Tours-Virtual-Tours-For-College.jpg?auto=compress,format&amp;rect=0,100,1600,858&amp;w=960&amp;h=515" alt="Students doing various activities in a large open grassy area on campus" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of an Exciting News Article</h3>
+                </div>
+              </a><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/9d54ebdd-35de-4780-af45-b47b2b1165f1_susan-yin-2JIvboGLeho-unsplash.jpg?auto=compress,format&amp;rect=0,288,4395,2358&amp;w=960&amp;h=515" alt="A long curved library shelf which houses tons of books" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of an Exciting News Item</h3>
+                </div>
+              </a><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/54c6f0b1-d60d-4c2c-a27d-03c72c3a77d5_russn_fckr-krV5aS4jDjA-unsplash.jpg?auto=compress,format&amp;rect=0,46,3705,1988&amp;w=960&amp;h=515" alt="A person&#x27;s hand grasping a paintbrush over the top of many cans of different colored paint" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of an Exciting Profile</h3>
+                </div>
+              </a><a class="slide card card-link" href="https://www.uc-riverside.com/">
+                <div class="image"><img class="card-img-top" src="https://images.prismic.io/ucriverside/6b082a0c-87f0-4cf9-a611-35476e9ff526_nathan-dumlao-ewGMqs2tmJI-unsplash.jpg?auto=compress,format&amp;rect=0,434,6720,3605&amp;w=960&amp;h=515" alt="Empty seats in an auditorium" width="960" height="515" loading="lazy" /></div>
+                <div class="card-body">
+                  <h3 class="card-title">This is the Title of an Exciting News Item</h3>
+                </div>
+              </a></div>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+  <div class="modal fade modal-info-popup" id="modal-info-popup" tabindex="-1" role="dialog" aria-label="Info Modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="heading">Info Modal</h2><button type="button" class="button__close btn" aria-label="Close Modal" data-dismiss="modal"><svg class="icon icon-close icon-32" width="32" height="32" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg><span class="sr-only">Close Modal</span></button>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade modal-video" id="modal-video" tabindex="-1" role="dialog" aria-label="Video Modal" aria-hidden="true"><button type="button" class="button__close btn" aria-label="Close Modal" data-dismiss="modal"><svg class="icon icon-close icon-32" width="32" height="32" aria-hidden="true">
+        <use xlink:href="#icon-close"></use>
+      </svg><span class="sr-only">Close Modal</span></button>
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="page__footer">
+    <div class="container-max">
+      <div class="primary-section">
+        <div class="footer-address"><a class="logo" href="https://www.uc-riverside.com/"><span class="sr-only">University of California, Riverside Extension</span><img src="https://www.uc-riverside.com/static/logo.0dddeaf7.svg" alt="University of California, Riverside Extension - Logo" /></a>
+          <div itemscope="" itemType="https://schema.org/CollegeOrUniversity">
+            <div itemProp="name"><strong>University of California,<br />Riverside Extension</strong></div>
+            <div itemType="http://schema.org/GeoCoordinates" itemProp="geo">
+              <meta itemProp="latitude" content="33.975011" />
+              <meta itemProp="longitude" content="-117.337361" />
+            </div>
+            <div itemType="http://schema.org/PostalAddress" itemProp="address">
+              <div itemProp="streetAddress">1200 University Ave.</div>
+              <div><span itemProp="addressLocality">Riverside</span>, <span itemProp="addressRegion">CA</span> <span itemProp="postalCode">92507-4596</span></div>
+            </div>
+            <div class="department" itemType="http://schema.org/EducationalOrganization" itemProp="address">
+              <div itemProp="department"><strong>Student Success Coaches</strong></div>
+              <div><span itemProp="telephone">951.827.4105</span> or <span itemProp="telephone">800.442.4990</span></div>
+            </div>
+          </div><a class="btn btn-link" href="https://www.uc-riverside.com/"><svg class="icon icon-schedule-appt icon-32" width="32" height="32" aria-hidden="true">
+              <use xlink:href="#icon-schedule-appt"></use>
+            </svg> Schedule an Appointment</a>
+        </div>
+        <nav class="footer-quicklinks nav flex-column"><a class="nav-link" href="https://www.uc-riverside.com/">Find Programs</a><a class="nav-link" href="https://www.uc-riverside.com/">Student Resources</a><a class="nav-link" href="https://www.uc-riverside.com/">Get Started</a><a class="nav-link" href="https://www.uc-riverside.com/">UCR Campus Diversity</a><a class="nav-link" href="https://www.uc-riverside.com/">Giving</a>
+          <div class="nav-divider"></div><a class="nav-link" href="https://www.uc-riverside.com/">Register for Classes</a><a class="nav-link" href="https://www.uc-riverside.com/">Why UCR Extension</a>
+        </nav>
+        <nav class="footer-links nav"><a class="nav-link disabled" href="https://www.uc-riverside.com/" tabindex="-1" aria-disabled="true">2020 UC Regents</a><a class="nav-link" href="https://www.uc-riverside.com/">Privacy Policy</a><a class="nav-link" href="https://www.uc-riverside.com/">Terms and Conditions</a><a class="nav-link disabled" href="https://www.uc-riverside.com/" tabindex="-1" aria-disabled="true"><svg class="icon icon-smoke-free icon-32" width="32" height="32" aria-hidden="true">
+              <use xlink:href="#icon-smoke-free"></use>
+            </svg> UCR is Tobacco Smoke Free Campus</a></nav>
+      </div>
+      <section class="secondary-section" aria-label="Stay Connected">
+        <h2 class="section-heading">Stay Connected</h2>
+        <p class="section-subheading">Get the latest info, news, tips, and trends straight to your inbox.</p>
+        <form class="signup-form" method="get" action="/signup">
+          <div class="form-group"><label class="sr-only" for="footer-signup__email">Email Address</label><input type="email" class="form-control" id="footer-signup__email" placeholder="Enter your email address" required="" /></div><button type="submit" class="btn btn-block btn-tertiary">Signup</button>
+        </form>
+        <nav class="footer-social-links nav"><a class="nav-link" href="https://www.facebook.com"><svg class="icon icon-facebook icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-facebook"></use>
+            </svg><span class="sr-only">Facebook</span></a><a class="nav-link" href="https://www.instagram.com"><svg class="icon icon-instagram icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-instagram"></use>
+            </svg><span class="sr-only">Instagram</span></a><a class="nav-link" href="https://www.twitter.com"><svg class="icon icon-twitter icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-twitter"></use>
+            </svg><span class="sr-only">Twitter</span></a><a class="nav-link" href="https://www.linkedin.com"><svg class="icon icon-linkedin icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-linkedin"></use>
+            </svg><span class="sr-only">Linkedin</span></a><a class="nav-link" href="https://www.youtube.com"><svg class="icon icon-youtube icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-youtube"></use>
+            </svg><span class="sr-only">Youtube</span></a><a class="nav-link" href="https://www.venmo.com"><svg class="icon icon-venmo icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-venmo"></use>
+            </svg><span class="sr-only">Venmo</span></a></nav>
+      </section>
+    </div>
+  </footer>
+  <script src="./js/theme.min.js" async></script>
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+// =============================================================================
+// Content with Filtering Template
+// =============================================================================
+
+body.has-content-filters {
+  position: relative;
+
+  @include media-breakpoint-down(md) {
+    .breadcrumbs {
+      margin-top: 2rem;
+    }
+  }
+
+  // Left Sidebar
+  // ---------------------------------------------------------------------------
+
+  .page-sidebar--left {
+    order: inherit;
+
+    @include media-breakpoint-up(lg) {
+      width: 35%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      .page-sidebar-inner {
+        margin-right: 8.5rem;
+      }
+    }
+  }
+}
+
+// Search results count
+// -----------------------------------------------------------------------------
+
+.search-results__count {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: $primary;
+
+  // Modify position when in the main content channel
+  // ---------------------------------------------------------------------------
+
+  .page-center & {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+    }
+  }
+}
+
+// Content filters
+// -----------------------------------------------------------------------------
+
+.content-filters {
+  position: relative;
+  margin-bottom: 1rem;
+
+  // Filters Group
+  // ---------------------------------------------------------------------------
+
+  .filters-group {
+    position: relative;
+  }
+
+  // Filters group heading
+  // ---------------------------------------------------------------------------
+
+  .filters-group-toggle {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border: 0;
+    margin-bottom: 1.2rem;
+    padding: 1.2rem 0 1rem;
+    border-top: 5px solid $tertiary;
+    background-color: white;
+  
+    h2 {
+      margin-bottom: 0;
+      font-family: $font-family-heading;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: inherit;
+    }
+
+    h3 {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: inherit;
+    }
+
+    .icon {
+      display: block;
+      margin-left: auto;
+      border-radius: 100%;
+      padding: rem-calc(2);
+      box-sizing: content-box;
+      transition: 0.2s ease-out;
+    }
+
+    &[aria-expanded=true] {
+      margin-bottom: 0;
+
+      .icon {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      .icon {
+        background-color: $light;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &.all-groups {
+      padding-top: 0;
+      padding-bottom: 1.3rem;
+      margin-bottom: 0;
+      border-top: none;
+      border-bottom: 5px solid $tertiary;
+      margin-bottom: -5px;
+
+      @include media-breakpoint-up(lg) {
+        &:hover {
+          text-decoration: none;
+          cursor: default;
+        }
+
+        .icon {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Filters
+  // ---------------------------------------------------------------------------
+
+  .filters {
+    font-weight: 300;
+  }
+
+  // Collapsible content sections
+  // ---------------------------------------------------------------------------
+
+  .collapsible-content {
+    position: relative;
+    z-index: 1;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -1rem;
+    transition: 0.2s ease-out;
+  }
+
+  [aria-expanded=true] + .collapsible-content {
+    height: auto;
+    margin-top: 0;
+    padding-bottom: 1rem;
+    visibility: inherit;
+    opacity: 1;
+  }
+
+  // Clear filters button
+  // ---------------------------------------------------------------------------
+
+  .clear-filters-btn {
+    position: absolute;
+    z-index: 3;
+    top: rem-calc(-48);
+    right: 0;
+    margin: 0 auto;
+    padding: rem-calc(8 8 5 4);
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 1;
+    background-color: transparent;
+    transition: 0.2s ease-out;
+    border-radius: 4px;
+    border: none;
+
+    @include media-breakpoint-up(lg) {
+      top: rem-calc(-6);
+    }
+
+    .icon {
+      display: inline-block;
+      margin-bottom: 0.1rem;
+      padding: rem-calc(2);
+      box-sizing: content-box;
+    }
+
+    &:hover {
+      background-color: $secondary;
+      color: white;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 1px rgba($primary, 0.5);
+    }
+  }
+}

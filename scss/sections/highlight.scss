@@ -1,0 +1,148 @@
+// =============================================================================
+// HIGHLIGHT
+// =============================================================================
+
+.section_highlight {
+  position: relative;
+  background: center / cover no-repeat;
+  padding: 4rem 0;
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    padding: 6rem 0;
+  }
+
+  // Shaded Image
+  // ---------------------------------------------------------------------------
+
+  .image {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    background-color: #2c2c2c;
+
+    img {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      width: auto;
+      height: 110%;
+      opacity: 0.44;
+      max-width: none;
+      transform: translate3d(-50%, -50%, 0);
+  
+      @media (min-width: 1125px) {
+        width: 110%;
+        height: auto;
+      }
+    }
+  }
+
+  // Container of Content
+  // ---------------------------------------------------------------------------
+
+  .container-max {
+    position: relative;
+    z-index: 2;
+  }
+
+  // Heading
+  // ---------------------------------------------------------------------------
+
+  h2.heading {
+    color: $primary;
+    font-family: $font-family-heading;
+    font-size: rem-calc(50);
+    font-weight: 300;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 5px;
+      width: 120px;
+      margin: 1.75rem auto 1.75rem;
+      background-color: $gold;
+    }
+
+    @include media-breakpoint-up(lg) {
+      font-size: rem-calc(69);
+    }
+  }
+
+  // Content
+  // ---------------------------------------------------------------------------
+
+  p.subheading {
+    margin-bottom: 0;
+    font-size: rem-calc(18);
+    font-weight: 300;
+    line-height: 1.5;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 75%;
+      margin: 0 auto;
+    }
+  }
+
+  // Button
+  // ---------------------------------------------------------------------------
+
+  .btn-overview {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  // If the highlight has an image
+  // ---------------------------------------------------------------------------
+
+  &.has-image {
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  
+    &:before {
+      background-color: $dark;
+      opacity: 0.56;
+    }
+  
+    &:after {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 80%);
+    }
+
+    .container-max {
+      h2.heading,
+      p.subheading {
+        color: white;
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+      }
+
+      p.subheading {
+        font-weight: 500;
+      }
+
+      .btn-overview {
+        color: white;
+
+        &:hover,
+        &:focus {
+          color: $dark;
+        }
+      }
+    }
+  }
+}

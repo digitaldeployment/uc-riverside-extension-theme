@@ -2,6 +2,7 @@ import $ from 'jquery'
 import 'select2'
 import 'popper.js'
 import 'bootstrap'
+import 'jquery-bonsai'
 import 'fg-collapsible/src/collapsible'
 import 'fg-collapsible/src/collapsible.set'
 import 'fg-collapsible/src/collapsible.tab'
@@ -9,18 +10,22 @@ import 'flickity-fade';
 import Sticky from '../utils/Sticky'
 import Flyout from '../components/Flyout'
 import SmoothScroll from 'smooth-scroll'
+import Breakpoints from '../utils/Breakpoints'
+import Checkboxes from '../components/Checkboxes'
 import PageAnchors from '../navigation/PageAnchors'
 import InfoModal from '../components/InfoModal'
 import Hero from '../components/Hero'
+import Toggle from '../components/Toggle'
 import Videos from '../components/Videos'
 import VideoModal from '../components/VideoModal'
 import InfoPopupButton from '../components/InfoPopupButton'
 import MainNavigation from '../navigation/MainNavigation'
 import TermNavigation from '../navigation/TermNavigation'
+import SliderRelated from '../components/SliderRelated'
 import SliderSpotlights from '../components/SliderSpotlights'
 import SliderExperiences from '../components/SliderExperiences'
 import SliderTestimonials from '../components/SliderTestimonials'
-import SliderRelatedPrograms from '../components/SliderRelatedPrograms'
+import SliderFeaturedStories from '../components/SliderFeaturedStories'
 import SliderCareerOpportunities from '../components/SliderCareerOpportunites'
 
 export default () => {
@@ -67,21 +72,22 @@ export default () => {
   // ---------------------------------------------------------------------------
   const infoModal = document.querySelector('#modal-info-popup');
   if (infoModal) {
+    // Add info modal logic.
+    if (!document.body.InfoModal) {
+      document.body.InfoModal = new InfoModal(infoModal);
+    }
+
+    // Add infoPopup button logic.
     document.querySelectorAll('[data-target="#modal-info-popup"]').forEach(element => {
-      // Add infoPopup button logic.
       if (!element.InfoPopupButton) {
         element.InfoPopupButton = new InfoPopupButton(element, infoModal);
-      }
-      // Add info modal logic.
-      if (!document.body.InfoModal) {
-        document.body.InfoModal = new InfoModal(infoModal);
       }
     });
   }
 
   // Collapsible powered accordions
   // ---------------------------------------------------------------------------
-  $('.accordions .collapsible').collapsible();
+  $('.accordion.collapsible').collapsible();
 
   // Collapsible powered tabs
   // ---------------------------------------------------------------------------
@@ -125,12 +131,12 @@ export default () => {
     }
   });
   
-  // Related Programs Slider
+  // Related Slider(s)
   // ---------------------------------------------------------------------------
 
-  document.querySelectorAll('.section__related-programs .slider').forEach(element => {
+  document.querySelectorAll('.section__related-slider .slider').forEach(element => {
     if (!element.Slider) {
-      element.Slider = new SliderRelatedPrograms(element);
+      element.Slider = new SliderRelated(element);
     }
   });
   
@@ -170,12 +176,120 @@ export default () => {
     }
   });
 
+  // Featured Stories Slider
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.section__featured-stories .slider').forEach(element => {
+    if (!element.Slider) {
+      element.Slider = new SliderFeaturedStories(element);
+    }
+  });
+
   // What's Your Dream - Full Desc Toggle
   // ---------------------------------------------------------------------------
 
   document.querySelectorAll('button.program-desc-btn').forEach(button => {
     button.addEventListener('click', () => {
       button.parentNode.classList.toggle('show-full-desc')
+    })
+  })
+
+  // Filters Toggles
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('#filters').forEach(element => {
+    // Dropdown Filters Toggle
+    if (!element.Toggle) {
+      element.Toggle = new Toggle(element, {
+        button: '.filters-toggle',
+        menu: '.filters-group',
+      })
+      Breakpoints.on('mobile', {
+        enter: () => { element.Toggle.collapse() },
+      })
+      Breakpoints.on('desktop', {
+        enter: () => { element.Toggle.expand() },
+      })
+    }
+
+    // Search Form Toggle
+    if (!element.FormToggle) {
+      element.FormToggle = new Toggle(element, {
+        button: '.filters-search-toggle',
+        menu: '.filters-search-components',
+      })
+      Breakpoints.on('mobile', {
+        enter: () => { element.FormToggle.expand() },
+      })
+      Breakpoints.on('desktop', {
+        enter: () => { element.FormToggle.collapse() },
+      })
+    }
+  })
+
+  // Content Filtering powered by Jquery Bonsai
+  // ---------------------------------------------------------------------------
+
+  $('.content-filters ul.filters').bonsai({
+    createInputs: 'checkbox',
+    checkboxes: true,
+  });
+
+  // Add a bit of a11y support to thumb components added by bonsai.
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.content-filters .thumb').forEach((element) => {
+    element.setAttribute('aria-label', 'Toggle visibility of nested filters');
+    element.setAttribute('role', 'button');
+    element.setAttribute('tabindex', 0);
+  });
+
+  // Checkbox Management
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('.content-filters').forEach((element) => {
+    if (!element.Checkboxes) {
+      element.Checkboxes = new Checkboxes(element);
+    }
+  });
+
+  // Expandable Filter Groups
+  // ---------------------------------------------------------------------------
+
+  const contentFilters = document.querySelector('.content-filters');
+ 
+  if (contentFilters && !contentFilters.processed) {
+    contentFilters.processed = true;
+
+    // Create expandable filter groups with the collapsible library.
+    // -------------------------------------------------------------------------
+    const $groups = $(contentFilters).find('.filters-group').collapsible();
+
+    // Automatically collapse/expand filter groups based on breakpoints.
+    // -------------------------------------------------------------------------
+
+    Breakpoints.on('mobile', {
+      enter: () => {
+        $groups.each((i, group) => {
+          $(group).data('collapsible').collapse();
+        });
+      }
+    });
+    Breakpoints.on('desktop', {
+      enter: () => {
+        $groups.each((i, group) => {
+          $(group).data('collapsible').expand();
+        });
+      }
+    });
+  }
+
+  // Print button
+  // ---------------------------------------------------------------------------
+
+  document.querySelectorAll('button.print').forEach(button => {
+    button.addEventListener('click', event => {
+      window.print();
     })
   })
 }

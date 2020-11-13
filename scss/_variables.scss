@@ -38,10 +38,11 @@ $gold:    #ffb81c;
 $green:   #78be20;
 $light:   #eaeaea;
 $dark:    #2b2b2b;
+$gray:    #d3d3d3;
 
 $colors: (
-  "blue-lt": $blue-lt,
-  "gold": $gold,
+  'blue-lt': $blue-lt,
+  'gold': $gold,
 );
 
 // Theme Colors
@@ -52,7 +53,7 @@ $secondary: $blue-lt;
 $tertiary:  $gold;
 
 $theme-colors: (
-  "tertiary": $tertiary,
+  'tertiary': $tertiary,
 );
 
 // Body
@@ -66,6 +67,12 @@ $body-color:                $dark;
 
 $link-color:       $primary;
 $link-hover-color: $secondary;
+
+// Tables
+// -----------------------------------------------------------------------------
+
+$table-head-bg:    white;
+$table-head-color: $dark;
 
 // Grid breakpoints
 // -----------------------------------------------------------------------------
@@ -99,6 +106,13 @@ $container-max-offsets: (
   xl: 144px,
 );
 
+// Spacing
+// -----------------------------------------------------------------------------
+
+$spacers: (
+  6: 2rem,
+);
+
 // Typography
 // -----------------------------------------------------------------------------
 
@@ -122,6 +136,10 @@ $headings-margin-bottom:      0.75rem;
 $headings-font-weight:        normal;
 $headings-line-height:        1.5;
 
+// Horizontal Rule
+// -----------------------------------------------------------------------------
+
+$hr-margin-y:                 3rem;
 
 // Sizing with .h-* and .w-* classes.
 // -----------------------------------------------------------------------------
@@ -140,26 +158,11 @@ $border-radius-sm:            $border-radius;
 // Cards
 // -----------------------------------------------------------------------------
 
-// $card-spacer-y:                     0.75rem;
-// $card-spacer-x:                     1.25rem;
 $card-border-width:                 0;
 $card-border-radius:                0;
 $card-border-color:                 rgba(black, .125);
-// $card-inner-border-radius:          subtract($card-border-radius, $card-border-width);
-// $card-cap-bg:                       rgba(black, .03);
-// $card-cap-color:                    null;
-// $card-height:                       null;
 $card-color:                        $dark;
 $card-bg:                           white;
-
-// $card-img-overlay-padding:          1.25rem;
-
-// $card-group-margin:                 $grid-gutter-width / 2;
-// $card-deck-margin:                  $card-group-margin;
-
-// $card-columns-count:                3;
-// $card-columns-gap:                  1.25rem;
-// $card-columns-margin:               $card-spacer-y;
 
 // Modals
 // -----------------------------------------------------------------------------
@@ -183,10 +186,51 @@ $breadcrumb-margin-bottom:          0;
 $breadcrumb-bg:                     transparent;
 $breadcrumb-divider-color:          inherit;
 $breadcrumb-active-color:           $primary;
-$breadcrumb-divider:                quote("/");
+$breadcrumb-divider:                quote('/');
 $breadcrumb-border-radius:          0;
 
 // Blockquote
 // -----------------------------------------------------------------------------
 
 $blockquote-font-size:              $font-size-base * 1.4;
+
+// Pagination
+// -----------------------------------------------------------------------------
+
+$pagination-padding-y:              0.5rem;
+$pagination-padding-x:              0.75rem;
+$pagination-line-height:            1.25;
+
+$pagination-color:                  $dark;
+$pagination-bg:                     transparent;
+$pagination-border-width:           2px;
+$pagination-border-color:           $tertiary;
+
+$pagination-hover-color:            white;
+$pagination-hover-bg:               $secondary;
+$pagination-hover-border-color:     $primary;
+
+$pagination-active-color:           $dark;
+$pagination-active-bg:              $tertiary;
+$pagination-active-border-color:    $tertiary;
+
+$pagination-disabled-color:         #757575;
+$pagination-disabled-bg:            white;
+$pagination-disabled-border-color:  #ccc;
+
+// Forms
+// -----------------------------------------------------------------------------
+
+$input-line-height:                     2;
+$form-group-margin-bottom:              0.5rem;
+
+// Custom Form Components
+// -----------------------------------------------------------------------------
+
+$custom-select-border-width:        2px;
+$custom-select-border-color:        $primary;
+$custom-select-disabled-color:      #818181;
+$custom-select-disabled-bg:         $light;
+$custom-select-bg-size:             1rem 0.625rem;
+$custom-select-indicator-color:     $dark;
+$custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='10' viewBox='0 0 16 10'><path d='M8,6.79l6-6a1.16,1.16,0,0,1,1.62,0h0a1.12,1.12,0,0,1,0,1.59L8.81,9.17a1.15,1.15,0,0,1-1.57,0L.34,2.43A1.11,1.11,0,0,1,.33.84,1.16,1.16,0,0,1,2,.84H2Z' style='fill:#{$custom-select-indicator-color}'/></svg>");

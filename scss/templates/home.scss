@@ -2,9 +2,6 @@
 // Template :: Home
 // =============================================================================
 
-@import 'home/hero';
-@import 'home/choices';
-@import 'home/programs';
-@import 'home/experiences';
-@import 'home/spotlights-stats';
-@import 'home/modal';
+body.homepage {
+  @import 'home/videos';
+}

@@ -1,0 +1,38 @@
+// =============================================================================
+// Pagination
+// =============================================================================
+
+.pagination {
+  .page-item {
+    .page-link {
+      width: rem-calc(44);
+      padding: 0;
+      margin: 0 1rem 1rem 0;
+      font-family: $font-family-heading;
+      font-size: rem-calc(18);
+      line-height: rem-calc(42);
+      text-align: center;
+      transition: all 0.2s ease-out;
+    }
+
+    &.page-prev,
+    &.page-next {
+      .page-link {
+        position: relative;
+        height: rem-calc(44);
+        border-color: transparent;
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &.disabled {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// =============================================================================
+// English Language Programs Specific
+// =============================================================================
+
+body.english-language-programs {
+  .teaser {
+    overflow: inherit;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+}

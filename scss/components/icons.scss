@@ -4,10 +4,11 @@
 
 .icon {
   display: inline-block;
+  overflow: inherit;
   fill: currentColor;
 
   // Adds dynamic icon sizing by using rem values as measurements.
-  $iconSizes: 12, 18, 20, 21, 24, 25, 28, 30, 32, 36, 44, 86;
+  $iconSizes: 12, 18, 19, 20, 21, 24, 25, 28, 30, 32, 36, 40, 44, 86;
   @each $size in $iconSizes {
     &.icon-#{$size} {
       width: rem-calc($size);

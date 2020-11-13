@@ -24,6 +24,7 @@ body {
 
 h1, .h1 {
   line-height: 1.1;
+  letter-spacing: normal;
   text-transform: uppercase;
   font-family: $font-family-heading;
   font-size: rem-calc(50);
@@ -68,32 +69,4 @@ h6, .h6 {
 img {
   max-width: 100%;
   height: auto;
-}
-
-// Readmore
-// -----------------------------------------------------------------------------
-
-.readmore {
-  position: relative;
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.2s ease-out;
-
-  &:after {
-    content: '\2192';
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%);
-    transition: transform 0.2s ease-out;
-    opacity: 0;
-  }
-
-  &:focus,
-  &:hover {
-    &:after {
-      opacity: 1;
-      transform: translateX(0.3em) translateY(-50%);
-    }
-  }
 }

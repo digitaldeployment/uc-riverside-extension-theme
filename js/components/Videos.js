@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'jquery'
 import Flickity from 'flickity';
 import VideoButton from './VideoButton';
 
@@ -26,6 +26,11 @@ export default class Videos {
   }
 
   addSlider() {
+    // Exit now if a slider wasn't built based on there is only one slide.
+    if (!this.shouldBuildSlider) {
+      return this.slider
+    }
+
     const Slider = new Flickity(this.slider, {
       prevNextButtons: false,
       fade: true,
@@ -93,9 +98,16 @@ export default class Videos {
     return Navigation;
   }
 
+  handleClick() {
+    $(this.modal).modal('show')
+  }
+
   connectPlayButtons() {
     this.playButtons.forEach(button => {
-      button.VideoButton = new VideoButton(button, this.modal);
+      button.VideoButton = new VideoButton(button, this.modal, !this.shouldBuildSlider);
+      if (!this.shouldBuildSlider) {
+        button.addEventListener('click', this.handleClick.bind(this));
+      }
     });
   }
 
@@ -113,5 +125,15 @@ export default class Videos {
 
   get inDeluxeMode() {
     return this.element.classList.contains('deluxe');
+  }
+
+  // Only builds slider if there are enought slides.
+  get shouldBuildSlider() {
+    return this.slides.length > 1;
+  }
+
+  // Returns reference to the available slides within this slider.
+  get slides() {
+    return this.slider.children;
   }
 }

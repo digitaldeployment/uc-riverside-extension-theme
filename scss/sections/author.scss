@@ -1,0 +1,21 @@
+// =============================================================================
+// Author Info
+// =============================================================================
+
+.author {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-bottom: 1.67rem;
+
+  .author__image {
+    width: rem-calc(57);
+    border-radius: 100%;
+    margin-right: 1rem;
+  }
+
+  .author__name a {
+    font-weight: normal;
+  }
+}

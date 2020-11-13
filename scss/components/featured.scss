@@ -1,0 +1,84 @@
+// =============================================================================
+// Featured Story Component
+// =============================================================================
+
+.featured {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+  flex-direction: column;
+  background-color: $primary;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row;
+  }
+
+  .image {
+    display: block;
+    background: no-repeat 50% 50% / cover transparent;
+
+    @include media-breakpoint-down(md) {
+      padding-bottom: percentage(200/300);
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 55%;
+    }
+  }
+
+  header {
+    flex-grow: 1;
+    padding: 3rem 5vw;
+    background: url('https://prismic-io.s3.amazonaws.com/ucriverside/6386e6c7-c87f-414b-8bb7-d6ccf2510bc7_pod-bg.svg') center 20px / 100% repeat-y $primary;
+    color: white;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 45%;
+
+      & > * {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  .type {
+    margin-bottom: 1.5rem;
+    font-family: $font-family-heading;
+    font-size: rem-calc(16);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .heading {
+    margin-bottom: 0;
+    font-size: rem-calc(23);
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .subheading {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .btn-overview {
+    margin-top: 1.75rem;
+    color: white;
+
+    &:hover,
+    &:focus {
+      color: $dark;
+    }
+  }
+}

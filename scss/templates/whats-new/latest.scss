@@ -1,0 +1,342 @@
+// =============================================================================
+// What's New :: The Latest
+// =============================================================================
+
+.section__the-latest {
+  padding-top: 2.5rem;
+  padding-bottom: 2rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 4rem;
+  }
+
+  // Section Heading
+  // ---------------------------------------------------------------------------
+
+  .section-heading {
+    margin-bottom: 1rem;
+  }
+
+  // Section Subheading
+  // ---------------------------------------------------------------------------
+
+  .section-subheading {
+    margin-bottom: 1.8rem;
+    font-size: rem-calc(18);
+    font-weight: 300;
+  }
+
+  // Filters
+  // ---------------------------------------------------------------------------
+
+  .filters {
+    margin: 1rem 0;
+
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      margin: 1.5rem 0;
+    }
+  }
+
+  // Filter Toggle
+  // ---------------------------------------------------------------------------
+
+  .filters-toggle {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    width: 100%;
+    height: 62px;
+
+    // Don't show on desktop
+    // -------------------------------------------------------------------------
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    // Expanded State
+    // -------------------------------------------------------------------------
+
+    &[aria-expanded=true] {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // Filters Group
+  // ---------------------------------------------------------------------------
+
+  .filters-group {
+    position: relative;
+    z-index: 1;
+    border-color: $gray;
+
+    @include media-breakpoint-down(md) {
+      transition: 0.2s ease-out;
+      margin-bottom: 1rem;
+
+      // Collapsed State
+      // -----------------------------------------------------------------------
+
+      &[aria-hidden=true] {
+        height: 0;
+        padding: 0 1rem;
+        overflow: hidden;
+        visibility: hidden;
+      }
+
+      // Expanded State
+      // -----------------------------------------------------------------------
+
+      &[aria-hidden=false] {
+        height: auto;
+        padding: 1rem;
+        border: 1px solid $gray;
+      }
+    }
+  }
+
+  // Filter
+  // ---------------------------------------------------------------------------
+
+  .filter {
+    width: 100%;
+    height: rem-calc(56);
+    margin-bottom: 0.75rem;
+    padding: rem-calc(0 22);
+    font-size: rem-calc(16);
+    border: 2px solid $dark;
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-weight: 500;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+      height: rem-calc(48);
+      margin: 0 0.75rem 0.75rem 0;
+      font-size: rem-calc(14);
+    }
+
+    &.filter--all {
+      border-color: $light;
+      background-color: $light;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $light;
+      }
+    }
+
+    &.filter--event {
+      border-color: $primary;
+      background-color: $primary;
+      color: white;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $primary;
+      }
+    }
+
+    &.filter--magazine {
+      border-color: $blue-ot;
+      background-color: $blue-ot;
+      color: white;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $blue-ot;
+      }
+    }
+
+    &.filter--deans-message {
+      border-color: $tertiary;
+      background-color: $tertiary;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $tertiary;
+      }
+    }
+
+    &.filter--inspire {
+      border-color: $dark;
+      background-color: $dark;
+      color: white;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $dark;
+      }
+    }
+
+    &.filter--news {
+      border-color: $green;
+      background-color: $green;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $green;
+      }
+    }
+
+    &.filter--innovate {
+      border-color: $gray;
+      background-color: $gray;
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem $gray;
+      }
+    }
+
+    // Filter Hover/Focus States
+    // -----------------------------------------------------------------------
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: white;
+      color: $dark;
+    }
+  }
+
+  // Filter Search
+  // ---------------------------------------------------------------------------
+
+  .filters-search {
+    display: flex;
+    margin-bottom: 0.75rem;
+    border: 2px solid #d3d3d3;
+
+    @include media-breakpoint-down(md) {
+      height: rem-calc(56);
+    }
+  }
+
+  // Filter Search Toggle
+  // ---------------------------------------------------------------------------
+
+  .filters-search-toggle {
+    position: relative;
+    z-index: 2;
+    border: none;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+
+    .icon {
+      transition: 0.2s ease-out;
+    }
+
+    // Collapsed State
+    // -------------------------------------------------------------------------
+
+    &[aria-expanded=false] {
+      .icon-close {
+        display: none;
+      }
+    }
+
+    // Expanded State
+    // -------------------------------------------------------------------------
+
+    &[aria-expanded=true] {
+      .icon-search {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      .icon {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  // Filter Search Form Components
+  // ---------------------------------------------------------------------------
+
+  .filters-search-components {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-grow: 1;
+    transition: 0.2s ease-out;
+
+    .form-group {
+      flex-grow: inherit;
+      margin-bottom: 0;
+    }
+
+    input {
+      border: 0;
+      height: 100%;
+      font-weight: 300;
+      color: inherit;
+    }
+
+    button {
+      border: none;
+
+      &:hover,
+      &:focus {
+        .icon {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      // Collapsed State
+      // -----------------------------------------------------------------------
+
+      &[aria-hidden=true] {
+        max-width: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+
+      // Expanded State
+      // -----------------------------------------------------------------------
+
+      &[aria-hidden=false] {
+        max-width: 100%;
+        border-left: 2px solid #d3d3d3;
+      }
+    }
+  }
+
+  // Items
+  // ---------------------------------------------------------------------------
+
+  .items {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -0.75rem;
+    }
+  }
+
+  // Item
+  // ---------------------------------------------------------------------------
+
+  .item {
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0.75rem;
+      width: calc(#{percentage(1/2)} - 1.5rem);
+
+      & > * {
+        height: 100%;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: calc(#{percentage(1/3)} - 1.5rem);
+    }
+  }
+}
