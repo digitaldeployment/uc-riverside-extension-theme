@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>UC Riverside Extension | Cost Estimator</title>
+  <meta charSet="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, shrink-to-fit=no" />
+  <link rel="stylesheet" media="all" href="./css/theme.min.css" />
+  <link rel="shortcut icon" href="./assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="./assets/favicon-48x48.png" />
+  <link rel="manifest" href="./assets/manifest.json" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="theme-color" content="#fff" />
+  <meta name="application-name" />
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="167x167" href="./assets/apple-touch-icon-167x167.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon-180x180.png" />
+  <link rel="apple-touch-icon" sizes="1024x1024" href="./assets/apple-touch-icon-1024x1024.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" />
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-640x1136.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-750x1334.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-828x1792.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1125x2436.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1242x2208.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1242x2688.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1536x2048.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1668x2224.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1668x2388.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-2048x2732.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)" href="./assets/apple-touch-startup-image-1620x2160.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-1136x640.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-1334x750.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-1792x828.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2436x1125.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2208x1242.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2688x1242.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2048x1536.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2224x1668.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2388x1668.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2732x2048.png" />
+  <link rel="apple-touch-startup-image" media="(device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)" href="./assets/apple-touch-startup-image-2160x1620.png" />
+  <link rel="icon" type="image/png" sizes="228x228" href="./assets/coast-228x228.png" />
+  <meta name="msapplication-TileColor" content="#fff" />
+  <meta name="msapplication-TileImage" content="./assets/mstile-144x144.png" />
+  <meta name="msapplication-config" content="./assets/browserconfig.xml" />
+  <link rel="yandex-tableau-widget" href="./assets/yandex-browser-manifest.json" />
+  <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/66770/UCRiverside/style-svg.css?vj0z29" />
+  <script defer src="https://d1azc1qln24ryf.cloudfront.net/66770/UCRiverside/svgxuse-cf.js?vj0z29"></script>
+</head>
+
+<body class="cost-estimator page--cost-estimator">
+  <header class="page__header navbar navbar-expand bg-primary sticky-top"><a class="branding__logo navbar-brand" href="https://www.uc-riverside.com/"><span class="sr-only">University of California, Riverside Extension</span><img src="https://www.uc-riverside.com/static/logo.0dddeaf7.svg" alt="University of California, Riverside Extension - Logo" /></a>
+    <nav class="navigation__secondary navbar-nav d-flex flex-row flex-wrap justify-content-end pr-3"><a class="nav-link d-flex align-items-center px-3 mr-md-4 mr-lg-0" href="https://www.uc-riverside.com/"><svg class="icon icon-apply icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-apply"></use>
+        </svg>Apply</a><a class="nav-link d-none d-lg-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-request-info icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-request-info"></use>
+        </svg>Request Info</a><a class="nav-link d-none d-lg-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-international icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-international"></use>
+        </svg>International</a><a class="nav-link d-none d-lg-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-giving icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-giving"></use>
+        </svg>Giving</a><a class="nav-link d-flex align-items-center px-3" href="https://www.uc-riverside.com/"><svg class="icon icon-phone icon-24" width="24" height="24" aria-hidden="true">
+          <use xlink:href="#icon-phone"></use>
+        </svg>951.827.4105</a></nav><a class="button__cart nav-link ml-3 mr-4 d-none d-lg-block" href="https://www.uc-riverside.com/"><svg class="icon icon-cart icon-24" width="24" height="24" aria-hidden="true">
+        <use xlink:href="#icon-cart"></use>
+      </svg><span class="sr-only">Shop</span></a><button type="button" class="button__menu btn btn-tertiary rounded-0 flex-shrink-0" data-toggle="flyout" aria-controls="flyout" aria-label="Toggle Flyout Menu" aria-expanded="false"><svg class="icon icon-menu icon-32" width="32" height="32" aria-hidden="true">
+        <use xlink:href="#icon-menu"></use>
+      </svg><span class="sr-only">Toggle Flyout Menu</span></button>
+  </header>
+  <div id="flyout" class="flyout flyout-collapse">
+    <div class="container-flyout">
+      <div class="toolbar"><a class="button__cart nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-cart icon-44" width="44" height="44" aria-hidden="true">
+            <use xlink:href="#icon-cart"></use>
+          </svg><span class="sr-only">Shop</span></a><button type="button" class="button__close btn" data-toggle="flyout" aria-label="Close Flyout Menu" aria-expanded="false"><svg class="icon icon-close icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-close"></use>
+          </svg><span class="sr-only">Close Flyout Menu</span></button></div>
+      <div class="login-options dropdown" data-boundry="viewport" id="sign-in-dropdown"><button type="button" class="btn btn-outline-tertiary dropdown-toggle" data-toggle="dropdown" aria-label="Sign In Options" aria-haspopup="true" aria-expanded="false" id="sign-in-dropdown-toggle">Sign In Options<svg class="icon icon-down icon-24" width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-down"></use>
+          </svg></button>
+        <div class="dropdown-menu" aria-labelledby="sign-in-dropdown-toggle"><a class="dropdown-item" href="https://www.uc-riverside.com/login/student">Student login</a><a class="dropdown-item" href="https://www.uc-riverside.com/login/faculty">Faculty login</a><a class="dropdown-item" href="https://www.uc-riverside.com/login/parent">Parent login</a></div>
+      </div>
+      <form class="site-search" action="/search">
+        <div class="form-group"><label class="sr-only" for="search-keywords">Search our Website</label><input type="search" class="form-control" placeholder="Search our Website" aria-label="Search our Website" aria-describedby="search-submit" id="search-keywords" /></div><button class="btn" type="submit" id="search-submit"><svg class="icon icon-search icon-24" width="24" height="24" aria-hidden="true">
+            <use xlink:href="#icon-search"></use>
+          </svg><span class="sr-only">Search our Website</span></button>
+      </form>
+      <nav class="main-navigation">
+        <ul id="main-navigation" class="nav">
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/" class="nav-link l1 ">Home</a></li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/landing-pages" class="nav-link l1 ">Landing Pages</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/landing-pages/standard" class="nav-link l2 ">Standard Page</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/standard-pods-below" class="nav-link l3 ">Standard Page with Pods Below</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/landing-pages/banner" class="nav-link l2 ">Banner Page</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/banner-pods-below" class="nav-link l3 ">Banner Page with Pods Below</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/banner-subheading" class="nav-link l3 ">Banner Page with Subheading</a></li>
+                </ul>
+              </li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/tabs" class="nav-link l2 ">Tabs</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/accordions" class="nav-link l2 ">Accordions</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/landing-pages/heading-waterfall" class="nav-link l2 ">Heading Waterfall</a></li>
+            </ul>
+          </li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/program-finder" class="nav-link l1 ">Program Finder</a></li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/areas-of-study" class="nav-link l1 ">Areas of Study</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/business" class="nav-link l2 ">Business</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/law-and-justice" class="nav-link l2 ">Law and Justice</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/healthcare-and-wellness" class="nav-link l2 ">Healthcare and Wellness</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/education-and-credentials" class="nav-link l2 ">Education and Credentials</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/sustainability-natural-resources" class="nav-link l2 ">Sustanability / Natural Resources</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/areas-of-study/creative-arts-and-design" class="nav-link l2 ">Creative Arts and Design</a></li>
+            </ul>
+          </li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/certificate" class="nav-link l1 ">Certificates</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/certificate/accounting-certificate" class="nav-link l2 ">Accounting Certificate</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/certificate/professional-certificate-in-crime-and-intelligence-analysis" class="nav-link l2 ">Professional Certificate in Crime and Intelligence Analysis</a></li>
+            </ul>
+          </li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/course" class="nav-link l1 ">Courses</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/course/accounting-for-governmental-and-nonprofit-organizations" class="nav-link l2 ">Accounting for Governmental and Nonprofit Organizations</a></li>
+            </ul>
+          </li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/international-homepage" class="nav-link l1 ">International Homepage</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/search-results" class="nav-link l1 ">Search Results</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/whats-new" class="nav-link l1 ">What&#x27;s New</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/featured-story" class="nav-link l1 ">Featured Story</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/news-articles" class="nav-link l1 ">News Articles</a></li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources" class="nav-link l1 ">Student Resources</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#registration" class="nav-link l2 ">Registration</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources/academic-policies-and-information" class="nav-link l2 ">Academic Policies and Information</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#general-information" class="nav-link l2 ">General Information</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#online-learning" class="nav-link l2 ">Online Learning</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#student-success-tools" class="nav-link l2 ">Student Success Tools</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/student-resources#financial-information-and-resources" class="nav-link l2 ">Financial Information and Resources</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#subterm" class="nav-link l3 ">This is a Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#different-subterm" class="nav-link l3 ">This is a different Subterm</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/student-resources#another-subterm" class="nav-link l3 ">This is another Subterm</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/more-content-options" class="nav-link l1 ">More Content Options</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/your-experience" class="nav-link l1 ">Your Experience</a></li>
+          <li class="nav-item  "><a href="https://www.uc-riverside.com/osher-lifelong-learning" class="nav-link l1 ">Osher Lifelong Learning</a></li>
+          <li class="nav-item subnav-item active-trail"><a href="https://www.uc-riverside.com/international-dates-and-fees" class="nav-link l1 ">Internation Dates &amp; Fees</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees/english-language-programs" class="nav-link l2 ">English Language Programs</a></li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/international-dates-and-fees#upp" class="nav-link l2 ">University Pathways Program</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#gateway" class="nav-link l3 ">Gateway</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#gpp" class="nav-link l3 ">GPP</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#mbpp" class="nav-link l3 ">MBPP</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#all-programs" class="nav-link l3 ">All Programs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#cp" class="nav-link l2 ">Certficate Programs</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#fees" class="nav-link l2 ">Additional Fees</a></li>
+              <li class="nav-item subnav-item active-trail"><a href="https://www.uc-riverside.com/international-dates-and-fees/cost-estimator" class="nav-link l2 active">Cost Estimator</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees/cost-estimator?progress" class="nav-link l3 ">Estimate Form Filled In</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/image-dimensions" class="nav-link l1 ">Image Dimensions</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                <use xlink:href="#icon-plus"></use>
+              </svg><span class="sr-only">Toggle submenu</span></button>
+            <ul class="subnav-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/homepage-dimensions" class="nav-link l2 ">Home Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/landing-page-dimensions" class="nav-link l2 ">General Landing Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/area-of-study-dimensions" class="nav-link l2 ">Area of Study Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/certificate-dimensions" class="nav-link l2 ">Certificate Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/course-dimensions" class="nav-link l2 ">Course Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/international-homepage-dimensions" class="nav-link l2 ">International Homepage</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/whats-new-dimensions" class="nav-link l2 ">What&#x27;s New Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/featured-story-dimensions" class="nav-link l2 ">Featured Story Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/news-articles-dimensions" class="nav-link l2 ">News Articles Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/student-resources-dimensions" class="nav-link l2 ">Student Resources Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/resource-dimensions" class="nav-link l2 ">Resource Example Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/more-content-options-dimensions" class="nav-link l2 ">More Content Options Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/your-experience-dimensions" class="nav-link l2 ">Your Experience Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/osher-lifelong-learning-dimensions" class="nav-link l2 ">Osher Lifelong Learning Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/international-dates-and-fees-dimensions" class="nav-link l2 ">Internation Dates &amp; Fees Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/english-language-programs-dimensions" class="nav-link l2 ">English Language Programs Example Page</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/image-dimensions/cost-estimator-dimensions" class="nav-link l2 ">Cost Estimator Page</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <nav class="flyout-quicklinks nav"><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-request-info icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-request-info"></use>
+          </svg>Request Info</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-schedule-appt icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-schedule-appt"></use>
+          </svg>Schedule an Appointment</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-international icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-international"></use>
+          </svg>International</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-giving icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-giving"></use>
+          </svg>Giving</a><a class="nav-link" href="https://www.uc-riverside.com/"><svg class="icon icon-phone icon-32" width="32" height="32" aria-hidden="true">
+            <use xlink:href="#icon-phone"></use>
+          </svg>951.827.4105</a></nav>
+    </div>
+  </div>
+  <main class="page-main" aria-label="Cost Estimator">
+    <div id="banner" class="banner banner--normal" style="background-image:url(https://images.prismic.io/ucriverside/a9f5c3cd-ec31-4224-ba54-560a5ab01235_kelly-sikkema-3-Tc_5LROrM-unsplash.jpg?auto=compress,format&amp;rect=0,1078,5568,1392&amp;w=1920&amp;h=480)">
+      <header class="container-max">
+        <h1 class="heading">Cost Estimator</h1>
+        <p class="subheading h2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.</p>
+      </header>
+    </div>
+    <div class="container-max">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="https://www.uc-riverside.com/">Home</a></li>
+          <li class="breadcrumb-item"><a href="https://www.uc-riverside.com/international-dates-and-fees">International Dates &amp; Fees</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Cost Estimator</li>
+        </ol>
+      </nav>
+      <aside class="page-sidebar page-sidebar--left" role="complementary" aria-label="Left Sidebar">
+        <div class="page-sidebar-inner">
+          <nav class="term-navigation">
+            <div class="term-navigation-toggle"><a class="term-navigation-toggle__link" href="https://www.uc-riverside.com/international-dates-and-fees">International Dates &amp; Fees</a><button class="btn term-navigation-toggle__button"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                  <use xlink:href="#icon-plus"></use>
+                </svg><span class="sr-only">Toggle mobile submenu</span></button></div>
+            <ul id="term-navigation-menu" class="nav term-navigation-menu">
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees/english-language-programs" class="nav-link l1 ">English Language Programs</a></li>
+              <li class="nav-item subnav-item "><a href="https://www.uc-riverside.com/international-dates-and-fees#upp" class="nav-link l1 ">University Pathways Program</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#gateway" class="nav-link l2 ">Gateway</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#gpp" class="nav-link l2 ">GPP</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#mbpp" class="nav-link l2 ">MBPP</a></li>
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#all-programs" class="nav-link l2 ">All Programs</a></li>
+                </ul>
+              </li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#cp" class="nav-link l1 ">Certficate Programs</a></li>
+              <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees#fees" class="nav-link l1 ">Additional Fees</a></li>
+              <li class="nav-item subnav-item active-trail"><a href="https://www.uc-riverside.com/international-dates-and-fees/cost-estimator" class="nav-link l1 active">Cost Estimator</a><button class="btn subnav-toggle"><svg class="icon icon-plus icon-24" width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-plus"></use>
+                  </svg><span class="sr-only">Toggle submenu</span></button>
+                <ul class="subnav-menu">
+                  <li class="nav-item  "><a href="https://www.uc-riverside.com/international-dates-and-fees/cost-estimator?progress" class="nav-link l2 ">Estimate Form Filled In</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <div class="page-center">
+        <h2 class="mb-6">Get Started by Answering a Few Questions</h2>
+        <form class="mb-5">
+          <fieldset>
+            <legend class="h6 mb-3" id="format-options">What program format are you looking for?</legend>
+            <div class="radio-group">
+              <div class="custom-control custom-radio"><input type="radio" name="format" value="In-person" class="custom-control-input" id="format-radio-0" /><label class="custom-control-label" for="format-radio-0">In-person</label></div>
+              <div class="custom-control custom-radio"><input type="radio" name="format" value="In-Hybrid (In-person and Online)" class="custom-control-input" id="format-radio-1" /><label class="custom-control-label" for="format-radio-1">In-Hybrid (In-person and Online)</label></div>
+              <div class="custom-control custom-radio"><input type="radio" name="format" value="Online" class="custom-control-input" id="format-radio-2" /><label class="custom-control-label" for="format-radio-2">Online</label></div>
+            </div>
+          </fieldset>
+          <hr class="my-6" />
+          <fieldset>
+            <legend class="h6 mb-3">What program are you interested in?</legend>
+            <div class="form-group form-select"><label class="sr-only" for="program-options">Choose a Program</label><select class="custom-select" name="program" id="program-options">
+                <option selected="" value="[program]0" disabled="">Choose a Program</option>
+                <option value="[program]1">Communication and Culture Program ($1,000-$2,900)</option>
+                <option value="[program]2">Intensive English Program ($1,875-$2,900)</option>
+                <option value="[program]3">Online English as a Second Language ($1,125-$2,900)</option>
+                <option value="[program]4">Youth Conversation &amp; American Culture Program ($1,000-$2,900)</option>
+              </select></div>
+            <div class="form-group form-select"><label class="sr-only" for="program_duration-options">How long do you want to study?</label><select disabled="" class="custom-select" name="program_duration" id="program_duration-options">
+                <option selected="" value="[program_duration]0" disabled="">How long do you want to study?</option>
+                <option value="[program_duration]1">9 weeks</option>
+                <option value="[program_duration]2">18 weeks</option>
+                <option value="[program_duration]3">36 weeks</option>
+                <option value="[program_duration]4">72 weeks</option>
+                <option value="[program_duration]5">108 weeks</option>
+              </select></div>
+          </fieldset>
+          <hr class="my-6" />
+          <fieldset>
+            <legend class="h6 mb-3">What housing option fits you best?</legend>
+            <div class="form-group form-select"><label class="sr-only" for="housing-options">Choose Housing Needs</label><select class="custom-select" name="housing" id="housing-options">
+                <option selected="" value="[housing]0" disabled="">Choose Housing Needs</option>
+                <option value="[housing]1">On-campus Housing</option>
+                <option value="[housing]2">Off-campus Housing:Homestay</option>
+                <option value="[housing]3">I&#x27;ve made my own arrangements</option>
+              </select></div>
+            <div class="form-group form-select"><label class="sr-only" for="housing_duration-options">Choose How Long</label><select disabled="" class="custom-select" name="housing_duration" id="housing_duration-options">
+                <option selected="" value="[housing_duration]0" disabled="">Choose How Long</option>
+                <option value="[housing_duration]1">9-month lease</option>
+                <option value="[housing_duration]2">22 week to 9 month lease</option>
+                <option value="[housing_duration]3">10 to 22 week lease</option>
+                <option value="[housing_duration]4">4 to 10 week lease</option>
+              </select></div>
+            <div class="form-group form-select"><label class="sr-only" for="housing_type-options">Choose Type of Room</label><select disabled="" class="custom-select" name="housing_type" id="housing_type-options">
+                <option selected="" value="[housing_type]0" disabled="">Choose Type of Room</option>
+                <option value="[housing_type]1">Double Room ($646)</option>
+                <option value="[housing_type]2">Single Room ($1,292)</option>
+                <option value="[housing_type]3">Studio ($1,313)</option>
+              </select></div>
+          </fieldset>
+          <hr class="my-6" />
+          <fieldset class="mb-5">
+            <legend class="h6 mb-3" id="format-options">Do you need a visa?</legend>
+            <div class="radio-group">
+              <div class="custom-control custom-radio"><input type="radio" name="visa" value="Yes" class="custom-control-input" id="visa-radio-0" /><label class="custom-control-label" for="visa-radio-0">Yes</label></div>
+              <div class="custom-control custom-radio"><input type="radio" name="visa" value="No" class="custom-control-input" id="visa-radio-1" /><label class="custom-control-label" for="visa-radio-1">No</label></div>
+            </div>
+          </fieldset>
+          <div class="estimator-results">
+            <h2>Program Cost Estimator</h2>
+            <nav class="share">
+              <ul class="nav">
+                <li class="print"><button class="btn print" type="button" aria-label="Print this page"><svg class="icon icon-print icon-36" width="36" height="36" aria-hidden="true">
+                      <use xlink:href="#icon-print"></use>
+                    </svg><span class="sr-only">Print this page</span></button></li>
+                <li class="email"><a href="mailto:?subject=I&#x27;d%20like%20to%20share%20a%20link%20with%20you&amp;body=https%3A%2F%2Fextension.ucr.edu" target="blank" rel="noopener noreferrer"><svg class="icon icon-email icon-36" width="36" height="36" aria-hidden="true">
+                      <use xlink:href="#icon-email"></use>
+                    </svg><span class="sr-only">Email this page</span></a></li>
+                <li class="schedule-appt"><a href="https://www.uc-riverside.com/"><svg class="icon icon-appt icon-36" width="36" height="36" aria-hidden="true">
+                      <use xlink:href="#icon-appt"></use>
+                    </svg><span class="small">Schedule an<br /> Appointment</span></a></li>
+              </ul>
+            </nav>
+          </div>
+          <table class="table table-bordered mb-0">
+            <thead class="thead-primary">
+              <tr>
+                <th class="w-50" scope="col">Program</th>
+                <th class="w-50" scope="col">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Intensive English Program (INT), In-person (36 weeks)</td>
+                <td>$12,900</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered mb-0">
+            <thead class="thead-primary">
+              <tr>
+                <th class="w-50" scope="col">Housing</th>
+                <th class="w-50" scope="col">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn" data-toggle="modal" data-target="#modal-info-popup"><span class="heading">Housing Placement Fee</span> <svg class="icon icon-details icon-null" aria-hidden="true">
+                      <use xlink:href="#icon-details"></use>
+                    </svg></button>
+                  <div class="popup sr-only">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.</p>
+                  </div>
+                </td>
+                <td>$200</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn" data-toggle="modal" data-target="#modal-info-popup"><span class="heading">Housing Deposit</span> <svg class="icon icon-details icon-null" aria-hidden="true">
+                      <use xlink:href="#icon-details"></use>
+                    </svg></button>
+                  <div class="popup sr-only">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.</p>
+                  </div>
+                </td>
+                <td>$200</td>
+              </tr>
+              <tr>
+                <td>On-campus housing (9 Month Lease, Double Room)</td>
+                <td>$5,814</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="table table-bordered mb-0">
+            <thead class="thead-primary">
+              <tr>
+                <th class="w-50" scope="col">Additional Fees</th>
+                <th class="w-50" scope="col">Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn" data-toggle="modal" data-target="#modal-info-popup"><span class="heading">Student Services Fees</span> <svg class="icon icon-details icon-null" aria-hidden="true">
+                      <use xlink:href="#icon-details"></use>
+                    </svg></button>
+                  <div class="popup sr-only">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.</p>
+                  </div>
+                </td>
+                <td>$150</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn" data-toggle="modal" data-target="#modal-info-popup"><span class="heading">Medical Insurance</span> <svg class="icon icon-details icon-null" aria-hidden="true">
+                      <use xlink:href="#icon-details"></use>
+                    </svg></button>
+                  <div class="popup sr-only">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.</p>
+                  </div>
+                </td>
+                <td>$200</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn" data-toggle="modal" data-target="#modal-info-popup"><span class="heading">Trips</span> <svg class="icon icon-details icon-null" aria-hidden="true">
+                      <use xlink:href="#icon-details"></use>
+                    </svg></button>
+                  <div class="popup sr-only">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.</p>
+                  </div>
+                </td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn" data-toggle="modal" data-target="#modal-info-popup"><span class="heading">Transportation</span> <svg class="icon icon-details icon-null" aria-hidden="true">
+                      <use xlink:href="#icon-details"></use>
+                    </svg></button>
+                  <div class="popup sr-only">
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et.</p>
+                  </div>
+                </td>
+                <td>$400</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="table-active">
+                <td><strong>Total Cost</strong></td>
+                <td><strong>$20,864</strong></td>
+              </tr>
+            </tfoot>
+          </table>
+        </form>
+        <div class="disclaimers">
+          <p>* The Cost Estimator is designed to give you an idea of the approximate costs of attending our programs. Actual amounts depend on several factors, such as arrival and departure dates, services requested and more.</p>
+          <p>* The Cost Estimator is NOT an official invoice. It can NOT be used as an official document for any payment related issue or procedure.</p>
+          <p>* Actual amounts will be provided on an official invoice after complete application materials have been received.</p>
+          <p>* All prices are in U.S. Dollars (US$)</p>
+          <p>* All courses, dates and fees are subject to change without notice.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="modal fade modal-info-popup" id="modal-info-popup" tabindex="-1" role="dialog" aria-label="Info Modal" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="heading">Info Modal</h2><button type="button" class="button__close btn" aria-label="Close Modal" data-dismiss="modal"><svg class="icon icon-close icon-32" width="32" height="32" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg><span class="sr-only">Close Modal</span></button>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="page__footer">
+    <div class="container-max">
+      <div class="primary-section">
+        <div class="footer-address"><a class="logo" href="https://www.uc-riverside.com/"><span class="sr-only">University of California, Riverside Extension</span><img src="https://www.uc-riverside.com/static/logo.0dddeaf7.svg" alt="University of California, Riverside Extension - Logo" /></a>
+          <div itemscope="" itemType="https://schema.org/CollegeOrUniversity">
+            <div itemProp="name"><strong>University of California,<br />Riverside Extension</strong></div>
+            <div itemType="http://schema.org/GeoCoordinates" itemProp="geo">
+              <meta itemProp="latitude" content="33.975011" />
+              <meta itemProp="longitude" content="-117.337361" />
+            </div>
+            <div itemType="http://schema.org/PostalAddress" itemProp="address">
+              <div itemProp="streetAddress">1200 University Ave.</div>
+              <div><span itemProp="addressLocality">Riverside</span>, <span itemProp="addressRegion">CA</span> <span itemProp="postalCode">92507-4596</span></div>
+            </div>
+            <div class="department" itemType="http://schema.org/EducationalOrganization" itemProp="address">
+              <div itemProp="department"><strong>Student Success Coaches</strong></div>
+              <div><span itemProp="telephone">951.827.4105</span> or <span itemProp="telephone">800.442.4990</span></div>
+            </div>
+          </div><a class="btn btn-link" href="https://www.uc-riverside.com/"><svg class="icon icon-schedule-appt icon-32" width="32" height="32" aria-hidden="true">
+              <use xlink:href="#icon-schedule-appt"></use>
+            </svg> Schedule an Appointment</a>
+        </div>
+        <nav class="footer-quicklinks nav flex-column"><a class="nav-link" href="https://www.uc-riverside.com/">Find Programs</a><a class="nav-link" href="https://www.uc-riverside.com/">Student Resources</a><a class="nav-link" href="https://www.uc-riverside.com/">Get Started</a><a class="nav-link" href="https://www.uc-riverside.com/">UCR Campus Diversity</a><a class="nav-link" href="https://www.uc-riverside.com/">Giving</a>
+          <div class="nav-divider"></div><a class="nav-link" href="https://www.uc-riverside.com/">Register for Classes</a><a class="nav-link" href="https://www.uc-riverside.com/">Why UCR Extension</a>
+        </nav>
+        <nav class="footer-links nav"><a class="nav-link disabled" href="https://www.uc-riverside.com/" tabindex="-1" aria-disabled="true">2020 UC Regents</a><a class="nav-link" href="https://www.uc-riverside.com/">Privacy Policy</a><a class="nav-link" href="https://www.uc-riverside.com/">Terms and Conditions</a><a class="nav-link disabled" href="https://www.uc-riverside.com/" tabindex="-1" aria-disabled="true"><svg class="icon icon-smoke-free icon-32" width="32" height="32" aria-hidden="true">
+              <use xlink:href="#icon-smoke-free"></use>
+            </svg> UCR is Tobacco Smoke Free Campus</a></nav>
+      </div>
+      <section class="secondary-section" aria-label="Stay Connected">
+        <h2 class="section-heading">Stay Connected</h2>
+        <p class="section-subheading">Get the latest info, news, tips, and trends straight to your inbox.</p>
+        <form class="signup-form" method="get" action="/signup">
+          <div class="form-group"><label class="sr-only" for="footer-signup__email">Email Address</label><input type="email" class="form-control" id="footer-signup__email" placeholder="Enter your email address" required="" /></div><button type="submit" class="btn btn-block btn-tertiary">Signup</button>
+        </form>
+        <nav class="footer-social-links nav"><a class="nav-link" href="https://www.facebook.com"><svg class="icon icon-facebook icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-facebook"></use>
+            </svg><span class="sr-only">Facebook</span></a><a class="nav-link" href="https://www.instagram.com"><svg class="icon icon-instagram icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-instagram"></use>
+            </svg><span class="sr-only">Instagram</span></a><a class="nav-link" href="https://www.twitter.com"><svg class="icon icon-twitter icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-twitter"></use>
+            </svg><span class="sr-only">Twitter</span></a><a class="nav-link" href="https://www.linkedin.com"><svg class="icon icon-linkedin icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-linkedin"></use>
+            </svg><span class="sr-only">Linkedin</span></a><a class="nav-link" href="https://www.youtube.com"><svg class="icon icon-youtube icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-youtube"></use>
+            </svg><span class="sr-only">Youtube</span></a><a class="nav-link" href="https://www.venmo.com"><svg class="icon icon-venmo icon-36" width="36" height="36" aria-hidden="true">
+              <use xlink:href="#icon-venmo"></use>
+            </svg><span class="sr-only">Venmo</span></a></nav>
+      </section>
+    </div>
+  </footer>
+  <script src="./js/theme.min.js" async></script>
+</body>
+
+</html>
