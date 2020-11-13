@@ -8,22 +8,25 @@ export default class Toggle {
     this.element = element;
     this.expanded = false;
     this.selectors = { ...defaultSelectors, ...selectors };
+    this.clickHandler = this.clickHandler.bind(this);
+    this.expand = this.expand.bind(this);
+    this.collapse = this.collapse.bind(this);
 
     if (this.menu && this.button) {
       this.listen();
     }
   }
 
-  clickHandler = () => {
+  clickHandler() {
     this.isExpanded ? this.collapse() : this.expand();
   }
 
-  expand = () => {
+  expand() {
     this.menu.setAttribute('aria-hidden', false);
     this.button.setAttribute('aria-expanded', true);
   }
 
-  collapse = () => {
+  collapse() {
     this.menu.setAttribute('aria-hidden', true);
     this.button.setAttribute('aria-expanded', false);
   }
