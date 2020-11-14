@@ -6,12 +6,12 @@
   position: relative;
   display: flex;
   width: 100%;
-  min-height: 600px;
   flex-direction: column;
   background-color: $primary;
 
   @include media-breakpoint-up(lg) {
     flex-direction: row;
+    min-height: 600px;
   }
 
   .image {
