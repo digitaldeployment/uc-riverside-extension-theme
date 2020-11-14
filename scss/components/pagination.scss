@@ -3,6 +3,8 @@
 // =============================================================================
 
 .pagination {
+  flex-wrap: wrap;
+
   .page-item {
     .page-link {
       width: rem-calc(44);
