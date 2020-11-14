@@ -54,12 +54,24 @@
   // Apply/Enroll Button
   // -------------------------------------------------------------------------
 
-  .btn-apply,
-  .btn-enroll {
+  & > .btn-apply,
+  & > .btn-enroll {
     border-radius: 2rem;
     font-family: $font-family-heading;
     text-transform: uppercase;
     padding: 0.65rem 2rem;
+  }
+
+  & > .btn-apply {
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    margin: 1rem 2rem;
+
+    @include media-breakpoint-up(lg) {
+      right: 3.5rem;
+      margin: 1.25rem 2rem;
+    }
   }
 
   // Accordion Content
